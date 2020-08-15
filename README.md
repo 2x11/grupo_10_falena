@@ -1,7 +1,7 @@
 # FANELA
 
 ##Logo
-![](https://#.png)
+![](https://github.com/sebastianabila/grupo_10_falena/blob/master/design/logos/logo1.png)
 
 ### Integrantes
 
@@ -15,7 +15,7 @@
 ------------
 
 
-Falena es una tienda especializada en libros digitales en espa�ol, donde podr�s encontrar las ultimas novedades literarias seleccionadas por nuestro equipo de lectores.
+Falena es una tienda especializada en libros digitales en español, donde podras encontrar las ultimas novedades literarias seleccionadas por nuestro equipo de lectores.
 Falena no solo es una tienda sino tambi�n una editorial online que brinda apoyo a todos aquellos escritores independientes que buscan un espacio de difusi�n.
 La tienda online Falena invita a descubrir sus colecciones de renombrados autores y escritores independientes a los fan�ticos de la lectura y a quienes quieran leer su primer libro.
 
@@ -35,11 +35,11 @@ Lo que nos inspiro de los sitios de referencia fue Front-end, en donde de cada p
 
 ------------
 
-- [Home](https://www.tematika.com "tematika")
-- [Detalle de producto](https://www.tematika.com "tematika")
-- [Carrito de compras](https://www.tematika.com "tematika")
-- [Formulario de registro](https://www.tematika.com "tematika")
-- [Formulario de carga de producto](https://www.tematika.com "tematika")
+- [Home](https://github.com/sebastianabila/grupo_10_falena/blob/master/wireframe/Home.png "Home")
+- [Detalle de producto](https://www.tematika.com "Detalle de producto")
+- [Carrito de compras](https://www.tematika.com "Carrito de compras")
+- [Formulario de registro](https://www.tematika.com "Formulario de registro")
+- [Formulario de carga de producto](https://www.tematika.com "Formulario de carga de producto")
 
 
 
