@@ -1,6 +1,6 @@
-# FANELA
+# FALENA
 
-##Logo
+
 ![](https://github.com/sebastianabila/grupo_10_falena/blob/master/design/logos/logo1.png)
 
 ### Integrantes
@@ -10,16 +10,16 @@
 - Santiago Uria edad
 - Sebastian Abila edad 31, hobby huerta Organica
 
-### Tem�tica del sitio y audiencia
+### Temitica del sitio y audiencia
 
 ------------
 
 
 Falena es una tienda especializada en libros digitales en español, donde podras encontrar las ultimas novedades literarias seleccionadas por nuestro equipo de lectores.
-Falena no solo es una tienda sino tambi�n una editorial online que brinda apoyo a todos aquellos escritores independientes que buscan un espacio de difusi�n.
-La tienda online Falena invita a descubrir sus colecciones de renombrados autores y escritores independientes a los fan�ticos de la lectura y a quienes quieran leer su primer libro.
+Falena no solo es una tienda sino tambien una editorial online que brinda apoyo a todos aquellos escritores independientes que buscan un espacio de difusion.
+La tienda online Falena invita a descubrir sus colecciones de renombrados autores y escritores independientes a los fanaticos de la lectura y a quienes quieran leer su primer libro.
 
-### Listado de p�ginas referentes
+### Listado de paginas referentes
 
 ------------
 
@@ -29,7 +29,7 @@ La tienda online Falena invita a descubrir sus colecciones de renombrados autore
 - [bananalibros](https://www.bananalibros.com.ar/ "bananalibros")
 - [libreriaboris](https://www.libreriaboris.com.ar/ "libreriaboris")
 
-Lo que nos inspiro de los sitios de referencia fue Front-end, en donde de cada p�gina sacamos  una caracter�sticas en particular como navegaci�n y la forma de organizar el contenido.
+Lo que nos inspiro de los sitios de referencia fue Front-end, en donde de cada pagina sacamos  una caracteristicas en particular como navegacion y la forma de organizar el contenido.
  
 ### Wireframe
 
