@@ -7,7 +7,7 @@
 
 ------------
 - Daiana Abal
-- Santiago Uria edad
+- Santiago Uria edad 19
 - Sebastian Abila edad 31, hobby huerta Organica
 
 ### Temitica del sitio y audiencia
