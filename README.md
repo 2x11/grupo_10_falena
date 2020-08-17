@@ -36,10 +36,11 @@ Lo que nos inspiro de los sitios de referencia fue el Front-end, en donde de cad
 ------------
 
 - [Home](https://github.com/sebastianabila/grupo_10_falena/blob/master/wireframe/Home.png "Home")
-- [Detalle de producto](https://www.tematika.com "Detalle de producto")
-- [Carrito de compras](https://www.tematika.com "Carrito de compras")
-- [Formulario de registro](https://www.tematika.com "Formulario de registro")
-- [Formulario de carga de producto](https://www.tematika.com "Formulario de carga de producto")
+- [Detalle de producto](https://github.com/sebastianabila/grupo_10_falena/blob/master/wireframe/Detalle_producto.png "Detalle de producto")
+- [Carrito de compras](https://github.com/sebastianabila/grupo_10_falena/blob/master/wireframe/carrito.png "Carrito de compras")
+- [Formulario de registro](https://github.com/sebastianabila/grupo_10_falena/blob/master/wireframe/register.png "Formulario de registro")
+- [Login](https://github.com/sebastianabila/grupo_10_falena/blob/master/wireframe/login.png "Login")
+- [Formulario de carga de producto](https://github.com/sebastianabila/grupo_10_falena/blob/master/wireframe/formulario_de_carga_producto.png "Formulario de carga de producto")
 
 
 
