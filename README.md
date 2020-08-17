@@ -6,11 +6,11 @@
 ### Integrantes
 
 ------------
-- Daiana Abal
+- Daiana Abal edad 33, corista/coreuta.
 - Santiago Uria edad 19
 - Sebastian Abila edad 31, hobby huerta Organica
 
-### Temitica del sitio y audiencia
+### Tematica del sitio y audiencia
 
 ------------
 
@@ -29,7 +29,7 @@ La tienda online Falena invita a descubrir sus colecciones de renombrados autore
 - [bananalibros](https://www.bananalibros.com.ar/ "bananalibros")
 - [libreriaboris](https://www.libreriaboris.com.ar/ "libreriaboris")
 
-Lo que nos inspiro de los sitios de referencia fue Front-end, en donde de cada pagina sacamos  una caracteristicas en particular como navegacion y la forma de organizar el contenido.
+Lo que nos inspiro de los sitios de referencia fue el Front-end, en donde de cada pagina sacamos una caracteristicas en particular como navegacion y la forma de organizar el contenido.
  
 ### Wireframe
 
