@@ -7,7 +7,7 @@
 
 ------------
 - Daiana Abal edad 33, corista/coreuta.
-- Santiago Uria edad 19
+- Santiago Uria edad 19, técnico informático.
 - Sebastian Abila edad 31, hobby huerta Organica
 
 ### Tematica del sitio y audiencia
