@@ -47,4 +47,5 @@ Lo que nos inspiro de los sitios de referencia fue el Front-end, en donde de cad
 ### Tablero de trabajo
 
 ------------
-Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente:https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena
+Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente:
+https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena
