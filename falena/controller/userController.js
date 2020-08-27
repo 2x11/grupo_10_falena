@@ -4,6 +4,9 @@ let userController = {
     },
     register: (req, res, next)=>{
         res.render('register');
+    },
+    cart: (req, res, next)=>{
+        res.render('cart')
     }
 }
 module.exports = userController;

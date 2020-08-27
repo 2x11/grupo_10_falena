@@ -12,5 +12,5 @@ const userController = require('../controller/userController')
 
 router.get('/login/', userController.login);
 router.get('/register/', userController.register);
-
+router.get('/cart', userController.cart);
 module.exports = router;
