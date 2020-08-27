@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheets de bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <!-- mi stylesheet-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+    <title>Librería Falena</title>
+</head>
+
+<body>
+    <!-- importa header -->
+    <%- include('./partials/header'); %>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <ul>
+                    <li><button>Carrito</button></li>
+                    <li><button>Guardados</button></li>
+                </ul>
+            </div> <!-- Fin col-->
+        </div> <!-- Fin Row1-->
+        <div class="row">
+            <div class="col-1">
+                <img src="" alt="">
+            </div> <!-- Fin col-->
+            <div class="col-6">
+                <h5>Nombre de producto</h5>
+                <h5>Característica de producto</h5>
+                <p>Hasta 6 cuotas sin interés</p>
+                <button>Comprar ahora</button>
+                <button>Guardar para más después</button>
+                <button>Eliminar</button>
+            </div> <!-- Fin col-->
+            <div class="col-3">
+                <ul>
+                    <li>
+                        <button> + </button>
+                    </li>
+                    <li>
+                        <h2>X</h2>
+                    </li>
+                    <li>
+                        <button> - </button>
+                    </li>
+                </ul>
+                <h6>X disponibles</h6>
+            </div> <!-- Fin col-->
+            <div class="col-2">
+                <h3>$---,--</h3>
+            </div> <!-- Fin col-->
+
+        </div> <!-- Fin Row2-->
+
+        <div class="row">
+            <div class="col-4">
+                <h3>Calcular Envío</h3>
+                <h6>Calcula la dirección de envío y el precio estimado</h6>
+                <form action="">
+                    <label for="country"> País</label>
+                    <select name="country">
+                        <option value="0"> Seleccione un país</option>
+                        <option value="1"> Argentina</option>
+                        <option value="2"> Chile </option>
+                        <option value="3"> Paraguay</option>
+                        <option value="5"> Uruguay</option>
+                        <option value="6"> Perú</option>
+                        <option value="7"> Colombia</option>
+                    </select>
+                    <label for="state"> Estado/Provincia</label>
+                    <select name="state">
+                        <option value="0">Seleccione un estado o provincia</option>
+                        <option value="1">Buenos Aires</option>
+                        <option value="">Córdoba</option>
+                        <option value="">La Rioja</option>
+                        <option value="">Santa Fe</option>
+                        <option value="">Corrientes</option>
+                        <option value="">Misiones</option>
+                    </select>
+                    <label for="city">Ciudad</label>
+                    <select name="Ciudad">
+                        <option value="0">Seleccione una ciudad</option>
+                        <option value="1"> Tigre</option>
+                        <option value="2"> Tres de Febrero</option>
+                        <option value="3"> Zarate</option>
+                        <option value="4"> Quilmes</option>
+                    </select>
+                    <label for="cp">Código Postal</label>
+                    <input type="text">
+                </form>
+                <button>Calcular</button>
+            </div> <!-- Fin de col-->
+            <div class="col-4">
+                <h3>CUPÓN DE DESCUENTO</h3>
+                <h6>Ingrese el código de su cupón si tiene uno</h6>
+                <input type="text" name="" id="">
+                <button>APLICAR CUPÓN</button>
+                <h3>GIFTCARD</h3>
+                <h6>Ingrese el código de su cupón si tiene uno</h6>
+                <input type="text" name="" id="">
+                <button>APLICAR GIFTCARD</button>
+            </div> <!-- Fin de col-->
+            
+            <div class="col-4">
+                <h3>TOTALES</h3>
+                <ul>
+                    <li>
+                        <h6>Subtotal</h6>
+                    </li>
+                    <li>
+                        <h6>Envío</h6>
+                    </li>
+                    <li>
+                        <h6>Descuento (Tipo de descuento)</h6>
+                    </li>
+                    <li>
+                        <h3>TOTAL GENERAL</h3>
+                    </li>
+                </ul>
+                <button>REALIZAR PEDIDO</button>
+            </div> <!-- Fin de col-->
+        </div> <!-- Fin de Row3-->
+
+    </div> <!-- Fin container-->
+
+
+
+    <!-- importa footer -->
+    <%- include('./partials/footer') %>
+
+    <!-- scripts de bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
+        crossorigin="anonymous "></script>
+</body>
+
+</html>
