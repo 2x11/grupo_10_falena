@@ -192,9 +192,6 @@ footer .info .contacto ul li a{
 /* 
 ----------------------------------------------------------------------------------------------------- LOGIN 
 */
-.login-body{
-
-}
 .login-logo{
   background-color: var(--color-marronOscuro);
   display: flex;
