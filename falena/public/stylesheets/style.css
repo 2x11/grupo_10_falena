@@ -34,6 +34,9 @@ a:hover{
 FIN GENERALES
 */
 
+/* 
+-------------------------------------------------------------------------------------------------------HEADER 
+*/
 
 /* 
 INICIO OPCIONES DE USUARIO
@@ -117,11 +120,11 @@ header .navbar li a{
   margin-right:45px;
 }
 /* 
-FIN HEADER
+------------------------------------------------------------------------------------------------FIN HEADER
 */
 
 /* 
-INICIO FOOTER
+----------------------------------------------------------------------------------------------------- FOOTER
 */
 footer .background{
   background-color: #666666;
@@ -182,3 +185,144 @@ footer .info .contacto ul li a{
   color: #111;
   font-size: 30px;
 }
+/* 
+------------------------------------------------------------------------------------------------FIN FOOTER
+*/
+
+/* 
+----------------------------------------------------------------------------------------------------- LOGIN 
+*/
+.login-body{
+
+}
+.login-logo{
+  background-color: var(--color-marronOscuro);
+  display: flex;
+  justify-content: center;
+  border-radius: 15px 15px 0 0 ;
+  padding: 0;
+
+}
+.login-logo img{
+  max-height: 200px;
+  margin: 20px;
+}
+.login-login{
+  background-color: var(--color-marronOscuro);
+  display: inline;
+  justify-content: center;
+  color: var(--color-crudo);
+}
+.login-login input{
+  border-radius: 10px;
+  width: 100%;
+}
+.login-login ul{
+  padding-left: 0px;
+}
+.login-login ul li{
+  margin-bottom: 10px;
+}
+.login-login ul li a{
+  color: var(--color-crudo);
+}
+.login-login ul li input.login-remember{
+  width: auto;
+}
+.login-login button{
+  border-radius: 10px;
+  width: 100%;
+}
+.login-media{
+  background-color: var(--color-marronOscuro);
+  color: var(--color-crudo);
+}
+.login-media img{
+  max-height: 75px;
+}
+.login-media ul{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding-left: 0px;
+
+}
+
+.login-register{
+  background-color: var(--color-marronOscuro);
+  color: var(--color-crudo);
+  border-radius: 0 0 15px 15px;
+}
+.login-register ul{
+  padding-left: 0px;
+}
+.login-register button{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+/* 
+---------------------------------------------------------------FIN LOGIN
+*/
+
+/* 
+---------------------------------------------------------------REGISTER
+*/
+.register-logo{
+  background-color: var(--color-marronOscuro);
+  padding: 0;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+}
+.register-logo img{
+  max-height: 200px;
+  margin: 20px;
+}
+.register-register{
+  background-color: var(--color-marronOscuro);
+}
+.register-register ul{
+  padding: 0;
+}
+.register-register ul li{
+  margin-bottom: 10px;
+}
+.register-register input{
+  width: 100%;
+  border-radius: 10px;
+}
+.register-register button{
+  width: 100%;
+  border-radius: 10px;
+}
+.register-media{
+  background-color: var(--color-marronOscuro);
+  color: var(--color-crudo);
+}
+
+.register-media img{
+  max-height: 75px;
+}
+.register-media ul{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding-left: 0px;
+}
+.register-login{
+  background-color: var(--color-marronOscuro);
+  color: var(--color-crudo);
+  border-radius: 0 0 15px 15px;
+}
+.register-login ul{
+  padding-left: 0px;
+}
+.register-login button{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+/* 
+-------------------------------------------------------------------FIN REGISTER
+*/
