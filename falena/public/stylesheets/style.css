@@ -41,10 +41,10 @@ FIN GENERALES
 /* 
 INICIO OPCIONES DE USUARIO
 */
-header .user{
+.header-user{
   background-color: var(--color-crudo);
 }
-header .user a{
+.header-user a{
   color: white;
 }
 /* 
@@ -55,18 +55,18 @@ FIN OPCIONES USUARIO
 INICIO BANNER
 */
 
-header .banner{
+.header-banner{
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: var(--color-marronClaro);
 }
-header .banner a{
+.header-banner a{
   color: white;
 }
 /* 
 LOGO
 */
-header .banner .logo img{  
+.header-banner .header-logo img{  
   max-width: 170px;
 }
 
@@ -74,15 +74,15 @@ header .banner .logo img{
 BARRA DE BUSQUEDA
 */
 
-header .banner .searchbox{
+.header-banner .header-searchbox{
   position: relative;
   align-content: center;
 }
-header .banner .searchbox form input{  
+.header-banner .header-searchbox form input{  
 margin-top: 75px;
 width: 100%;
 }
-header .banner .searchbox form button{
+.header-banner .header-searchbox form button{
   position: absolute;
   top: 75px;
   right: 15px;
@@ -94,28 +94,28 @@ FIN BANNER
 /* 
 INICIO HEADER
 */
-header .favoritos{ 
+.header-favoritos{ 
   display: flex;
   margin-top: 75px;
 }
 
-header .navbar{
+.header-navbar{
   background-color: var(--color-marronOscuro);
   height: 30px;
   padding: 1px;
  
 }
-header .navbar ul{
+.header-navbar ul{
   justify-content: space-between;
   display: flex;
 }
-header .navbar li{
+.header-navbar li{
   border-right: 1px solid black;
 }
-header .navbar li:last-child{
+.header-navbar li:last-child{
   border-right: none;
 }
-header .navbar li a{
+.header-navbar li a{
   color: white;
   margin-right:45px;
 }
@@ -126,61 +126,61 @@ header .navbar li a{
 /* 
 ----------------------------------------------------------------------------------------------------- FOOTER
 */
-footer .background{
+.footer-background{
   background-color: #666666;
 }
 
-footer .col1 .tarjetas ul{
+.footer-col1 .footer-tarjetas ul{
   display: flex;
   padding-left: 0;
 }
-footer .col1 .tarjetas img{
+.footer-col1 .footer-tarjetas img{
   max-height: 40px;
 }
-footer .col1 .nav2 ul li a{
+.footer-col1 .footer-nav2 ul li a{
   color: #111;
 }
-footer .newsletter form input{
+.footer-newsletter form input{
   width: 100%;
   position: relative;
 }
-footer .social .newsletter form button{
+.footer-social .footer-newsletter form button{
   position: absolute;
   background: none;
   border: none;
   right: 20px;
 }
-footer .social .redes ul{
+.footer-social .footer-redes ul{
   flex-wrap: wrap;
   display: flex;
 }
-footer .social .redes ul img{
+.footer-social .footer-redes ul img{
   position: relative;
   max-height: 40px;
   left: -40px;
 }
-footer .social .redes{
+.footer-social .footer-redes{
 margin-top: 100px;
 }
-footer .info .qr {
+.footer-info .footer-qr {
 margin-left: 50px;
 }
-footer .info .qr img{
+.footer-info .footer-qr img{
   max-height: 120px;
   margin-left: 50px;
 }
-footer .info .contacto{
+.footer-info .footer-contacto{
 margin-left: 50px;
 
 }
-footer .info .contacto ul {
+.footer-info .footer-contacto ul {
   display: flex;
   margin-left: 30px;
 }
-footer .info .contacto ul li{
+.footer-info .footer-contacto ul li{
   margin-left:10px;
 }
-footer .info .contacto ul li a{
+.footer-info .footer-contacto ul li a{
   height: 50px;
   color: #111;
   font-size: 30px;
