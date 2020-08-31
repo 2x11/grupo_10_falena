@@ -3,6 +3,6 @@ module.exports = {
         res.render('productDetail');
     },
     add: function(req, res, next){
-        res.render('productDetail');
+        res.render('productAdd');
     }
 }

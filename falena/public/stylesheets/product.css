@@ -1,0 +1,30 @@
+/*
+*  productDetail
+*/
+
+.img-tapa{
+    width: 343px;
+    text-align: center;
+}
+
+.img-tapa-miniatura{
+    width: 72px;
+    margin: 5px 0;
+}
+
+.article-footer{
+ margin-top: 15px;
+}
+
+.formato-precio{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.color-link{
+    color: black;
+}
+
+.button-compras{
+    width: 100%;
+}
