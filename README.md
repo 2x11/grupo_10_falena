@@ -44,7 +44,7 @@ Lo que nos inspiro de los sitios de referencia fue el Front-end, en donde de cad
 
 
 
-#### Sprint 2:
+# Sprint 2:
 
 ------------
 ### Tablero de trabajo
