@@ -44,8 +44,18 @@ Lo que nos inspiro de los sitios de referencia fue el Front-end, en donde de cad
 
 
 
-### Tablero de trabajo
+#### Sprint 2:
 
 ------------
-Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente:
-https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena
+### Tablero de trabajo
+Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente: [Tablero de Trello](https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena "Tablero de Trello")
+
+### Retro.md
+Retrospectiva: [Retro.md](# "retro.md")
+
+### View
+- Home: index.ejs
+- Detalle del producto: productDetail.ejs
+- Carrito de compras: productCart.ejs
+- Formulario de registro: register.ejs
+- Formulario de carga de producto: productAdd.ejs
