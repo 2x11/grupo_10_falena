@@ -51,7 +51,7 @@ Lo que nos inspiro de los sitios de referencia fue el Front-end, en donde de cad
 Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente: [Tablero de Trello](https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena "Tablero de Trello")
 
 ### Retro.md
-Retrospectiva: [Retro.md](# "retro.md")
+Retrospectiva: [Retro.md](https://github.com/sebastianabila/grupo_10_falena/blob/master/retro.md "retro.md")
 
 ### View
 - Home: index.ejs
