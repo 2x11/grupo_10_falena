@@ -1,0 +1,88 @@
+/* 
+-------------------------------------------------------------------------------------------------------HEADER 
+*/
+
+/* 
+INICIO OPCIONES DE USUARIO
+*/
+.header-user{
+    background-color: var(--color-crudo);
+  }
+  .header-user a{
+    color: white;
+  }
+  /* 
+  FIN OPCIONES USUARIO
+  */
+  
+  /* 
+  INICIO BANNER
+  */
+  
+  .header-banner{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--color-marronClaro);
+  }
+  .header-banner a{
+    color: white;
+  }
+  /* 
+  LOGO
+  */
+  .header-banner .header-logo img{  
+    max-width: 170px;
+  }
+  
+  /* 
+  BARRA DE BUSQUEDA
+  */
+  
+  .header-banner .header-searchbox{
+    position: relative;
+    align-content: center;
+  }
+  .header-banner .header-searchbox form input{  
+  margin-top: 75px;
+  width: 100%;
+  }
+  .header-banner .header-searchbox form button{
+    position: absolute;
+    top: 75px;
+    right: 15px;
+  }
+  /* 
+  FIN BANNER
+  */
+  
+  /* 
+  INICIO HEADER
+  */
+  .header-favoritos{ 
+    display: flex;
+    margin-top: 75px;
+  }
+  
+  .header-navbar{
+    background-color: var(--color-marronOscuro);
+    height: 30px;
+    padding: 1px;
+   
+  }
+  .header-navbar ul{
+    justify-content: space-between;
+    display: flex;
+  }
+  .header-navbar li{
+    border-right: 1px solid black;
+  }
+  .header-navbar li:last-child{
+    border-right: none;
+  }
+  .header-navbar li a{
+    color: white;
+    margin-right:45px;
+  }
+  /* 
+  ------------------------------------------------------------------------------------------------FIN HEADER
+  */

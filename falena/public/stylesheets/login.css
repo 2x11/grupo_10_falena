@@ -1,0 +1,73 @@
+@import "style.css";
+/* 
+----------------------------------------------------------------------------------------------------- LOGIN 
+*/
+.login-logo{
+    background-color: var(--color-marronOscuro);
+    display: flex;
+    justify-content: center;
+    border-radius: 15px 15px 0 0 ;
+    padding: 0;
+  
+  }
+  .login-logo img{
+    max-height: 200px;
+    margin: 20px;
+  }
+  .login-login{
+    background-color: var(--color-marronOscuro);
+    display: inline;
+    justify-content: center;
+    color: var(--color-crudo);
+  }
+  .login-login input{
+    border-radius: 10px;
+    width: 100%;
+  }
+  .login-login ul{
+    padding-left: 0px;
+  }
+  .login-login ul li{
+    margin-bottom: 10px;
+  }
+  .login-login ul li a{
+    color: var(--color-crudo);
+  }
+  .login-login ul li input.login-remember{
+    width: auto;
+  }
+  .login-login button{
+    border-radius: 10px;
+    width: 100%;
+  }
+  .login-media{
+    background-color: var(--color-marronOscuro);
+    color: var(--color-crudo);
+  }
+  .login-media img{
+    max-height: 75px;
+  }
+  .login-media ul{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding-left: 0px;
+  
+  }
+  
+  .login-register{
+    background-color: var(--color-marronOscuro);
+    color: var(--color-crudo);
+    border-radius: 0 0 15px 15px;
+  }
+  .login-register ul{
+    padding-left: 0px;
+  }
+  .login-register button{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  /* 
+  ---------------------------------------------------------------FIN LOGIN
+  */

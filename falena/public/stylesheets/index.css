@@ -1,7 +1,4 @@
-*{
-    box-sizing: border-box;
-    margin: 0 auto;
-}
+@import "style.css";
 
 .product{
     float: right;

@@ -1,0 +1,62 @@
+@import "style.css";
+/* 
+---------------------------------------------------------------REGISTER
+*/
+.register-logo{
+    background-color: var(--color-marronOscuro);
+    padding: 0;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: center;
+  }
+  .register-logo img{
+    max-height: 200px;
+    margin: 20px;
+  }
+  .register-register{
+    background-color: var(--color-marronOscuro);
+  }
+  .register-register ul{
+    padding: 0;
+  }
+  .register-register ul li{
+    margin-bottom: 10px;
+  }
+  .register-register input{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .register-register button{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .register-media{
+    background-color: var(--color-marronOscuro);
+    color: var(--color-crudo);
+  }
+  
+  .register-media img{
+    max-height: 75px;
+  }
+  .register-media ul{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding-left: 0px;
+  }
+  .register-login{
+    background-color: var(--color-marronOscuro);
+    color: var(--color-crudo);
+    border-radius: 0 0 15px 15px;
+  }
+  .register-login ul{
+    padding-left: 0px;
+  }
+  .register-login button{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  /* 
+  -------------------------------------------------------------------FIN REGISTER
+  */

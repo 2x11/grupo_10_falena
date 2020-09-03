@@ -1,0 +1,66 @@
+@import "general.css";
+/* 
+----------------------------------------------------------------------------------------------------- FOOTER
+*/
+.footer-background{
+    background-color: #666666;
+  }
+  
+  .footer-col1 .footer-tarjetas ul{
+    display: flex;
+    padding-left: 0;
+  }
+  .footer-col1 .footer-tarjetas img{
+    max-height: 40px;
+  }
+  .footer-col1 .footer-nav2 ul li a{
+    color: #111;
+  }
+  .footer-newsletter form input{
+    width: 100%;
+    position: relative;
+  }
+  .footer-social .footer-newsletter form button{
+    position: absolute;
+    background: none;
+    border: none;
+    right: 20px;
+  }
+  .footer-social .footer-redes ul{
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .footer-social .footer-redes ul img{
+    position: relative;
+    max-height: 40px;
+    left: -40px;
+  }
+  .footer-social .footer-redes{
+  margin-top: 100px;
+  }
+  .footer-info .footer-qr {
+  margin-left: 50px;
+  }
+  .footer-info .footer-qr img{
+    max-height: 120px;
+    margin-left: 50px;
+  }
+  .footer-info .footer-contacto{
+  margin-left: 50px;
+  
+  }
+  .footer-info .footer-contacto ul {
+    display: flex;
+    margin-left: 30px;
+  }
+  .footer-info .footer-contacto ul li{
+    margin-left:10px;
+  }
+  .footer-info .footer-contacto ul li a{
+    height: 50px;
+    color: #111;
+    font-size: 30px;
+  }
+  /* 
+  ------------------------------------------------------------------------------------------------FIN FOOTER
+  */
