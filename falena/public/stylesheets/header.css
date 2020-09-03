@@ -102,6 +102,11 @@ INICIO OPCIONES DE USUARIO
   .header-navbar ul{
     justify-content: space-between;
   }
+
+  .header-navbar li{
+    text-align: center;
+    list-style-type: none;
+  }
   
   .header-navbar li:last-child{
     border-right: none;
