@@ -5,8 +5,14 @@
 /* 
 INICIO OPCIONES DE USUARIO
 */
+.header-body{
+  padding-left: 0;
+  padding-right: 0;
+}
 .header-user{
     background-color: var(--color-crudo);
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .header-user a{
     color: white;
@@ -30,6 +36,13 @@ INICIO OPCIONES DE USUARIO
   /* 
   LOGO
   */
+  .header-banner .header-logo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }  
   .header-banner .header-logo img{  
     max-width: 170px;
   }
@@ -38,18 +51,24 @@ INICIO OPCIONES DE USUARIO
   BARRA DE BUSQUEDA
   */
   
-  .header-banner .header-searchbox{
+  .header-searchbox{
     position: relative;
     align-content: center;
   }
+  .header-banner .header-searchbox form{
+    padding-left: 15px;
+    padding-right: 15px;
+  }  
   .header-banner .header-searchbox form input{  
-  margin-top: 75px;
+  margin-top: 25px;
   width: 100%;
   }
   .header-banner .header-searchbox form button{
     position: absolute;
-    top: 75px;
-    right: 15px;
+    top: 27px;
+    right: 33px;
+    background: none;
+    border: none;
   }
   /* 
   FIN BANNER
@@ -60,18 +79,27 @@ INICIO OPCIONES DE USUARIO
   */
   .header-favoritos{ 
     display: flex;
-    margin-top: 75px;
+    margin-top: 20px;
   }
   
   .header-navbar{
     background-color: var(--color-marronOscuro);
     height: 30px;
     padding: 1px;
-   
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .header-navbar:before{
+    
+  }
+    .header-burger{
+    color: white;
+    border: none;
+}
   .header-navbar ul{
     justify-content: space-between;
-    display: flex;
   }
   .header-navbar li{
     border-right: 1px solid black;
@@ -86,3 +114,13 @@ INICIO OPCIONES DE USUARIO
   /* 
   ------------------------------------------------------------------------------------------------FIN HEADER
   */
+  @media(min-width:768px){
+
+    .carousel{
+        position: relative;
+        width: 720px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+        display: block;
+    }
+}
