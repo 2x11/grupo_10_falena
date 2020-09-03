@@ -1,66 +1,123 @@
-@import "general.css";
 /* 
 ----------------------------------------------------------------------------------------------------- FOOTER
 */
-.footer-background{
+
+.footer-body {
     background-color: #666666;
-  }
-  
-  .footer-col1 .footer-tarjetas ul{
+}
+
+
+/* INFO 1 */
+
+.footer-info1 h2 {
+    text-align: center;
+}
+
+
+/* TARJETAS */
+
+.footer-info1 .footer-tarjetas {
     display: flex;
-    padding-left: 0;
-  }
-  .footer-col1 .footer-tarjetas img{
+    justify-content: center;
+}
+
+.footer-info1 .footer-tarjetas img {
     max-height: 40px;
-  }
-  .footer-col1 .footer-nav2 ul li a{
+}
+
+
+/* NAV2 */
+
+.footer-info1 .footer-nav2 ul li {
+    text-align: center;
+    list-style-type: none;
+    text-indent: -30px;
+}
+
+.footer-info1 .footer-nav2 ul li a {
     color: #111;
-  }
-  .footer-newsletter form input{
+}
+
+
+/* INFO 2 */
+
+.footer-info2 h2 {
+    text-align: center;
+}
+
+
+/* NESLETTER */
+
+.footer-info2 .footer-newsletter label {
+    text-align: center;
+}
+
+.footer-info2 .footer-newsletter form {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer-info2 .footer-newsletter form input {
     width: 100%;
     position: relative;
-  }
-  .footer-social .footer-newsletter form button{
+}
+
+.footer-info2 .footer-newsletter form button {
     position: absolute;
     background: none;
     border: none;
     right: 20px;
-  }
-  .footer-social .footer-redes ul{
-    flex-wrap: wrap;
+    top: 120px;
+}
+
+
+/* REDES */
+
+.footer-redes {
     display: flex;
-  }
-  .footer-social .footer-redes ul img{
-    position: relative;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-info2 .footer-redes img {
     max-height: 40px;
-    left: -40px;
-  }
-  .footer-social .footer-redes{
-  margin-top: 100px;
-  }
-  .footer-info .footer-qr {
-  margin-left: 50px;
-  }
-  .footer-info .footer-qr img{
-    max-height: 120px;
-    margin-left: 50px;
-  }
-  .footer-info .footer-contacto{
-  margin-left: 50px;
-  
-  }
-  .footer-info .footer-contacto ul {
+}
+
+
+/* INFO 3 */
+
+.footer-info3 h2 {
+    text-align: center;
+}
+
+
+/* QR */
+
+.footer-info3 .footer-qr {
     display: flex;
-    margin-left: 30px;
-  }
-  .footer-info .footer-contacto ul li{
-    margin-left:10px;
-  }
-  .footer-info .footer-contacto ul li a{
-    height: 50px;
+    justify-content: center;
+}
+
+
+/* CONTACTO */
+
+.footer-info3 .footer-contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-info3 .footer-contacto ul {
+    display: flex;
+}
+
+.footer-info3 .footer-contacto ul li a i {
     color: #111;
     font-size: 30px;
-  }
-  /* 
+    margin-right: 25px;
+}
+
+
+/* 
   ------------------------------------------------------------------------------------------------FIN FOOTER
   */
