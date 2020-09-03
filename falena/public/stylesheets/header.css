@@ -17,6 +17,12 @@ INICIO OPCIONES DE USUARIO
   .header-user a{
     color: white;
   }
+  .header-user a i{
+    font-size: 25px;
+  }
+  .header-oculto{
+    display: none;
+  }
   /* 
   FIN OPCIONES USUARIO
   */
@@ -33,6 +39,7 @@ INICIO OPCIONES DE USUARIO
   .header-banner a{
     color: white;
   }
+  
   /* 
   LOGO
   */
@@ -83,32 +90,24 @@ INICIO OPCIONES DE USUARIO
   }
   
   .header-navbar{
-    background-color: var(--color-marronOscuro);
-    height: 30px;
+    /* background-color: var(--color-marronOscuro); */
     padding: 1px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .header-navbar:before{
-    
-  }
-    .header-burger{
-    color: white;
-    border: none;
-}
+
+  
   .header-navbar ul{
     justify-content: space-between;
   }
-  .header-navbar li{
-    border-right: 1px solid black;
-  }
+  
   .header-navbar li:last-child{
     border-right: none;
   }
   .header-navbar li a{
-    color: white;
+    color: black; /* cambiar a white */
     margin-right:45px;
   }
   /* 
@@ -124,3 +123,9 @@ INICIO OPCIONES DE USUARIO
         display: block;
     }
 }
+
+/*
+ .header-navbar li{
+    border-right: 1px solid black;
+  } 
+  */

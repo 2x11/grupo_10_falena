@@ -1,14 +1,16 @@
 <header class="container-fluid header-body">
 
+    <div class="container header-main">
+
       <div class="row header-user">
-        <div class="col-6">
+        <div class="col-8">
           <a href=""><i class="fas fa-question-circle"></i> Ayuda</a>
         </div>
-        <div class="col-3">
-          <a href=""><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+        <div class="col-2">
+          <a href=""><i class="fas fa-sign-in-alt"></i><span class="header-oculto">Iniciar Sesión</span></a>
         </div>
-        <div class="col-3">
-          <a href=""><i class="fas fa-user-plus"></i> Registrate</a>
+        <div class="col-2">
+          <a href=""><i class="fas fa-user-plus"></i> <span class="header-oculto">Registrate</span></a>
         </div>
 
       </div> <!-- FIN DEL ROW-->
@@ -40,7 +42,7 @@
       </div> <!-- FIN DEL ROW-->
       <nav class="navbar-expand-md header-navbar">
         <button
-          class="navbar-toggler header-burger"
+          class="navbar-toggler burger"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -48,8 +50,10 @@
           aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse header-navbar-collapse" id="navbarSupportedContent">
-          <ul class="menu navbar-nav mr-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <div class="col-12 ">
+            <ul>
             <li><a href="">Géneros</a></li>
             <li><a href="">Recomendados</a></li>
             <li><a href="">Novedades</a></li>
@@ -57,7 +61,9 @@
             <li><a href="">Más Vendidos</a></li>
             <li><a href="">Autores</a></li>
           </ul>
+        </div>
       </div>
       </nav> <!-- FIN CONTAINER-->
+      </div>
 
   </header>
