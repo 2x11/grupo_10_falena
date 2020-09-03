@@ -9,13 +9,13 @@
 .vip-products{
     overflow:hidden;
     margin-top: 30px;
+    display: none; /* OCULTO */
 }
 
 .photo-container{
     position: relative;
     background-color: white;
     width: 470px;
-    
 }
 .photo{
     width: 30%;
