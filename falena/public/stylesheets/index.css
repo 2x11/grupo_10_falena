@@ -9,30 +9,10 @@
 .vip-products{
     overflow:hidden;
     margin-top: 30px;
-    display: none; /* OCULTO */
+    
 }
 
-.photo-container{
-    position: relative;
-    background-color: white;
-    width: 470px;
-}
-.photo{
-    width: 30%;
-    margin: 60px 30px 50px;
-}
-.special{
-    position: absolute;
-    top: 10px;
-    left: 0px;
-}
 
- .star-rating{
-     position: absolute;
-     width: 70px;
-     bottom: 20px;
-     left: 40px;
- } 
 
  .carousel{
      position: relative;
@@ -137,5 +117,14 @@
     .productos article h2{
         font-size: 1.5rem;
     }
+
+}
+
+.carousel{
+    position: relative;
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    
 
 }
