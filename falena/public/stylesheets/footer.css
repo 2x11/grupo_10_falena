@@ -118,6 +118,22 @@
 }
 
 
+
+@media(min-width:768px){
+    .footer-info3 .footer-qr img{
+        max-height: 140px;
+    }
+    
+    .footer-seguridad{
+        font-size: 1.9rem;
+    }
+}
+
+@media(min-width:1024px){
+
+    
+}
+
 /* 
   ------------------------------------------------------------------------------------------------FIN FOOTER
   */

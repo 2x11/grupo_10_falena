@@ -69,6 +69,7 @@ INICIO OPCIONES DE USUARIO
   .header-banner .header-searchbox form input{  
   margin-top: 25px;
   width: 100%;
+  border: none;
   }
   .header-banner .header-searchbox form button{
     position: absolute;
@@ -99,36 +100,39 @@ INICIO OPCIONES DE USUARIO
   }
 
   
-  .header-navbar ul{
-    justify-content: space-between;
-  }
 
   .header-navbar li{
     text-align: center;
     list-style-type: none;
   }
   
-  .header-navbar li:last-child{
-    border-right: none;
-  }
   .header-navbar li a{
     color: black; /* cambiar a white */
-    margin-right:45px;
+  }
+  .header-navbarActive{
+    justify-content: center;
+  }
+
+  .header-navbarActive ul li a{
+    text-align: center;
+    list-style-type: none;
   }
   /* 
   ------------------------------------------------------------------------------------------------FIN HEADER
   */
   @media(min-width:768px){
-
-    .carousel{
-        position: relative;
-        width: 720px;
-        margin-left: 0px;
-        margin-bottom: 30px;
-        display: block;
+    .header-favoritos{
+      justify-content: center;
     }
 }
+@media(min-width:1024px){
 
+  .header-favoritos{
+    justify-content: center;
+  }
+  
+
+}
 /*
  .header-navbar li{
     border-right: 1px solid black;

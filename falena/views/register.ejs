@@ -4,17 +4,19 @@
   <%- include('./partials/head'); %>
 
 <body>
-
   <!-- contenido -->
+  <%- include('./partials/header'); %>
 
   <div class="container register-body">
     <div class="row">
+      <div class="col-3"></div>
       <div class="col-6 register-logo">
         
         <img src="/images/prueba.png" alt="">
         </div>
-        </div>
+        </div> <!-- FIN ROW 1-->
         <div class="row">
+          <div class="col-3"></div>
           <div class="col-6 register-register">
             <ul>
               <li>
@@ -44,9 +46,11 @@
               </form>
             </ul>
           </div>
-        </div>
+          <div class="col-3"></div>
+        </div> <!-- FIN ROW 2-->
 
     <div class="row">
+      <div class="col-3"></div>
       <div class="col-6 register-media">
         <h5>Registrate con:</h5>                                                       <!-- CSS centrar esto-->
         <ul>
@@ -55,8 +59,13 @@
           <li><img src="/images/img-google+.png" alt=""></li>
         </ul>
       </div>
-    </div> <!-- FIn de Row2-->
+      <div class="col-3"></div>
+
+
+
+    </div> <!-- FIN DE ROW 3-->
     <div class="row">
+      <div class="col-3"></div>
       <div class="col-6 register-login">
         <ul>
           <li>
@@ -67,8 +76,11 @@
           </li>
         </ul>
       </div>
-    </div> <!-- Fin de row 3-->
+      <div class="col-3"></div>
+    </div> <!-- FIN DE ROW 4-->
   </div> <!-- Fin de Container-->
+
+  <%- include('./partials/footer') %>
 
   <!-- Fin Del Contenido -->
 
