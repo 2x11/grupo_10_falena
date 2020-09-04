@@ -1,1 +1,42 @@
 @import "style.css";
+
+/* FAVS */
+
+.cart-favs {
+    display: flex;
+}
+
+.cart-tapa img {
+    max-height: 140px;
+}
+
+
+
+
+.cart-cantidad {
+    text-align: center;
+}
+
+.cart-cantidad input {
+    width: 50px;
+}
+
+
+
+.cart-precio {
+    text-align: center;
+}
+
+.cart-envio select, .cart-envio input, .cart-envio button{
+    width: 100%;
+}
+.cart-descuentos input, .cart-descuentos button{
+    width: 100%;
+}
+.cart-total {
+    padding-bottom: 10px;
+}
+
+.cart-total button{
+   width: 100%;
+}

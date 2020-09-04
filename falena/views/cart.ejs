@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('./partials/head'); %>
+<%- include('./partials/head'); %>
 
 
-<body>
-    <!-- importa header -->
-    <%- include('./partials/header'); %>
+    <body>
+        <!-- importa header -->
+        <%- include('./partials/header'); %>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <ul>
-                    <li><button>Carrito</button></li>
-                    <li><button>Guardados</button></li>
-                </ul>
-            </div> <!-- Fin col-->
-        </div> <!-- Fin Row1-->
-        <div class="row">
-            <div class="col-1">
-                <img src="" alt="">
-            </div> <!-- Fin col-->
-            <div class="col-6">
-                <h5>Nombre de producto</h5>
-                <h5>Característica de producto</h5>
-                <p>Hasta 6 cuotas sin interés</p>
-                <button>Comprar ahora</button>
-                <button>Guardar para más después</button>
-                <button>Eliminar</button>
-            </div> <!-- Fin col-->
-            <div class="col-3">
-                <ul>
-                    <li>
-                        <button> + </button>
-                    </li>
-                    <li>
-                        <h2>X</h2>
-                    </li>
-                    <li>
-                        <button> - </button>
-                    </li>
-                </ul>
-                <h6>X disponibles</h6>
-            </div> <!-- Fin col-->
-            <div class="col-2">
-                <h3>$---,--</h3>
-            </div> <!-- Fin col-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="cart-favs">
+                            <li><button>Carrito</button></li>
+                            <li><button>Guardados</button></li>
+                        </ul>
+                    </div>
+                    <!-- Fin col-->
+                </div>
+                <!-- Fin Row1-->
+                <div class="row">
+                    <div class="col-3 cart-tapa">
+                        <img src="/images/libros/tapa.png" alt="">
+                    </div>
+                    <!-- Fin col-->
+                    <div class="col-9">
+                        <h5>Nombre de producto</h5>
+                        <h5>Característica de producto</h5>
+                        <p>Hasta 6 cuotas sin interés</p>
+                        <div class="cart-cantidad">
+                            <button class="cart-mas"> + </button> <input type="text"><button class="cart-menos"> - </button>
+                            <h6>X disponibles</h6>
+                        </div>
+                    </div>
+                    <!-- Fin col-->
 
-        </div> <!-- Fin Row2-->
+                    <div class="col-12 cart-precio">
+                        <h3>$---,--</h3>
+                    </div>
+                    <!-- Fin col-->
+                    <div class="col-12">
+                        <button>Comprar ahora</button>
+                        <button>Guardar para más después</button>
+                        <button>Eliminar</button>
+                    </div>
 
-        <div class="row">
-            <div class="col-4">
-                <h3>Calcular Envío</h3>
-                <h6>Calcula la dirección de envío y el precio estimado</h6>
-                <form action="">
-                    <label for="country"> País</label>
-                    <select name="country">
+                </div>
+                <!-- Fin Row2-->
+
+                <div class="row">
+                    <div class="col-12 cart-envio">
+                        <h3>Calcular Envío</h3>
+                        <h6>Calcula la dirección de envío y el precio estimado</h6>
+                        <form action="">
+                            <label for="country"> País</label>
+                            <br>
+                            <select name="country">
                         <option value="0"> Seleccione un país</option>
                         <option value="1"> Argentina</option>
                         <option value="2"> Chile </option>
@@ -64,9 +64,11 @@
                         <option value="5"> Uruguay</option>
                         <option value="6"> Perú</option>
                         <option value="7"> Colombia</option>
-                    </select>
-                    <label for="state"> Estado/Provincia</label>
-                    <select name="state">
+                        </select>
+                            <br>
+                            <label for="state"> Estado/Provincia</label>
+                            <br>
+                            <select name="state">
                         <option value="0">Seleccione un estado o provincia</option>
                         <option value="1">Buenos Aires</option>
                         <option value="">Córdoba</option>
@@ -75,67 +77,68 @@
                         <option value="">Corrientes</option>
                         <option value="">Misiones</option>
                     </select>
-                    <label for="city">Ciudad</label>
-                    <select name="Ciudad">
+                            <br>
+                            <label for="city">Ciudad</label>
+                            <br>
+                            <select name="Ciudad">
                         <option value="0">Seleccione una ciudad</option>
                         <option value="1"> Tigre</option>
                         <option value="2"> Tres de Febrero</option>
                         <option value="3"> Zarate</option>
                         <option value="4"> Quilmes</option>
                     </select>
-                    <label for="cp">Código Postal</label>
-                    <input type="text">
-                </form>
-                <button>Calcular</button>
-            </div> <!-- Fin de col-->
-            <div class="col-4">
-                <h3>CUPÓN DE DESCUENTO</h3>
-                <h6>Ingrese el código de su cupón si tiene uno</h6>
-                <input type="text" name="" id="">
-                <button>APLICAR CUPÓN</button>
-                <h3>GIFTCARD</h3>
-                <h6>Ingrese el código de su cupón si tiene uno</h6>
-                <input type="text" name="" id="">
-                <button>APLICAR GIFTCARD</button>
-            </div> <!-- Fin de col-->
-            
-            <div class="col-4">
-                <h3>TOTALES</h3>
-                <ul>
-                    <li>
-                        <h6>Subtotal</h6>
-                    </li>
-                    <li>
-                        <h6>Envío</h6>
-                    </li>
-                    <li>
-                        <h6>Descuento (Tipo de descuento)</h6>
-                    </li>
-                    <li>
+                            <br>
+                            <label for="cp">Código Postal</label>
+                            <br>
+                            <input type="text">
+                            <button>Calcular</button>
+                        </form>
+                    </div>
+                    <!-- Fin de col-->
+                    <div class="col-12 cart-descuentos">
+                        <h3>CUPÓN DE DESCUENTO</h3>
+                        <h6>Ingrese el código de su cupón si tiene uno</h6>
+                        <input type="text" name="" id="">
+                        <button>APLICAR CUPÓN</button>
+                        <h3>GIFTCARD</h3>
+                        <h6>Ingrese el código de su cupón si tiene uno</h6>
+                        <input type="text" name="" id="">
+                        <button>APLICAR GIFTCARD</button>
+                    </div>
+                    <!-- Fin de col-->
+
+                    <div class="col-12 cart-total">
+                        <h3>TOTALES</h3>
+                        <ul>
+                            <li>
+                                <h6>Subtotal</h6>
+                            </li>
+                            <li>
+                                <h6>Envío</h6>
+                            </li>
+                            <li>
+                                <h6>Descuento (Tipo de descuento)</h6>
+                            </li>
+                        </ul>
                         <h3>TOTAL GENERAL</h3>
-                    </li>
-                </ul>
-                <button>REALIZAR PEDIDO</button>
-            </div> <!-- Fin de col-->
-        </div> <!-- Fin de Row3-->
+                        <button class="cart-finalizar">REALIZAR PEDIDO</button>
+                    </div>
+                    <!-- Fin de col-->
+                </div>
+                <!-- Fin de Row3-->
 
-    </div> <!-- Fin container-->
+            </div>
+            <!-- Fin container-->
 
 
 
-    <!-- importa footer -->
-    <%- include('./partials/footer') %>
+            <!-- importa footer -->
+            <%- include('./partials/footer') %>
 
-    <!-- scripts de bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
-        crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
-        crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
-        crossorigin="anonymous "></script>
-</body>
+                <!-- scripts de bootstrap-->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    </body>
 
 </html>
