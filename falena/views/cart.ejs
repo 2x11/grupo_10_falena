@@ -9,9 +9,9 @@
         <%- include('./partials/header'); %>
 
 
-            <div class="container">
+            <div class="container cart-body">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-md-12 col-lg-12">
                         <ul class="cart-favs">
                             <li><button>Carrito</button></li>
                             <li><button>Guardados</button></li>
@@ -21,11 +21,11 @@
                 </div>
                 <!-- Fin Row1-->
                 <div class="row">
-                    <div class="col-3 cart-tapa">
+                    <div class="col-3 col-md-3 col-lg-4 cart-tapa">
                         <img src="/images/libros/tapa.png" alt="">
                     </div>
                     <!-- Fin col-->
-                    <div class="col-9">
+                    <div class="col-9 col-md-4 col-lg-4">
                         <h5>Nombre de producto</h5>
                         <h5>Característica de producto</h5>
                         <p>Hasta 6 cuotas sin interés</p>
@@ -36,7 +36,7 @@
                     </div>
                     <!-- Fin col-->
 
-                    <div class="col-12 cart-precio">
+                    <div class="col-12 col-md-4 col-lg-4 cart-precio">
                         <h3>$---,--</h3>
                     </div>
                     <!-- Fin col-->
@@ -50,8 +50,8 @@
                 <!-- Fin Row2-->
 
                 <div class="row">
-                    <div class="col-12 cart-envio">
-                        <h3>Calcular Envío</h3>
+                    <div class="col-12 col-md-12 col-lg-4 cart-envio">
+                        <h3>CALCULAR ENVÍO</h3>
                         <h6>Calcula la dirección de envío y el precio estimado</h6>
                         <form action="">
                             <label for="country"> País</label>
@@ -95,19 +95,21 @@
                         </form>
                     </div>
                     <!-- Fin de col-->
-                    <div class="col-12 cart-descuentos">
+                    <div class="col-12 col-md-12 col-lg-4 cart-descuentos">
                         <h3>CUPÓN DE DESCUENTO</h3>
                         <h6>Ingrese el código de su cupón si tiene uno</h6>
                         <input type="text" name="" id="">
                         <button>APLICAR CUPÓN</button>
-                        <h3>GIFTCARD</h3>
-                        <h6>Ingrese el código de su cupón si tiene uno</h6>
-                        <input type="text" name="" id="">
-                        <button>APLICAR GIFTCARD</button>
+                        <div class="cart-giftcard">
+                            <h3>GIFTCARD</h3>
+                            <h6>Ingrese el código de su cupón si tiene uno</h6>
+                            <input type="text" name="" id="">
+                            <button>APLICAR GIFTCARD</button>
+                        </div>
                     </div>
                     <!-- Fin de col-->
 
-                    <div class="col-12 cart-total">
+                    <div class="col-12 col-md-12 col-lg-4 cart-total">
                         <h3>TOTALES</h3>
                         <ul>
                             <li>

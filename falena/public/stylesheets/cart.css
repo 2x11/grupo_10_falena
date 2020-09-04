@@ -1,9 +1,18 @@
 @import "style.css";
 
 /* FAVS */
+.cart-body button{
+    background-color: var(--color-azul);
+    color: white;
+    border: none;
+    margin: 5px 0 5px 0;
+}
 
 .cart-favs {
     display: flex;
+}
+.cart-favs button:last-child{
+    margin-left: 15px;
 }
 
 .cart-tapa img {
@@ -39,4 +48,24 @@
 
 .cart-total button{
    width: 100%;
+}
+
+@media(min-width:1024px) {
+    .cart-total {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+    }
+    .cart-descuentos{
+        padding-top: 45px;
+        margin-bottom: 15px;
+    }
+    .cart-envio{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    
 }
