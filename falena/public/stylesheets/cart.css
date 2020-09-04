@@ -1,6 +1,9 @@
 @import "style.css";
 
 /* FAVS */
+.cart-body{
+    padding-bottom: 10px;
+}
 .cart-body button{
     background-color: var(--color-azul);
     color: white;
@@ -10,6 +13,8 @@
 
 .cart-favs {
     display: flex;
+    padding-top: 15px;
+ 
 }
 .cart-favs button:last-child{
     margin-left: 15px;
@@ -28,6 +33,8 @@
 
 .cart-cantidad input {
     width: 50px;
+    margin-right: 5px;
+    text-align: center;
 }
 
 
@@ -42,30 +49,46 @@
 .cart-descuentos input, .cart-descuentos button{
     width: 100%;
 }
-.cart-total {
-    padding-bottom: 10px;
-}
+
 
 .cart-total button{
    width: 100%;
 }
+@media(min-width:687px){
+    .cart-tapa img {
+        margin-left: 25%;
+    }
+    .cart-options{
+        text-align: center;
+    }
+    .cart-favs {
+        justify-content: center;
+    }
+}
 
-@media(min-width:1024px) {
+
+@media(min-width:1024px){
     .cart-total {
         display: flex;
         flex-direction: column;
         align-self: flex-end;
     }
     .cart-descuentos{
-        padding-top: 45px;
-        margin-bottom: 15px;
+        padding-top: 88px;
     }
     .cart-envio{
         display: flex;
         flex-direction: column;
         align-self: flex-end;
-        margin-bottom: 10px;
-        margin-top: 20px;
     }
-    
+    .cart-tapa img {
+        max-height: 250px;
+        margin-left: 25%;
+    }
+    .cart-options{
+        text-align: center;
+    }
+    .cart-favs {
+        justify-content: center;
+    }
 }
