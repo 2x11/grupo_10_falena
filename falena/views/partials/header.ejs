@@ -1,71 +1,91 @@
-<header class="container-fluid header-body"> 
+<header class="container">
 
-    <div class="container header-main">
-
-      <div class="row header-user">
-        
-        <div class="col-8">
-
-          <a href=""><i class="fas fa-question-circle"></i> Ayuda</a>
-        </div>
-        <div class="col-2">
-          <a href=""><i class="fas fa-sign-in-alt"></i><span class="header-oculto">Iniciar Sesión</span></a>
-        </div>
-        <div class="col-2">
-          <a href=""><i class="fas fa-user-plus"></i> <span class="header-oculto">Registrate</span></a>
-        </div>
-
-      </div> <!-- FIN DEL ROW-->
-
-      <div class="row header-banner">
-
-        <div class="col-12 header-logo">
-          <a href="/"><img src="/images/prueba.png" alt=" " /></a>
-        </div>
-
-        <div class="col-12 header-searchbox">
-          <form action="">
-            <input type="text" name="search" placeholder="Buscá tus libros!">
-            <button type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
-        </div>
-
-        <div class="col-12 header-favoritos">
-          <ul>
-            <li><a href=""><i class="fas fa-heart"></i> Lista de deseos</a></li>
-          </ul>
-          <ul>
-            <li><a href=""><i class="fas fa-shopping-cart"></i> Mi carrito</a></li>
-          </ul>
-        </div>
-          
-      </div> <!-- FIN DEL ROW-->
-      <nav class="navbar-expand-md header-navbar">
-        <button
-          class="navbar-toggler burger"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
+  <div class="row">
+    <div class="col-12">
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- Boton en vesion Tablet y Mobil -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones1">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          <div class="col-12 ">
-            <ul>
-            <li><a href="">Géneros</a></li>
-            <li><a href="">Recomendados</a></li>
-            <li><a href="">Novedades</a></li>
-            <li><a href="">Independientes</a></li>
-            <li><a href="">Más Vendidos</a></li>
-            <li><a href="">Autores</a></li>
-          </ul>
+        <!-- Menu derecho-->
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="opciones1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
+                </li>
         </div>
-      </div>
-      </nav> <!-- FIN CONTAINER-->
-      </div>
+        <!-- Menu izquiero-->
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="opciones1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user-plus"></i> Registrate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav> 
+    </div>
+    </div>
 
-  </header>
+
+  <div class="header-banner">
+     <!-- logo --> 
+    <div class="col-12 header-logo">
+      <a href="/"><img src="/images/prueba.png" alt=" " /></a>
+    </div>
+    <!-- buscador -->
+    <div class="col-12 header-searchbox">
+      <form action="">
+        <input type="text" name="search" placeholder="Buscá tus libros!">
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- enlases -->
+    <div class="col-12 header-favoritos">
+      <ul>
+        <li><a href=""><i class="fas fa-heart"></i> Lista de deseos</a></li>
+      </ul>
+      <ul>
+        <li><a href=""><i class="fas fa-shopping-cart"></i> Mi carrito</a></li>
+      </ul>
+    </div>
+      
+  <!-- FIN DEL ROW-->
+  </div>
+  <!-- Nav 2-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <!-- Boton en vesion Tablet y Mobil -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="opciones">   
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Géneros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recomendados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Novedades</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Independientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Más Vendidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Autores</a>
+        </li>                           
+      </ul>
+    </div>
+    <!--Fin del Nav 2-->
+  </nav>
+</header>
