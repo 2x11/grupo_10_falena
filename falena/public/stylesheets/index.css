@@ -32,6 +32,7 @@
      text-align: left;
      font-size: 24px;
      padding: 30px;
+     color: var(--color-marronClaro);
  }
  .productos .contenido{
      background-color: white;
@@ -46,7 +47,7 @@
 .productos article{
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid ;
+    border-top: 1px solid var(--color-marronClaro) ;
     padding: 20px;
     height: 150px;
     position: relative;
@@ -58,7 +59,7 @@
 }
 
 .productos article span{
-    color: green;
+    color: var(--color-celeste);
     margin-left: 10px;
     display: flex;
     align-items: center;
@@ -80,20 +81,25 @@
 }
 
 .piedepagina article i{
-    font-size: 35px;
-    color: maroon;
+    font-size: 33px;
+    color: var(--color-marronClaro);
     display: flex;
-    margin: 10px 0;
+    margin:5px 0;
+    position: relative;
+    top:45px;
+    right: 45px;
 }
  .piedepagina article h4{
-    color:black;
+    color: var(--color-marronClaro);
     display:flex;
     margin: 10px 0;
  }
 
  .piedepagina article p {
-     color:black;
+     color:var(--color-marronOscuro);
      display:flex;
+     text-align: left;
+     padding-right: 35px;
      
 }
 
