@@ -3,6 +3,12 @@
 *  productDetail
 */
 
+
+.product-body{
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
 .img-tapa{
     width: 343px;
     text-align: center;
