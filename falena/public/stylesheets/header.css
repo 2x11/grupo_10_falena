@@ -51,7 +51,7 @@ INICIO OPCIONES DE USUARIO
     margin-top: 10px;
   }  
   .header-banner .header-logo img{  
-    max-width: 170px;
+    max-width: 100%;
   }
   
   /* 

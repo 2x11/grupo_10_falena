@@ -85,7 +85,6 @@
     color: var(--color-marronClaro);
     display: flex;
     margin:5px 0;
-    position: relative;
     top:45px;
     right: 45px;
 }
