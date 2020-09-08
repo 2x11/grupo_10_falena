@@ -20,16 +20,24 @@
               <h1>Cargar de productos</h1>
               <hr>
               <!-- FORMULARIO -->
-              <form action="#" get="POST" enctype="multipart/formdata">
+              <form action="#" get="POST">
                   <!-- CATEGORIAS -->
                   <div class="form-group">
                       <label for="categoria-libro">Categorias</label>
                       <select class="form-control" id="categoria-libro" name="categoria-libro">
-                        <option value="1">terror</option>
-                        <option value="2">cocina</option>
-                        <option value="3">novela</option>
+                        <option value="terror">terror</option>
+                        <option value="cocina">cocina</option>
+                        <option value="novela">novela</option>
                       </select>
                   </div>
+                  <!-- SECCION -->
+                  <div class="form-group">
+                    <label for="seccion-libro">Seccion</label>
+                    <select class="form-control" id="seccion-libro" name="seccion-libro">
+                      <option value="masVendidos">Más vendidos</option>
+                      <option value="ultimaVisita">ultima visitaa</option>
+                    </select>
+                </div>                  
                   <!-- TITULO -->
                   <div class="form-group">
                       <label for="titulo-libro">Titulo</label>
@@ -53,8 +61,13 @@
                   <!-- PRECIO -->
                   <div class="form-group">
                       <label for="precio-libro">Precio</label>
-                      <input type="number" class="form-control" id="precio-libro" name="precio-libro" placeholder="Agregar Precio" required>
+                      <input type="text" class="form-control" id="precio-libro" name="precio-libro" placeholder="Agregar Precio" required>
                   </div>
+                  <!-- DESCUENTO -->
+                  <div class="form-group">
+                    <label for="precio-libro">Descuento</label>
+                    <input type="text" class="form-control" id="precio-libro" name="precio-descuento" placeholder="Agregar Descuento" required>
+                </div>                  
                   <!-- Boton Enviar -->
                   <button type="submit" class="btn btn-primary mb-2">Guardar</button>
                   <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     

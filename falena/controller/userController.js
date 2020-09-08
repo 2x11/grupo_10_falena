@@ -1,17 +1,20 @@
 let userController = {
     login: (req, res, next)=>{
         res.render('login',{
-            css: 'login.css'
+            css: 'login.css',
+            menu: 'user'
         });
     },
     register: (req, res, next)=>{
         res.render('register',{
-            css: 'register.css'
+            css: 'register.css',
+            menu: 'user'
         });
     },
     cart: (req, res, next)=>{
         res.render('cart',{
-            css: 'cart.css'
+            css: 'cart.css',
+            menu: 'user'
         })
     }
 }
