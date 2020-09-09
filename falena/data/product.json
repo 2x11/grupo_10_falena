@@ -2,7 +2,7 @@
 {
     "id": 1,
     "author": "Biss Eula",
-    "title": "Inmunidad",
+    "name": "Inmunidad",
     "prece": 1450,
     "discount": 12,
     "review": "Al dar a luz a su primer hijo, la ensayista Eula Biss descubre que la maternidad puede también convertirse en una experiencia aterradora y el mundo en un lugar hostil y lleno de peligros. Ante la escala inabarcable de amenazas globales como el terrorismo, los intereses de las grandes corporaciones o la contaminación medioambiental, nuestros temores y sospechas se dirigen incluso contra lo que debería protegernos: los medicamentos y las vacunas.",
@@ -13,7 +13,7 @@
 {
     "id": 2,
     "author": "GALLARDO SARA ",
-    "title": "La rosa en el viento",
+    "name": "La rosa en el viento",
     "prece": 850,
     "discount": 5,
     "review": "La rosa que en el viento se destruye deja volar sus pétalos en una luz quemada», se lee en esta novela alucinada de Sara Gallardo, la última que publicó, un punto de llegada extraordinario para una obra deslumbrante, siempre certera, siempre singular, siempre cautivadora.",
@@ -24,7 +24,7 @@
 {
     "id": 3,
     "author": "OCAMPO VICTORIA & WOOLF VIRGINIA",
-    "title": "Correspondencia",
+    "name": "Correspondencia",
     "prece": 820,
     "discount": 7,
     "review": "Correspondencia reúne las cartas que se escribieron V. Ocampo y V Woolf. El libro, compilado y prologado por Manuela Barral, incluye Virginia Woolf en su diario texto de Ocampo publicado por Sur en 1954 además de algunos manuscritos inéditos de ambas autoras.",
@@ -35,7 +35,7 @@
 {
     "id": 4,
     "author": "KATCHADJIAN PABLO",
-    "title": "Amado señor",
+    "name": "Amado señor",
     "prece": 690,
     "discount": 30,
     "review": "Tierra larga será contra la insistencia en inocular la percepción de que el camino es una línea recta y continua hacia un destino No Tan Parecidos echa por tierra esa idea y también la forma recta de la historieta",
@@ -46,7 +46,7 @@
 {
     "id": 5,
     "author": "NO TAN PARECIDOS",
-    "title": "Tierra larga",
+    "name": "Tierra larga",
     "prece": 790,
     "discount": 15,
     "review": "Tierra larga será contra la insistencia en inocular la percepción de que el camino es una línea recta y continua hacia un destino? No Tan Parecidos echa por tierra esa idea y también la forma recta de la historieta",
@@ -57,7 +57,7 @@
 {
     "id": 6,
     "author": "BARNES DJUNA",
-    "title": "Paprika Johnson y otro relatos",
+    "name": "Paprika Johnson y otro relatos",
     "prece": 1390,
     "discount": 3,
     "review": "Djuna Barnes, a pesar de ser admirada por autores de la talla de James Joyce, T. S. Eliot, Carson McCullers o Anaïs Nin, cayó en el olvido al ser opacada por los hombres de su generación, «la generación perdida",
@@ -68,7 +68,7 @@
 {
     "id": 7,
     "author": "SUCARI LEILA",
-    "title": "Baldío",
+    "name": "Baldío",
     "prece": 300,
     "discount": 0,
     "review": "En medio del horror que es el mundo, las palabras tejen puentes, abren ventanas. Como dice Olga Orozco, la poesía ayuda a mirar juntos el fondo de la noche, a vislumbrar la unidad en un mundo fragmentado por la separación y el aislamiento, a saber que no estamos solos",
@@ -79,7 +79,7 @@
 {
     "id": 8,
     "author": "ITURRASPE CONSUELO",
-    "title": "Acaricio Perros",
+    "name": "Acaricio Perros",
     "prece": 500,
     "discount": 0,
     "review": "¿Cuánto tiempo hay que pisar un suelo para que se convierta en un hogar? ¿Cómo se pausa el desencuentro? . La profundidad de las preguntas que se hace la autora a lo largo de este poemario no sólo hacen de guía para esta lectura, sino que se convierten en el recurso perfecto para traducir el desconsuelo y la enorme sensación de pérdida que produce la muerte",
@@ -90,7 +90,7 @@
 {
     "id": 9,
     "author": "PANZA ACHELI ",
-    "title": "El río se adelantó de golpe",
+    "name": "El río se adelantó de golpe",
     "prece": 500,
     "discount": 17,
     "review": "tapas en cartulina de ±250 gr con impresión tipográfica a 2 tintas y tapa con Ilustración de Valeria Fukunaga materializada tipográficamente por Papel Principal mediante un cuño confeccionado mediante la técnica de clise de magnesio.",
@@ -101,7 +101,7 @@
 {
     "id": 10,
     "author": "BECHELLI ADRIÁN",
-    "title": "Los planetas nos aman",
+    "name": "Los planetas nos aman",
     "prece": 1000,
     "discount": 0,
     "review": "Narra la historia de Miwa, una joven que decide recuperar la sabiduría olvidada de su abuelo astrólogo. Para eso, viaja a las montañas en busca de Kai, el único discípulo de su abuelo, quien la conecta con el arte de interpretar el cielo",
@@ -112,7 +112,7 @@
 {
     "id": 11,
     "author": "OLIVO LAURA",
-    "title": "Los astros que me habitan",
+    "name": "Los astros que me habitan",
     "prece": 1450,
     "discount": 30,
     "review": "Una mirada simple y sencilla de la astrología, para que puedas verte y reverte cuantas veces lo necesites. Para sembrar semillas de cambio o abrir conciencia. Puedes leerlo como lo sientas, de principio a fin o como libro de consulta de lo que te resuene o necesites de acuerdo al momento que transites",
@@ -123,7 +123,7 @@
 {
     "id": 12,
     "author": "OLIVO LAURA",
-    "title": "Oráculo Mujeres Autoras FERA",
+    "name": "Oráculo Mujeres Autoras FERA",
     "prece": 950,
     "discount": 12,
     "review": "Este oráculo contiene 45 cartas ilustradas con mujeres de la historia que forman parte de Mujeres autoras.",
@@ -134,7 +134,7 @@
 {
     "id": 13,
     "author": "REITER STEPH",
-    "title": "Tote Bag - LA FUERZA",
+    "name": "Tote Bag - LA FUERZA",
     "prece": 600,
     "discount": 12,
     "review": "Este oráculo contiene 45 cartas ilustradas con mujeres de la historia que forman Este oráculo contiene 45 cartas ilustradas con mujeres de la historia que forman",
@@ -145,7 +145,7 @@
 {
     "id": 14,
     "author": "BECHELLI ADRIÁN",
-    "title": "Un planeta llamado agua",
+    "name": "Un planeta llamado agua",
     "prece": 1200,
     "discount": 20,
     "review": "Kai, maestro de astrología, viaja a la costa para reencontrarse con Miwa, su aprendiz. En un entorno natural paradisíaco, entre desencuentros y aventuras, se irá desplegando la cualidad energética de los planetas.",
@@ -156,7 +156,7 @@
 {
     "id": 15,
     "author": "REITER STEPH",
-    "title": "Tote bag LA LUNA",
+    "name": "Tote bag LA LUNA",
     "prece": 600,
     "discount": 5,
     "review": "Kai, maestro de astrología, viaja a la costa para reencontrarse con Miwa, su aprendiz. En un entorno natural paradisíaco, entre desencuentros y aventuras, se irá desplegando la cualidad energética de los planetas.",
@@ -167,7 +167,7 @@
 {
     "id": 16,
     "author": "KATCHADJIAN PABLO",
-    "title": "Amado señor",
+    "name": "Amado señor",
     "prece": 690,
     "discount": 30,
     "review": "Tierra larga será contra la insistencia en inocular la percepción de que el camino es una línea recta y continua hacia un destino No Tan Parecidos echa por tierra esa idea y también la forma recta de la historieta",
@@ -178,7 +178,7 @@
 {
     "id": 17,
     "author": "Biss Eula",
-    "title": "Inmunidad",
+    "name": "Inmunidad",
     "prece": 1450,
     "discount": 12,
     "review": "Al dar a luz a su primer hijo, la ensayista Eula Biss descubre que la maternidad puede también convertirse en una experiencia aterradora y el mundo en un lugar hostil y lleno de peligros. Ante la escala inabarcable de amenazas globales como el terrorismo, los intereses de las grandes corporaciones o la contaminación medioambiental, nuestros temores y sospechas se dirigen incluso contra lo que debería protegernos: los medicamentos y las vacunas.",
@@ -189,7 +189,7 @@
 {
     "id": 18,
     "author": "GALLARDO SARA ",
-    "title": "La rosa en el viento",
+    "name": "La rosa en el viento",
     "prece": 850,
     "discount": 5,
     "review": "La rosa que en el viento se destruye deja volar sus pétalos en una luz quemada», se lee en esta novela alucinada de Sara Gallardo, la última que publicó, un punto de llegada extraordinario para una obra deslumbrante, siempre certera, siempre singular, siempre cautivadora.",
@@ -200,7 +200,7 @@
 {
     "id": 19,
     "author": "OCAMPO VICTORIA & WOOLF VIRGINIA",
-    "title": "Correspondencia",
+    "name": "Correspondencia",
     "prece": 820,
     "discount": 7,
     "review": "Correspondencia reúne las cartas que se escribieron V. Ocampo y V Woolf. El libro, compilado y prologado por Manuela Barral, incluye Virginia Woolf en su diario texto de Ocampo publicado por Sur en 1954 además de algunos manuscritos inéditos de ambas autoras.",
@@ -211,7 +211,7 @@
 {
     "id": 20,
     "author": "BECHELLI ADRIÁN",
-    "title": "Los planetas nos aman",
+    "name": "Los planetas nos aman",
     "prece": 1000,
     "discount": 0,
     "review": "Narra la historia de Miwa, una joven que decide recuperar la sabiduría olvidada de su abuelo astrólogo. Para eso, viaja a las montañas en busca de Kai, el único discípulo de su abuelo, quien la conecta con el arte de interpretar el cielo",
