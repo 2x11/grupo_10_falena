@@ -11,7 +11,7 @@ let productController = require('../controller/productController')
 */
 router.get('/', productController.index);
 
-router.get('/detail/1', productController.detail);
+router.get('/detail/:id', productController.detail);
 
 router.get('/add', productController.add);
 

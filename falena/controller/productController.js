@@ -16,9 +16,14 @@ module.exports = {
         });
     },    
     detail: function(req, res){
+        idProducto = req.params.id;
+        let product = dbProducts.filter(producto=>{
+            return producto.id == idProducto
+        })
         res.render('productDetail',{
             css: 'product.css',
-            menu: 'user'
+            menu: 'user',
+            product: product[0]
         });
     },
     add: function(req, res){
