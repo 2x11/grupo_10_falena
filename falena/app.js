@@ -3,7 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+/*
+* AGREGADAS 
+*/
+const methodOverride = require('method-override');
 /*
 * IMPORTAR ARCHIVOS
 */
@@ -17,7 +20,10 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+/*
+* AGREGADAS
+*/
+app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
