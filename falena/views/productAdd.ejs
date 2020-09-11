@@ -20,58 +20,58 @@
               <h1>Cargar de productos</h1>
               <hr>
               <!-- FORMULARIO -->
-              <form action="#" get="POST">
-                  <!-- CATEGORIAS -->
-                  <div class="form-group">
-                      <label for="categoria-libro">Categorias</label>
-                      <select class="form-control" id="categoria-libro" name="categoria-libro">
-                        <option value="terror">terror</option>
-                        <option value="cocina">cocina</option>
-                        <option value="novela">novela</option>
-                      </select>
-                  </div>
-                  <!-- SECCION -->
-                  <div class="form-group">
-                    <label for="seccion-libro">Seccion</label>
-                    <select class="form-control" id="seccion-libro" name="seccion-libro">
-                      <option value="masVendidos">Más vendidos</option>
-                      <option value="ultimaVisita">ultima visitaa</option>
+              <form action="/product/save" method="POST" enctype="multipart/form-data">
+                <!-- CATEGORIAS -->
+                <div class="form-group">
+                    <label for="category">Categorias</label>
+                    <select class="form-control" id="category" name="category">
+                      <option value="terror">terror</option>
+                      <option value="cocina">cocina</option>
+                      <option value="novela">novela</option>
                     </select>
-                </div>                  
-                  <!-- TITULO -->
-                  <div class="form-group">
-                      <label for="titulo-libro">Titulo</label>
-                      <input type="text" class="form-control" id="titulo-libro" name="titulo-libro" placeholder="Agregar un titulo" required>
-                  </div>
-                  <!-- AUTOR -->
-                  <div class="form-group">
-                      <label for="autor-libro">Autor</label>
-                      <input type="text" class="form-control" id="autor-libro" name="autor-libro" placeholder="Agregar un Autor" required>
-                  </div> 
-                  <!-- DESCRIPCION DEL PRODUCTO -->
-                  <div class="form-group">
-                      <label for="descripcion-libro">Descripcion Del producto</label>
-                      <textarea class="form-control" id="descripcion-libro" name="descripcion-libro" rows="3" placeholder="Agregar una Descripcion Del producto" required></textarea>
-                  </div>
-                  <!-- SUBIR IMAGENES -->
-                  <div class="form-group">
-                      <label for="imagenes-libro">Subir Imagenes</label>
-                      <input type="file" class="form-control-file" id="imagenes-libro" name="imagenes-libro">
-                  </div>
-                  <!-- PRECIO -->
-                  <div class="form-group">
-                      <label for="precio-libro">Precio</label>
-                      <input type="text" class="form-control" id="precio-libro" name="precio-libro" placeholder="Agregar Precio" required>
-                  </div>
-                  <!-- DESCUENTO -->
-                  <div class="form-group">
-                    <label for="precio-libro">Descuento</label>
-                    <input type="text" class="form-control" id="precio-libro" name="precio-descuento" placeholder="Agregar Descuento" required>
-                </div>                  
-                  <!-- Boton Enviar -->
-                  <button type="submit" class="btn btn-primary mb-2">Guardar</button>
-                  <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
-              </form>
+                </div>
+                <!-- SECCION -->
+                <div class="form-group">
+                  <label for="section">Seccion</label>
+                  <select class="form-control" id="section" name="section">
+                    <option value="masVendidos">Más vendidos</option>
+                    <option value="ultimaVisita">ultima visitaa</option>
+                  </select>
+              </div>                  
+                <!-- TITULO -->
+                <div class="form-group">
+                    <label for="name">Titulo</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" required>
+                </div>
+                <!-- AUTOR -->
+                <div class="form-group">
+                    <label for="author">Autor</label>
+                    <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" required>
+                </div> 
+                <!-- DESCRIPCION DEL PRODUCTO -->
+                <div class="form-group">
+                    <label for="review">Descripcion Del producto</label>
+                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required></textarea>
+                </div>
+                <!-- SUBIR IMAGENES -->
+                <div class="form-group">
+                    <label for="file">Subir Imagenes</label>
+                    <input type="file" class="form-control-file" id="file" name="file">
+                </div>
+                <!-- PRECIO -->
+                <div class="form-group">
+                    <label for="prece">Precio</label>
+                    <input type="text" class="form-control" id="prece" name="prece" placeholder="Agregar Precio" required>
+                </div>
+                <!-- DESCUENTO -->
+                <div class="form-group">
+                  <label for="discoun">Descuento</label>
+                  <input type="text" class="form-control" id="discoun" name="discoun" placeholder="Agregar Descuento" required>
+              </div>                  
+                <!-- Boton Enviar -->
+                <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+                <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
+            </form>
               <!-- FIN FORMULARIO -->
           </div>
           <!-- COLUMNA 3 -->

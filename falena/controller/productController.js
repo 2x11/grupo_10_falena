@@ -2,6 +2,7 @@
 * IMPORTAR LIBRERIA Y ARCHIVOS
 */
 const path = require('path');
+const fs = require('fs');
 const dbProducts = require(path.join(__dirname,'..','data','dbProducts'));
 const dbCategory = require(path.join(__dirname,'..','data','dbCategory'));
 
@@ -31,5 +32,27 @@ module.exports = {
             css: 'product.css',
             menu: 'admin'
         });
+    },
+    save: function(req, res, next){
+        let lastID = 1;
+        dbProducts.forEach(producto=>{
+            if(producto.id > lastID){
+                lastID = producto.id
+            }
+        })
+        let newProduct = {
+            id:lastID +1,
+            author: req.body.author,
+            name: req.body.name,
+            prece: Number(req.body.prece),
+            discount: Number(req.body.discount),
+            review: req.body.review,
+            category: req.body.category,
+            section: req.body.section,
+            image: req.files[0].filename
+        }
+        dbProducts.push(newProduct);
+        fs.writeFileSync(path.join(__dirname,"..","data","product.json"),JSON.stringify(dbProducts),'utf-8')
+        res.redirect('/product/add')        
     }
 }
