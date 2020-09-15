@@ -53,7 +53,7 @@ module.exports = {
         }
         dbProducts.push(newProduct);
         fs.writeFileSync(path.join(__dirname,"..","data","product.json"),JSON.stringify(dbProducts),'utf-8')
-        res.redirect('/product/add')        
+        res.redirect('/product')        
     },
 
 
@@ -93,8 +93,8 @@ module.exports = {
         });
         dbProducts.splice(idProducto, 1);
         
-        dbProducts.push(newProduct);
+        
         fs.writeFileSync(path.join(__dirname,"..","data","product.json"),JSON.stringify(dbProducts),'utf-8')
-        res.redirect('/product/add')  
+        res.redirect('/product')  
     }
 }
