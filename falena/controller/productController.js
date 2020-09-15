@@ -54,5 +54,47 @@ module.exports = {
         dbProducts.push(newProduct);
         fs.writeFileSync(path.join(__dirname,"..","data","product.json"),JSON.stringify(dbProducts),'utf-8')
         res.redirect('/product/add')        
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    edit: (req,res)=>{
+        let productoAEditar;
+        dbProducts.forEach(producto =>{
+            if (producto.id == req.params.id){
+                productoAEditar = producto
+            }
+        })
+        res.render('productEdit', {producto:productoAEditar})
+    },
+    editForm: (req,res)=>{
+       res.render('productEdit',{
+           css: 'product.css',
+           menu: 'admin'
+       })
+    },
+    delete: (req,res)=>{
+        let idProducto;
+        dbProducts.forEach(producto => {
+            if (producto.id == req.params.id) {
+                idProducto = dbProducts.indexOf(producto)
+            }
+        });
+        dbProducts.splice(idProducto, 1);
+        
+        dbProducts.push(newProduct);
+        fs.writeFileSync(path.join(__dirname,"..","data","product.json"),JSON.stringify(dbProducts),'utf-8')
+        res.redirect('/product/add')  
     }
 }
