@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <%- include('./partials/head'); %>
+
+<body>
+    <!-- importa header -->
+    <%- include('./partials/header'); %>
+
+    <!-- 
+      CONTENIDO 
+    -->
+
+    <section class="container">
+      <article class="row">
+          <!-- COLUMNA 1 -->
+          <div class="col-md-2"></div>
+          <!-- COLUMNA 2 -->
+          <div class="col-12 col-md-8">
+              <h1>Editar Producto</h1>
+              <hr>
+              <!-- FORMULARIO -->
+              <form action="/product/save" method="POST" enctype="multipart/form-data">
+                <!-- CATEGORIAS -->
+                <div class="form-group">
+                    <label for="category">Categorias</label>
+                    <select class="form-control" id="category" name="category">
+                      <option value="terror">terror</option>
+                      <option value="cocina">cocina</option>
+                      <option value="novela">novela</option>
+                    </select>
+                </div>
+                <!-- SECCION -->
+                <div class="form-group">
+                  <label for="section">Seccion</label>
+                  <select class="form-control" id="section" name="section">
+                    <option value="masVendidos">Más vendidos</option>
+                    <option value="ultimaVisita">ultima visitaa</option>
+                  </select>
+              </div>                  
+                <!-- TITULO -->
+                <div class="form-group">
+                    <label for="name">Titulo</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" value="<% producto.name %> " required>
+                </div>
+                <!-- AUTOR -->
+                <div class="form-group">
+                    <label for="author">Autor</label>
+                    <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" value="<% producto.author %> " required>
+                </div> 
+                <!-- DESCRIPCION DEL PRODUCTO -->
+                <div class="form-group">
+                    <label for="review">Descripcion Del producto</label>
+                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required></textarea>
+                </div>
+                <!-- SUBIR IMAGENES -->
+                <div class="form-group">
+                    <label for="file">Subir Imagenes</label>
+                    <input type="file" class="form-control-file" id="file" name="file">
+                </div>
+                <!-- PRECIO -->
+                <div class="form-group">
+                    <label for="prece">Precio</label>
+                    <input type="text" class="form-control" id="prece" name="prece" placeholder="Agregar Precio" required>
+                </div>
+                <!-- DESCUENTO -->
+                <div class="form-group">
+                  <label for="discoun">Descuento</label>
+                  <input type="text" class="form-control" id="discoun" name="discoun" placeholder="Agregar Descuento" required>
+              </div>                  
+                <!-- Boton Enviar -->
+                <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+                <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
+            </form>
+              <!-- FIN FORMULARIO -->
+          </div>
+          <!-- COLUMNA 3 -->
+          <div class="col-md-2"></div>
+      <!-- FIN ROW -->    
+      </article>
+  <!-- FIN CONTAINER -->    
+  </section>
+        
+    <!-- 
+      FIN DEL CONTENIDO 
+    -->
+
+    <!-- importa footer -->
+    <%- include('./partials/footer') %>
+  <!-- scripts de bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+    crossorigin="anonymous "></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+    crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
+    crossorigin="anonymous "></script>
+</body>
+
+</html>
