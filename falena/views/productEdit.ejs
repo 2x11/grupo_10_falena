@@ -19,7 +19,7 @@
               <hr>
               <!-- FORMULARIO -->  
              
-              <form action="/product/save" method="POST" enctype="multipart/form-data">
+              <form action="/product/edit/<%= prodToEdit.id %>?_method=PUT" method="POST">
                 <!-- CATEGORIAS -->                   
                 
                 <div class="form-group">
@@ -33,7 +33,7 @@
                 <!-- SECCION -->
                 <div class="form-group">
                   <label for="section">Seccion</label>
-                  <select class="form-control" id="section" name="section" > <!-- no funciona  value="< %=prodToEdit.section%>"    -->
+                  <select class="form-control" id="section" name="section" ><%=prodToEdit.section%>
                     <option value="masVendidos">Más vendidos</option>
                     <option value="ultimaVisita">Última visita</option>
                   </select>
@@ -51,7 +51,7 @@
                 <!-- DESCRIPCION DEL PRODUCTO -->
                 <div class="form-group">
                     <label for="review">Descripcion Del producto</label>
-                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required></textarea> <!-- no funciona  value="< %prodToEdit.review%>"   -->
+                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required> <%=prodToEdit.review%> </textarea> 
                 </div>
                 <!-- SUBIR IMAGENES -->
                 <div class="form-group">
@@ -68,15 +68,14 @@
                   <label for="discount">Descuento</label>
                   <input type="text" class="form-control" id="discount" name="discount" placeholder="Agregar Descuento" value="<%=prodToEdit.discount%>" required>
               </div>                  
-            </form>
-            <!-- FIN FORMULARIO -->
-            <form action="/product/edit/<%= prodToEdit.id %>?_method=PUT" method="POST">
+              <!-- Boton Guardar -->
               <button type="submit" class="btn btn-primary mb-2">Guardar</button>
             </form>
+            <!-- FIN FORMULARIO -->
+            <!-- Boton Eliminar-->
             <form action="/product/delete/<%= prodToEdit.id %>?_method=DELETE" method="POST">
-              <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
+              <button type="submit" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
             </form>
-            <!-- Boton Enviar -->
           </div>
           <!-- COLUMNA 3 -->
           <div class="col-md-2"></div>

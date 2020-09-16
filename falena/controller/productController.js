@@ -3,9 +3,8 @@
  */
 const path = require('path');
 const fs = require('fs');
-const dbProducts = require(path.join(__dirname, '..', 'data', 'dbProducts'));
+const dbProducts = require(path.join(__dirname, '..', 'data', 'dbProducts'),'utf-8');
 const dbCategory = require(path.join(__dirname, '..', 'data', 'dbCategory'));
-
 
 module.exports = {
     index: function(req, res) {
@@ -56,18 +55,34 @@ module.exports = {
         res.redirect('/product')
     },
 
-    edit: (req, res) => {
-        let id = req.params.id;
-        let products = dbProducts;
-        let prodToEdit = products[id];
+    editForm: (req, res) => {
+        let prodToEdit;
+        dbProducts.forEach(product => {
+            if(product.id == req.params.id){
+                prodToEdit = product;
+            }          
+        });
         res.render('productEdit', {
             css: 'product.css',
             menu: 'admin',
-            prodToEdit: prodToEdit
-        })
+            prodToEdit:prodToEdit
+        });
     },
 
+    edit: (req,res)=>{
+        dbProducts.forEach(product =>{
+            if (product.id == req.params.id) {
+                product.name = req.body.name;
+                product.prece = req.body.prece;
+                product.category = req.body.category;
+                product.review = req.body.review;                
+            };
+        });
 
+        fs.writeFileSync(path.join(__dirname, '..', 'data', 'product.json'), JSON.stringify(dbProducts),'utf-8');
+
+        res.redirect('/product/detail/' + req.params.id);
+    },
 
     delete: (req, res) => {
         let idProducto;

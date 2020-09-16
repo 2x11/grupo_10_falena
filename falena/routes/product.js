@@ -32,10 +32,8 @@ router.get('/detail/:id', productController.detail);
 
 router.get('/add', productController.add);
 router.post('/save', upload.any(), productController.save);
-router.get('/edit/:id', productController.edit)
-router.put('/edit/id', (req,res)=>{
-  res.send('put')
-})
+router.get('/edit/:id', productController.editForm)
+router.put('/edit/:id', productController.edit);
 
 router.delete('/delete/:id',productController.delete)
 
