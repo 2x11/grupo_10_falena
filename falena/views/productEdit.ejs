@@ -4,9 +4,7 @@
   <%- include('./partials/head'); %>
 
 <body>
-    <!-- importa header -->
-    <%- include('./partials/header'); %>
-
+  <%- include('./partials/header'); %>
     <!-- 
       CONTENIDO 
     -->
@@ -17,14 +15,16 @@
           <div class="col-md-2"></div>
           <!-- COLUMNA 2 -->
           <div class="col-12 col-md-8">
-              <h1>Editar Producto</h1>
+              <h1>Editando producto: <%= prodToEdit.name %> #<%= prodToEdit.id %>  </h1>
               <hr>
-              <!-- FORMULARIO -->
+              <!-- FORMULARIO -->  
+             
               <form action="/product/save" method="POST" enctype="multipart/form-data">
-                <!-- CATEGORIAS -->
+                <!-- CATEGORIAS -->                   
+                
                 <div class="form-group">
-                    <label for="category">Categorias</label>
-                    <select class="form-control" id="category" name="category">
+                    <label for="category">Categorías</label>
+                    <select class="form-control" id="category" name="category" > <!-- no funciona   value="< %=prodToEdit.category%>"    -->
                       <option value="terror">terror</option>
                       <option value="cocina">cocina</option>
                       <option value="novela">novela</option>
@@ -33,46 +33,50 @@
                 <!-- SECCION -->
                 <div class="form-group">
                   <label for="section">Seccion</label>
-                  <select class="form-control" id="section" name="section">
+                  <select class="form-control" id="section" name="section" > <!-- no funciona  value="< %=prodToEdit.section%>"    -->
                     <option value="masVendidos">Más vendidos</option>
-                    <option value="ultimaVisita">ultima visitaa</option>
+                    <option value="ultimaVisita">Última visita</option>
                   </select>
               </div>                  
                 <!-- TITULO -->
                 <div class="form-group">
                     <label for="name">Titulo</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" value="<% producto.name %> " required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" value="<%=prodToEdit.name%>" required>
                 </div>
                 <!-- AUTOR -->
                 <div class="form-group">
                     <label for="author">Autor</label>
-                    <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" value="<% producto.author %> " required>
+                    <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" value="<%=prodToEdit.author%>"  required>
                 </div> 
                 <!-- DESCRIPCION DEL PRODUCTO -->
                 <div class="form-group">
                     <label for="review">Descripcion Del producto</label>
-                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required></textarea>
+                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required></textarea> <!-- no funciona  value="< %prodToEdit.review%>"   -->
                 </div>
                 <!-- SUBIR IMAGENES -->
                 <div class="form-group">
                     <label for="file">Subir Imagenes</label>
-                    <input type="file" class="form-control-file" id="file" name="file">
+                    <input type="file" class="form-control-file" id="file" name="file"> <!-- no funciona   value="< %=prodToEdit.file%>"    -->
                 </div>
                 <!-- PRECIO -->
                 <div class="form-group">
                     <label for="prece">Precio</label>
-                    <input type="text" class="form-control" id="prece" name="prece" placeholder="Agregar Precio" required>
+                    <input type="text" class="form-control" id="prece" name="prece" placeholder="Agregar Precio" value="<%=prodToEdit.prece%>" required>
                 </div>
                 <!-- DESCUENTO -->
                 <div class="form-group">
-                  <label for="discoun">Descuento</label>
-                  <input type="text" class="form-control" id="discoun" name="discoun" placeholder="Agregar Descuento" required>
+                  <label for="discount">Descuento</label>
+                  <input type="text" class="form-control" id="discount" name="discount" placeholder="Agregar Descuento" value="<%=prodToEdit.discount%>" required>
               </div>                  
-                <!-- Boton Enviar -->
-                <button type="submit" class="btn btn-primary mb-2">Guardar</button>
-                <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
             </form>
-              <!-- FIN FORMULARIO -->
+            <!-- FIN FORMULARIO -->
+            <form action="/product/edit/<%= prodToEdit.id %>?_method=PUT" method="POST">
+              <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+            </form>
+            <form action="/product/delete/<%= prodToEdit.id %>?_method=DELETE" method="POST">
+              <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
+            </form>
+            <!-- Boton Enviar -->
           </div>
           <!-- COLUMNA 3 -->
           <div class="col-md-2"></div>
