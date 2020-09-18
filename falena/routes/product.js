@@ -27,6 +27,7 @@ let productController = require('../controller/productController')
 * Routes
 */
 router.get('/', productController.index);
+router.get('/',productController.listar)
 
 router.get('/detail/:id', productController.detail);
 

@@ -6,12 +6,12 @@
   <!-- importa header -->
   <%- include('./partials/header'); %>
 
-  
-  
+
+
   <div class="container">
     <section class="vip-products">
 
-        <!--carrousel-->
+      <!--carrousel-->
       </article>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -51,69 +51,28 @@
             <h2>Más vendidos</h2>
           </div>
 
+          <% masVendidos.forEach(producto => { %>
 
           <div class="col-12 col-md-6 col-lg-3">
             <div class="contenido">
               <figure>
-                <a href=""><img src="/images/libros/it.jpg" alt=""></a>
+                <a href=""><img src="/images/libros/<%= producto.image %> " alt=""></a>
               </figure>
               <article>
                 <h2>
-                  $2.300
+                  <%= producto.prece %>
                 </h2>
-                <span>10% OFF</span>
-                <P>It - Stephen King</P>
+                <span><%= producto.discount %> %OFF </span>
+                <P><%= producto.name %> </P>
               </article>
             </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="contenido">
-              <figure>
-                <a href=""><img src="/images/libros/sangre.jpg" alt=""></a>
-              </figure>
-              <article>
-                <h2>
-                  $1.200
-                </h2>
-                <span>10% OFF</span>
-                <P>La Sangre Manda - Stephen King</P>
-              </article>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="contenido">
-              <figure>
-                <a href=""><img src="/images/libros/stan-lee.jpg" alt=""></a>
-              </figure>
-              <article>
-                <h2>
-                  $1.390
-                </h2>
-                <span>10% OFF</span>
-                <P>Alliances un juego de luz  Stan Lee</P>
-              </article>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="contenido">
-              <figure>
-                <a href=""><img src="/images/libros/secretos.jpg" alt=""></a>
-              </figure>
-              <article>
-                <h2>
-                  $2.800
-                </h2>
-                <span>10% OFF</span>
-                <P>Secretos Revelados - Garcia Calvo</P>
-              </article>
-            </div>
-          </div>
+          <% }) %>
 
 
         </div>
+
 
         <div class="row productos">
 
@@ -121,67 +80,26 @@
             <h2>Basado en tu ultima visita</h2>
           </div>
 
+          <% visitados.forEach(producto => { %>
 
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="contenido">
-              <figure>
-                <a href=""><img src="/images/libros/tapa.png" alt=""></a>
-              </figure>
-              <article>
-                <h2>
-                  $980
-                </h2>
-                <span>10% OFF</span>
-                <P>El presente - Ana Basualdo</P>
-              </article>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="contenido">
+                <figure>
+                  <a href=""><img src="/images/libros/<%= producto.image %> " alt=""></a>
+                </figure>
+                <article>
+                  <h2>
+                    <%= producto.prece %>
+                  </h2>
+                  <span><%= producto.discount %> %OFF </span>
+                  <P><%= producto.name %> </P>
+                </article>
+              </div>
             </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="contenido">
-              <figure>
-                <a href=""><img src="/images/libros/pandemia.jpg" alt=""></a>
-              </figure>
-              <article>
-                <h2>
-                  $1.500
-                </h2>
-                <span>10% OFF</span>
-                <P>Pandemia: virus y miedo  Monica Müller</P>
-              </article>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="contenido">
-              <figure>
-                <a href=""><img src="/images/libros/tapa.png" alt=""></a>
-              </figure>
-              <article>
-                <h2>
-                  $1.500
-                </h2>
-                <span>10% OFF</span>
-                <P>El presente - Ana Basualdo</P>
-              </article>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="contenido">
-              <figure>
-                <a href=""><img src="/images/libros/tapa.png" alt=""></a>
-              </figure>
-              <article>
-                <h2>
-                  $1.500
-                </h2>
-                <span>10% OFF</span>
-                <P>El presente - Ana Basualdo</P>
-              </article>
-            </div>
-          </div>
-        </div>
+  
+            <% }) %>
+          
+         </div>
       </section>
 
     </div>
@@ -213,12 +131,12 @@
         <div class="col-12 col-lg-4">
           <article>
             <i class="fas fa-shield-alt"></i>
-            
+
             <h4>sitio seguro</h4>
             <p>seguridad de principio a fin, protegemos todos tus datos</p>
           </article>
         </div>
-         
+
       </div>
     </section>
   </div>

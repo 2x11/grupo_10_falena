@@ -15,6 +15,17 @@ module.exports = {
             products: dbProducts
         });
     },
+    
+    listar:function(req,res){
+        res.render('product',{
+            title: 'productos',
+            css:'index.css',
+            menu: 'user',
+            productos:dbProducts
+
+        })
+    },
+
     detail: function(req, res) {
         idProducto = req.params.id;
         let product = dbProducts.filter(producto => {
