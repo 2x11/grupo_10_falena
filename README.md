@@ -59,3 +59,23 @@ Retrospectiva: [Retro.md](https://github.com/sebastianabila/grupo_10_falena/blob
 - Carrito de compras: productCart.ejs
 - Formulario de registro: register.ejs
 - Formulario de carga de producto: productAdd.ejs
+
+# Sprint 3:
+
+### Retro.md
+Retrospectiva: [Retro.md](https://github.com/sebastianabila/grupo_10_falena/blob/master/retro.md "retro.md")
+
+### Tablero de trabajo
+Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente: [Tablero de Trello](https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena "Tablero de Trello")
+
+### Archivos
+- Creamos Json de [Productos](https://github.com/sebastianabila/grupo_10_falena/blob/master/falena/data/product.json "Productos") [Usuarios](https://github.com/sebastianabila/grupo_10_falena/blob/master/falena/data/user.json "Usuarios") [Categoria](https://github.com/sebastianabila/grupo_10_falena/blob/master/falena/data/category.json "Categoria")
+
+### vistas creadas del CRUD
+- /products (GET), Listado de productos
+- /products/create (GET), Formulario de creación de productos
+- /products/ :id (GET), Detalle de un producto particular
+- /products (POST), Acción de creación (a donde se envía el formulario)
+- /products/ :id /edit (GET), Formulario de edición de productos
+- /products/ :id (PUT), Acción de edición (a donde se envía el formulario)
+- /products/ :id (DELETE) Acción de borrado
