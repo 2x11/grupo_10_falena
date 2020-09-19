@@ -24,10 +24,11 @@
                 
                 <div class="form-group">
                     <label for="category">Categorías</label>
-                    <select class="form-control" id="category" name="category" > <!-- no funciona   value="< %=prodToEdit.category%>"    -->
-                      <option value="terror">terror</option>
-                      <option value="cocina">cocina</option>
-                      <option value="novela">novela</option>
+                    <select class="form-control" id="category" name="category" >
+                      <option value="<%=prodToEdit.category %>" selected><%=prodToEdit.category %></option>
+                      <% category.forEach(element => { %>
+                        <option value="<%= element.category %>"><%= element.category %></option>                       
+                      <% }) %>
                     </select>
                 </div>
                 <!-- SECCION -->

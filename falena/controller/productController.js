@@ -77,7 +77,8 @@ module.exports = {
         res.render('productEdit', {
             css: 'product.css',
             menu: 'admin',
-            prodToEdit:prodToEdit
+            prodToEdit:prodToEdit,
+            category: dbCategory
         });
     },
 
