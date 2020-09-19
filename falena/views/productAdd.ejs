@@ -25,9 +25,9 @@
                 <div class="form-group">
                     <label for="category">Categorias</label>
                     <select class="form-control" id="category" name="category">
-                      <option value="terror">terror</option>
-                      <option value="cocina">cocina</option>
-                      <option value="novela">novela</option>
+                      <% category.forEach(element => { %>
+                       <option value="<%= element.category %>"><%= element.category %></option>
+                      <% }) %>
                     </select>
                 </div>
                 <!-- SECCION -->
