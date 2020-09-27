@@ -38,7 +38,7 @@
      background-color: white;
      margin-bottom: 30px;
      border-radius: 5px;
-     padding: 5px;
+     padding: 20px;
      text-align: center;
  }
 .productos .contenido figure img{
@@ -81,24 +81,26 @@
 }
 
 .piedepagina article i{
-    font-size: 33px;
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    background: var(--light);
     color: var(--color-marronClaro);
-    display: flex;
-    margin:5px 0;
-    top:45px;
-    right: 45px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
 }
  .piedepagina article h4{
+    text-align: center;
     color: var(--color-marronClaro);
-    display:flex;
     margin: 10px 0;
  }
 
  .piedepagina article p {
      color:var(--color-marronOscuro);
-     display:flex;
-     text-align: left;
-     padding-right: 35px;
+     text-align: center;
+     
      
 }
 

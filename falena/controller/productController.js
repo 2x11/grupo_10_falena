@@ -40,7 +40,8 @@ module.exports = {
     add: function(req, res) {
         res.render('productAdd', {
             css: 'product.css',
-            menu: 'admin'
+            menu: 'admin',
+            category: dbCategory
         });
     },
     save: function(req, res, next) {
@@ -76,7 +77,8 @@ module.exports = {
         res.render('productEdit', {
             css: 'product.css',
             menu: 'admin',
-            prodToEdit:prodToEdit
+            prodToEdit:prodToEdit,
+            category: dbCategory
         });
     },
 
