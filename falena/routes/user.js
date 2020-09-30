@@ -6,11 +6,15 @@ const router = express.Router();
 */
 const userController = require('../controller/userController')
 
+
 /*
 * Routes
 */
 
-router.get('/login/', userController.login);
-router.get('/register/', userController.register);
-router.get('/cart', userController.cart);
+router.get('/login', userController.login);
+router.post('/login', userController.loginProcess);
+
+router.get('/register', userController.register);
+router.post('/register', userController.registerProcess);
+
 module.exports = router;
