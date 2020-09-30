@@ -23,8 +23,9 @@
   }
   .login-login ul li{
     margin-bottom: 10px;
+    text-align: center;
   }
-  .login-login ul li a{
+  .login-login ul a{
     color: var(--color-crudo);
   }
   .login-login ul li input.login-remember{
