@@ -6,15 +6,17 @@ const router = express.Router();
 */
 const userController = require('../controller/userController')
 
+const registerValidator = require('../validations/registerValidator')
+const loginValidator = require('../validations/loginValidator')
 
 /*
 * Routes
 */
 
 router.get('/login', userController.login);
-router.post('/login', userController.loginProcess);
+router.post('/login',loginValidator ,userController.loginProcess);
 
 router.get('/register', userController.register);
-router.post('/register', userController.registerProcess);
+router.post('/register',registerValidator, userController.registerProcess);
 
 module.exports = router;
