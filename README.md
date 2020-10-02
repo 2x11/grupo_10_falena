@@ -1,7 +1,7 @@
 # FALENA
 
 
-![](https://github.com/sebastianabila/grupo_10_falena/blob/master/design/logos/logo1.png)
+
 
 ### Integrantes
 
