@@ -15,29 +15,73 @@
                 <form action="" method="POST">
                 </div>
                 <div>
-                  <input type="text" id="firstname" name="firstname" placeholder="Nombre">
+                  <input  type="text" class="form-control <%= (typeof old != 'undefined' && old.firstname && !errors.firstname)?" is-valid ":
+                  (typeof errors != 'undefined' && errors.firstname)?"is-invalid ":
+                  '' %>" id="exampleInputfirstname" aria-describedby="firstnameHelp" value="<%= (typeof old != 'undefined' && old.firstname)?old.firstname:'' %>" id="firstname" name="firstname" placeholder="Nombre">
+                  <small
+                  class="text-danger"><%= (typeof errors != 'undefined' && errors.firstname)?errors.firstname.msg: "" %>
+                </small>
                 </div>
                 <div>
-                  <input type="text" id="lastname" name="lastname" placeholder="Apellido">
+                  <input type="text" class="form-control <%= (typeof old != 'undefined' && old.lastname && !errors.lastname)?" is-valid ":
+                  (typeof errors != 'undefined' && errors.lastname)?"is-invalid ":
+                  '' %>" id="exampleInputlastname" aria-describedby="lastnameHelp" value="<%= (typeof old != 'undefined' && old.lastname)?old.lastname:'' %>" id="lastname" name="lastname" placeholder="Apellido">
+                  <small
+                  class="text-danger"><%= (typeof errors != 'undefined' && errors.lastname)?errors.lastname.msg: "" %>
+                </small>
                 </div>
                 <div>
-                  <input type="text" id="dni" name="dni" placeholder="DNI">
+                  <input type="text" class="form-control <%= (typeof old != 'undefined' && old.dni && !errors.dni)?" is-valid ":
+                  (typeof errors != 'undefined' && errors.dni)?"is-invalid ":
+                  '' %>" id="exampleInputdni" aria-describedby="dniHelp" value="<%= (typeof old != 'undefined' && old.dni)?old.dni:'' %>" id="dni" name="dni" placeholder="DNI">
+                  <small
+                  class="text-danger"><%= (typeof errors != 'undefined' && errors.dni)?errors.dni.msg: "" %>
+                </small>
                 </div>
                 <div>
-                  <input type="text" id="email" name="email" placeholder="Correo lectrónico">
+                  <input type="text" class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?" is-valid ":
+                  (typeof errors != 'undefined' && errors.email)?"is-invalid ":
+                  '' %>" id="exampleInputEmail" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" id="email" name="email" placeholder="Correo lectrónico">
+                  <small
+                  class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %>
+                </small>
                 </div>
+
+
                 <div>
-                  <input type="text" id="emailRepeat" name="emailRepeat" placeholder="Repita su correo electrónico">
+                  <input type="text" class="form-control <%= (typeof old != 'undefined' && old.emailRepeat && !errors.emailRepeat)?" is-valid ":
+                  (typeof errors != 'undefined' && errors.emailRepeat)?"is-invalid ":
+                  '' %>" id="exampleInputEmailRepeat" aria-describedby="emailRepeatHelp" value="<%= (typeof old != 'undefined' && old.emailRepeat)?old.emailRepeat:'' %>" id="emailRepeat" name="emailRepeat" placeholder="Repita su correo electrónico">
+                  <small
+                  class="text-danger"><%= (typeof errors != 'undefined' && errors.emailRepeat)?errors.emailRepeat.msg: "" %>
+                </small>
                 </div>
+
+
                 <div>
-                  <input type="password" id="password" name="password" placeholder="Contraseña">
+                  <input type="password" class="form-control <%= (typeof old != 'undefined' && old.password && !errors.password)?" is-valid ":
+                  (typeof errors != 'undefined' && errors.password)?"is-invalid ":
+                  '' %>" id="exampleInputpassword" aria-describedby="passwordHelp" value="<%= (typeof old != 'undefined' && old.password)?old.password:'' %>" id="password" name="password" placeholder="Contraseña">
+                  <small
+                  class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %>
+                </small>
                 </div>
+
+
                 <div>
-                  <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="Repita su contraseña">
+                  <input type="password" class="form-control <%= (typeof old != 'undefined' && old.passwordRepeat && !errors.passwordRepeat)?" is-valid ":
+                  (typeof errors != 'undefined' && errors.passwordRepeat)?"is-invalid ":
+                  '' %>" id="exampleInputpasswordRepeat" aria-describedby="passwordRepeatHelp" value="<%= (typeof old != 'undefined' && old.passwordRepeat)?old.passwordRepeat:'' %>" id="passwordRepeat" name="passwordRepeat" placeholder="Repita su contraseña">
+                  <small
+                  class="text-danger"><%= (typeof errors != 'undefined' && errors.passwordRepeat)?errors.passwordRepeat.msg: "" %>
+                </small>
                 </div>
+
+
                 <div>
                   <button type="submit"> Registrate </button>
                 </div>
+
               </form>
           </div>
           <div class="col-3"></div>
