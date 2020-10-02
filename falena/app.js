@@ -7,6 +7,7 @@ var logger = require('morgan');
 * AGREGADAS 
 */
 const methodOverride = require('method-override');
+const session = require('express-session')
 /*
 * IMPORTAR ARCHIVOS
 */
@@ -23,12 +24,13 @@ app.set('view engine', 'ejs');
 /*
 * AGREGADAS
 */
-app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
+app.use(session({secret:'falenasession'}))
 
 /*
 * RUTAS
