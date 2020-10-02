@@ -78,3 +78,27 @@ Para la realización y organización del proyecto optamos por realizar un tabler
 - /products/ :id /edit (GET), Formulario de edición de productos
 - /products/ :id (PUT), Acción de edición (a donde se envía el formulario)
 - /products/ :id (DELETE) Acción de borrado
+
+# Sprint 4:
+
+### Retro.md
+Retrospectiva: [Retro.md](https://github.com/sebastianabila/grupo_10_falena/blob/master/retro.md "retro.md")
+
+### Tablero de trabajo
+Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente: [Tablero de Trello](https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena "Tablero de Trello")
+
+### Formulario de registro con:
+- Los campos mínimos mencionados en el sprint anterior
+- Subida de una imagen de perfil
+- Guardado en JSON con encriptación de contraseña
+### Formulario de login con:
+- Campos de email y password
+### Rutas de huéspedes y usuarios
+- Las de huéspedes deberán redireccionar al perfil si el usuario está logeado
+- Las de usuarios deberán redireccionar al login si el usuario no está logeado
+### Usuarios Administrador
+- Email: admin@admin.com
+- password: 123456
+### Usuarios visitante
+- Email: vistante@vistante.com
+- password: 123456
