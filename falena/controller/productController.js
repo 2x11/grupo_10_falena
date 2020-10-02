@@ -6,6 +6,7 @@ const fs = require('fs');
 const dbProducts = require(path.join(__dirname, '..', 'data', 'dbProducts'),'utf-8');
 const dbCategory = require(path.join(__dirname, '..', 'data', 'dbCategory'),'utf-8');
 
+
 module.exports = {
     index: function(req, res) {
         res.render('product', {

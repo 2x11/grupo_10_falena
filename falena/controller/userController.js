@@ -22,6 +22,12 @@ module.exports = {
         if(errors.isEmpty()){
             dbUser.forEach(user => {
                 if(user.email == req.body.email){
+                    /*agregado*/    
+                    req.session.id = user.id;
+                    req.session.nick = user.first_name + " " + user.last_name;
+                    req.session.email = user.email;
+                    req.session.rol = user.rol; 
+
                     req.session.user = {
                         id: user.id,
                         nick: user.firstname + " " + user.lastname,
@@ -84,6 +90,12 @@ module.exports = {
         }
        
     },
+
+    logaut: function(req, res, next) {
+        req.session.destroy();
+        res.redirect('/');
+    },
+    
     cart: (req, res, next) => {
         res.render('cart', {
             css: 'cart.css',

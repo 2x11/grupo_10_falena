@@ -20,5 +20,11 @@ module.exports = {
             masVendidos: masVendidos,
             visitados: visitados
         });
+    },
+    cart: (req, res, next)=>{
+        res.render('cart',{
+            css: 'cart.css',
+            menu: 'user'
+        })
     }
 }

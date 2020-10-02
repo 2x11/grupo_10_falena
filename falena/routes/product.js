@@ -10,17 +10,18 @@ const path = require('path');
 */
 let productController = require('../controller/productController')
 let imageProduct = require('../middlewares/subirImagenProduct'); /* Multer */
+let validarAdmin = require('../middlewares/validarAdmin')
 /*
 * Routes
 */
-router.get('/', productController.index);
+router.get('/', validarAdmin, productController.index);
 /*router.get('/',productController.listar)*/
 
 router.get('/detail/:id', productController.detail);
 
-router.get('/add',  productController.add);
+router.get('/add',  validarAdmin, productController.add);
 router.post('/save', imageProduct.any(), productController.save);
-router.get('/edit/:id', productController.editForm)
+router.get('/edit/:id', validarAdmin, productController.editForm)
 router.put('/edit/:id', productController.edit);
 
 router.delete('/delete/:id',productController.delete)

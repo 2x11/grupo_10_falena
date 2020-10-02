@@ -9,6 +9,7 @@ const userController = require('../controller/userController')
 const registerValidator = require('../validations/registerValidator')
 const loginValidator = require('../validations/loginValidator')
 
+
 /*
 * Routes
 */
@@ -18,5 +19,7 @@ router.post('/login',loginValidator ,userController.loginProcess);
 
 router.get('/register', userController.register);
 router.post('/register',registerValidator, userController.registerProcess);
+
+router.get('/logout', userController.logaut);
 
 module.exports = router;
