@@ -4,7 +4,7 @@
 const path = require('path');
 const fs = require('fs');
 const dbProducts = require(path.join(__dirname, '..', 'data', 'dbProducts'),'utf-8');
-
+const dbCategory = require(path.join(__dirname, '..', 'data', 'dbCategory'),'utf-8');
 
 module.exports = {
     index: function(req, res) {
@@ -15,7 +15,7 @@ module.exports = {
             products: dbProducts
         });
     },
-    
+    /*
     listar:function(req,res){
         res.render('product',{
             title: 'productos',
@@ -25,7 +25,7 @@ module.exports = {
 
         })
     },
-
+   */
     detail: function(req, res) {
         idProducto = req.params.id;
         let product = dbProducts.filter(producto => {
