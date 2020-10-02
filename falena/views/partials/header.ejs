@@ -18,18 +18,29 @@
         <!-- Menu izquiero-->
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="opciones1">
             <ul class="navbar-nav ml-auto">
+              <% if(locals.rol == 'admin'){ %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/product"><i class="fas fa-user-plus"></i> Panel Admin</a>
+                </li> 
                 <li class="nav-item">
                   <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> cerrar sesion</a>
-                </li>              
+                </li> 
+              <% }else if(locals.rol == 'user'){ %>
                 <li class="nav-item">
-                <a class="nav-link" href="/product"><i class="fas fa-user-plus"></i> Panel Admin</a>
-                </li>              
+                  <a class="nav-link" href="/user/profile"><i class="fas fa-sign-in-alt"></i> Perfil</a>
+                </li>               
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/register"><i class="fas fa-user-plus"></i> Registrate</a>
-                </li>
+                  <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> cerrar sesion</a>
+                </li> 
+
+              <% }else{ %>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
-                </li>
+                  <a class="nav-link" href="/user/register"><i class="fas fa-user-plus"></i> Registrate</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/user/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+              </li>                
+              <% } %>
             </ul>
         </div>
     </nav> 
