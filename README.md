@@ -87,6 +87,9 @@ Retrospectiva: [Retro.md](https://github.com/sebastianabila/grupo_10_falena/blob
 ### Tablero de trabajo
 Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente: [Tablero de Trello](https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena "Tablero de Trello")
 
+### Weekly.md
+Implementacion Weekly Stundups: [Weekly.md](https://github.com/sebastianabila/grupo_10_falena/blob/master/weekly.md "weekly.md")
+
 ### Formulario de registro con:
 - Los campos mínimos mencionados en el sprint anterior
 - Subida de una imagen de perfil
