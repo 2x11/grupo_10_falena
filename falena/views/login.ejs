@@ -4,49 +4,41 @@
   <%- include('./partials/head'); %>
 
 <body>
-  <%- include('./partials/header'); %>
+  <%- include('./partials/header'); %> 
   <!-- contenido -->
 
   <div class="container login-body">
 
       <div class="row">
-        <div class="col-md-3 col-lg-3"></div>
+        <div class="col-md-3 col-lg-3 "></div>
         <div class="col-12 col-md-6 col-lg-6 login-login">
-          <ul>
-          <li>
-              <form action="" method="POST">
-              </li>
-              <li>
+              <form action="" method="POST" class="box">
                 <input type="email" class="form-control 
                 <%= (typeof old != 'undefined' && old.email && !errors.email)?" is-valid ":
                 (typeof errors != 'undefined' && errors.email)?"is-invalid ":
-                '' %>" id="exampleInputEmail" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="email" name="email">
+                '' %>" id="exampleInputEmail" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="Correo electrónico" name="email">
                 <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
-              </li>
-              <li>
                 <input type="password" class="form-control <%= (typeof errors != 'undefined' && errors.password)?" is-invalid ":
                 '' %>" id="exampleInputPassword" placeholder="Contraseña" name="password">
                 <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </small>
-              </li>
-              <li>
-                <input type="checkbox" class="login-remember"> Recuerdame </input>
                 
-              </li>
-              <button type="submit"> Ingresar </button>
-              <a href=""> ¿Has olvidado tu contraseña? </a>
-            </ul>
+                <label>
+                  <input type="checkbox" class="login-remember"> Recuerdame
+                </label>
+                
+              <input type="submit" value="Iniciar sesión"> 
+              <a href="" class="password-reset"> ¿Has olvidado tu contraseña? </a>
             </form>
         </div>
-        <div class="col-3"></div>
 
       </div> <!-- Fin del row-->
 
 
 
     <div class="row">
-      <div class="col-3"></div>
+      <div class="col-md-3 col-lg-3 "></div>
       <div class="col-12 col-md-6 col-lg-6 login-media" >
-        <h5>Ingresa con:</h5>                                                       <!-- CSS centrar esto-->
+        <h5>Ingresa con:</h5></br>                                                     <!-- CSS centrar esto-->
         <ul>
           <li><img src="/images/img-twitter.png" alt=""></li>
           <li><img src="/images/img-facebook.png" alt=""></li>
@@ -59,16 +51,15 @@
 
 
     <div class="row">
-      <div class="col-3"></div>
+      <div class="col-md-3 col-lg-3 "></div>
       <div class="col-12 col-md-6 col-lg-6 login-register">
         <ul>
           <li>
             <h6>¿Todavía no estas registrado? Registrate ahora, ¡Es gratis!</h6> 
           </li>
         </ul>
-        <a href="/user/register"><button >Registrate</button></a>
+        <a href="/user/register"><button>Registrate</button></a>
             </div>
-      <div class="col-3"></div>
     </div> <!-- Fin de row 3-->
 
 

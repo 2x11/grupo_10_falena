@@ -5,7 +5,7 @@
 */
 
 .register-body {
-    margin-top: 30px;
+    margin-top: 30px; 
     margin-bottom: 30px;
 }
 
@@ -14,25 +14,76 @@
     padding-top: 10px;
     border-radius: 15px 15px 0 0;
 }
-
-.register-register div {
-    padding: 0;
-    margin-bottom: 10px;
+.register-register h2{
+    display: block;
+    text-align: center;
+    color: var(--color-marronClaro);
+}
+.box input[type="text"],
+.box input[type="number"],
+.box input[type="email"],
+.box input[type="password"]{
+    color: white;
+    background: none;
+    border: 2px solid var(--color-azul);
+    border-radius: 24px;
+    margin: 20px auto;
+    padding: 14px 10px;
+    width: 50%;
+    display: block;
+    text-align: center;
+    outline: none;
+    transition: 0.25s;
 }
 
-.register-register input {
-    width: 100%;
-    border-radius: 10px;
+.box input[type="text"]:focus,
+.box input[type="number"]:focus,
+.box input[type="email"]:focus,
+.box input[type="password"]:focus{
+    border-color: var(--color-celeste);
+    width: 75%;
+    color: white;
+}
+.box input[type="text"]::placeholder,
+.box input[type="number"]::placeholder,
+.box input[type="email"]::placeholder,
+.box input[type="password"]::placeholder{
+    color: white;
+    opacity: 0.8;
 }
 
-.register-register button {
-    width: 100%;
-    border-radius: 10px;
+
+.box input[type="submit"] {
+    border: 0;
+    background: var(--color-celeste);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--color-azul);
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 50%;
+    font-size: 1.1rem;
+    
+}
+
+.box input[type="submit"]:hover {
+    background: var(--color-azul);
 }
 
 .register-media {
     background-color: var(--color-marronOscuro);
     color: var(--color-crudo);
+}
+
+.register-media h5 {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .register-media img {
@@ -52,17 +103,30 @@
     border-radius: 0 0 15px 15px;
 }
 
-.register-login ul {
-    padding-left: 0px;
+.register-login h6 {
+    display: block;
+    text-align: center;
 }
 
-.register-login button {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.register-login a {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
+.register-login a button {
+    border-radius: 24px;
+    width: 30%;
+    height: 40px;
+    background: var(--color-celeste);
+    border: 2px solid var(--color-azul);
+    color: white;
+    font-size: 1.1rem;
+}
 
+.register-login a button:hover {
+    background: var(--color-azul);
+}
 
 
 /* 

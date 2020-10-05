@@ -1,68 +1,141 @@
 @import "style.css";
+
 /* 
 ----------------------------------------------------------------------------------------------------- LOGIN 
 */
-.login-body{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-  .login-login{
-    background-color: var(--color-marronOscuro);
-    color: var(--color-crudo);
-    display: inline;
-    justify-content: center;
+
+.login-login {
+    color: var(--color-marronClaro);
+    background: var(--color-marronOscuro);
+    margin-top: 3%;
     border-radius: 15px 15px 0 0;
     padding-top: 10px;
-  }
-  .login-login input{
-    border-radius: 10px;
-    width: 100%;
-  }
-  .login-login ul{
-    padding-left: 0px;
-  }
-  .login-login ul li{
-    margin-bottom: 10px;
+}
+
+.box input[type="email"],
+.box input[type="password"]{
+    color: black;
+    background: none;
+    border: 2px solid var(--color-azul);
+    border-radius: 24px;
+    margin: 20px auto;
+    padding: 14px 10px;
+    width: 50%;
+    display: block;
     text-align: center;
-  }
-  .login-login ul a{
+    outline: none;
+    transition: 0.25s;
+}
+
+.box input[type="email"]:focus,
+.box input[type="password"]:focus {
+    border-color: var(--color-celeste);
+    width: 75%;
+}
+
+.box input[type="text"]::placeholder,
+.box input[type="number"]::placeholder,
+.box input[type="email"]::placeholder,
+.box input[type="password"]::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: var(--color-celeste);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--color-azul);
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 50%;
+    font-size: 1.1rem;
+}
+
+.box input[type="submit"]:hover {
+    background: var(--color-azul);
+}
+
+.login-login .password-reset {
     color: var(--color-crudo);
-  }
-  .login-login ul li input.login-remember{
-    width: auto;
-  }
-  .login-login button{
+    display: block;
+    text-align: center;
+}
+
+.login-login label {
+    display: block;
+    text-align: center;
+}
+
+.login-login button {
     border-radius: 10px;
     width: 100%;
-  }
-  .login-media{
+}
+
+.login-media {
+    color: black;
     background-color: var(--color-marronOscuro);
+}
+
+.login-media h5 {
+    display: block;
+    text-align: center;
     color: var(--color-crudo);
-  }
-  .login-media img{
+}
+
+.login-media img {
     max-height: 75px;
-  }
-  .login-media ul{
+}
+
+.login-media ul {
     display: flex;
     justify-content: space-around;
-    align-content: center;
     padding-left: 0px;
-  
-  }
-  
-  .login-register{
+}
+
+.login-register {
     background-color: var(--color-marronOscuro);
     color: var(--color-crudo);
     border-radius: 0 0 15px 15px;
-  }
-  .login-register ul{
+    margin-bottom: 30px;
+}
+
+.login-register ul {
     padding-left: 0px;
-  }
-  .login-register button{
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  /* 
+}
+
+.login-register h6 {
+    display: block;
+    text-align: center;
+}
+
+.login-register a {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.login-register a button {
+    border-radius: 24px;
+    width: 30%;
+    height: 40px;
+    background: var(--color-celeste);
+    border: 2px solid var(--color-azul);
+    color: white;
+    font-size: 1.1rem;
+}
+
+.login-register a button:hover {
+    background: var(--color-azul);
+}
+
+
+/* 
   ---------------------------------------------------------------FIN LOGIN
   */
