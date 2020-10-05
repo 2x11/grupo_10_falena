@@ -18,7 +18,7 @@ let locasRol = require('../middlewares/locasRol');
 router.get('/',  locasRol, validarAdmin, productController.index);
 /*router.get('/',productController.listar)*/
 
-router.get('/detail/:id', productController.detail);
+router.get('/detail/:id', locasRol,productController.detail);
 
 router.get('/add',  locasRol,  validarAdmin, productController.add);
 router.post('/save', imageProduct.any(), productController.save);
