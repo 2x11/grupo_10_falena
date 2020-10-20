@@ -23,6 +23,9 @@ INICIO OPCIONES DE USUARIO
   .header-oculto{
     display: none;
   }
+  .profile-picture{
+    width: 25px;
+  }
   /* 
   FIN OPCIONES USUARIO
   */
