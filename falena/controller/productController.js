@@ -56,7 +56,7 @@ module.exports = {
             id: lastID + 1,
             author: req.body.author,
             name: req.body.name,
-            prece: Number(req.body.prece),
+            price: Number(req.body.price),
             discount: Number(req.body.discount),
             review: req.body.review,
             category: req.body.category,
@@ -87,7 +87,7 @@ module.exports = {
         dbProducts.forEach(product =>{
             if (product.id == req.params.id) {
                 product.name = req.body.name;
-                product.prece = req.body.prece;
+                product.price = req.body.price;
                 product.category = req.body.category;
                 product.review = req.body.review;                
             };
