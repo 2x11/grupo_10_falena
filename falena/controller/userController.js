@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 const { title } = require('process');
 
+const dbProducts = require(path.join(__dirname, '..', 'data', 'dbProducts'),'utf-8');
 
 const dbUser = require(path.join(__dirname, '..', 'data', 'dbUser'))
 
@@ -14,7 +15,8 @@ module.exports = {
         res.render('login', {
             css: 'login.css',
             menu: 'user',
-            title: 'Ingresar'
+            title: 'Ingresar',
+            user: dbUser
         });
     },
     loginProcess: (req, res, next) => {
@@ -95,7 +97,16 @@ module.exports = {
         req.session.destroy();
         res.redirect('/');
     },
-    
+    profile : (req,res,next)=>{
+        res.render('profile',{
+            css: 'profile.css',
+            menu: 'user',
+            user : dbUser,
+        })
+    },
+    profileUpdate : (req,res,next)=>{
+
+    },
     cart: (req, res, next) => {
         res.render('cart', {
             css: 'cart.css',
