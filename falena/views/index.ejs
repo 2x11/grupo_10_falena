@@ -60,7 +60,7 @@
               </figure>
               <article>
                 <h2>
-                  $ <%- (producto.prece - producto.prece * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+                  $ <%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
                 </h2>
                 <span><%= producto.discount %> %OFF </span>
                 <P><%= producto.name %> </P>
@@ -89,7 +89,7 @@
                 </figure>
                 <article>
                   <h2>
-                    $ <%- (producto.prece - producto.prece * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+                    $ <%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
                   </h2>
                   <span><%= producto.discount %> %OFF </span>
                   <P><%= producto.name %> </P>
