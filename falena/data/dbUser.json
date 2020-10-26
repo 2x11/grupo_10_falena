@@ -152,7 +152,7 @@
     {
         "id": 16,
         "first_name": "admin",
-        "last_name": "Sadmin",
+        "last_name": "admin",
         "email": "admin@admin.com",
         "password": "$2b$10$MwprUMRD5s0MnDFuJ2ECv.JJd25BoNyJssVVOttAaqqRGM1OHjAnm",
         "rol": "admin",
@@ -160,9 +160,9 @@
     },
     {
         "id": 17,
-        "first_name": "visitante",
-        "last_name": "svistante",
-        "email": "vistante@vistante.com",
+        "first_name": "user",
+        "last_name": "user",
+        "email": "user@user.com",
         "password": "$2b$10$OewGhk4Dd34bLBNbUzpDXOW2psoROCiDGyv9CYYA6IxCkptDnXbh6",
         "rol": "user",
         "picture" : "default-picture.png"
