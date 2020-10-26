@@ -6,7 +6,8 @@
         "dni": "43150555",
         "email": "uriasantiago.a@gmail.com",
         "password": "$2b$10$R85nEPvG.NDk.IE8cIeEteTteRuFCyXDckIaM1yKJq/5WhBNB12fC",
-        "rol": "user"
+        "rol": "user",
+        "picture": "default-picture.png"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "dni": "26859123",
         "email": "noahgoulding@gmail.com",
         "password": "$2b$10$.t3Ls9gip2QhAEQOqA/DOuoFbPIR3i47KC9SESz3cXtp4cdLnZhcu",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "dni": "24188574",
         "email": "emilijachapman@gmail.com",
         "password": "$2b$10$db5adjx047zhkPFi/fx4COiUzGRhyrbSxO1c5CMdoXEWjCXmgeMIm",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "dni": "20758969",
         "email": "liliansargent@gmail.com",
         "password": "$2b$10$DcNCmmmvmdIUbNPvdVzqY.xpoQ.OEPqWDYeLekmb47tLbOdrLGsD.",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "dni": "33555789",
         "email": "donniemcdonnell@gmail.com",
         "password": "$2b$10$y5yIUyXKG3j8uq3qzi8/qezgbs1aauqawCNlOfX8vgcoK4r8x.K.m",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "dni": "17859285",
         "email": "waseemmckenzie@gmail.com",
         "password": "$2b$10$MqPCnYyaXss1KD2MJcTjIubbdYLhr/vOmTu3Ly8p1h8MCW6fz/JVu",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "dni": "39687452",
         "email": "mattiehoffman@gmail.com",
         "password": "$2b$10$64tt89btkmzWaY2os3Khle4X3NTJVWgqb1vF3CZn3ZZ906mLPJg.u",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@
         "dni": "12333421",
         "email": "christinecraig@gmail.com",
         "password": "$2b$10$iwDmt84rKVayEepiMRQK1eNusZ48SoXQwmcsDIMHEQpY5js7C5HYe",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@
         "dni": "37195842",
         "email": "tiannarowley@gmail.com",
         "password": "$2b$10$b5GwozvrlBnapgQf3icX/uZhBrNjmGQPlyGF51C5G8ZI8BCGljF0.",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@
         "dni": "44256875",
         "email": "inayahmercado@gmail.com",
         "password": "$2b$10$OWBOebVBmFGMYaEnoZzbC.kOmHj7klKupUo91vknfXDysaaLl2ZwS",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@
         "dni": "45789654",
         "email": "nategentile@gmail.com",
         "password": "$2b$10$iAvFw21ktNUM580TxrSOTeAgrVPIwzrTxnhdXg8mvNAp9TDsjU8N6",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 12,
@@ -105,7 +116,8 @@
         "dni": "15498666",
         "email": "kirayoshikage@gmail.com",
         "password": "$2b$10$vmk/BRrbFTVdpVC2NsRFee4VDbXwukweq559WVU9HPn8Qm3Wfn3PW",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 13,
@@ -114,7 +126,8 @@
         "dni": "22478139",
         "email": "smokeybrown@gmail.com",
         "password": "$2b$10$q1bQePN9/T.kk.hQxULJL.VqV8bOGwbdHC7RhY6v0OGWm3DMIztea",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 14,
@@ -123,7 +136,8 @@
         "dni": "55716482",
         "email": "robynmachamon@gmail.com",
         "password": "$2b$10$AyYF6dPV2peSx9qWgXtTr.kggkhOiOAKyRFrpXfnozWYENOL.Ih/O",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 15,
@@ -132,7 +146,8 @@
         "dni": "44759351",
         "email": "arthurhayes@gmail.com",
         "password": "$2b$10$iLgAsgTHOwYSiDIqahfjt.mJ2JIrvrelGWB/tP8JwR7VJUsDeqD2.",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     },
     {
         "id": 16,
@@ -140,7 +155,8 @@
         "last_name": "Sadmin",
         "email": "admin@admin.com",
         "password": "$2b$10$MwprUMRD5s0MnDFuJ2ECv.JJd25BoNyJssVVOttAaqqRGM1OHjAnm",
-        "rol": "admin"
+        "rol": "admin",
+        "picture" : "default-picture.png"
     },
     {
         "id": 17,
@@ -148,6 +164,7 @@
         "last_name": "svistante",
         "email": "vistante@vistante.com",
         "password": "$2b$10$OewGhk4Dd34bLBNbUzpDXOW2psoROCiDGyv9CYYA6IxCkptDnXbh6",
-        "rol": "user"
+        "rol": "user",
+        "picture" : "default-picture.png"
     }
 ]
