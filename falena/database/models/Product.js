@@ -17,11 +17,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         price: {
-            type: dataTypes.DECIMAL(5, 2).UNSIGNED,
+            type: dataTypes.DECIMAL(10, 2).UNSIGNED,
+            allowNull: false
+        },
+        discount: {
+            type: dataTypes.INTEGER(3),
             allowNull: false
         },
         review: {
-            type: dataTypes.STRING(500),
+            type: dataTypes.TEXT(),
             allowNull: false
         },
         category_id: {
@@ -37,11 +41,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         rating: {
-            type: dataTypes.DECIMAL(5, 1),
-            allowNull: false
-        },
-        discount: {
-            type: dataTypes.INTEGER(3),
+            type: dataTypes.DECIMAL(2, 1),
             allowNull: false
         }
     }

@@ -5,7 +5,8 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true,
         },
         transaction_id: {
             type: dataTypes.INTEGER(11),
