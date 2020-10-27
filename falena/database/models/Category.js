@@ -1,21 +1,21 @@
-module.exports = (sequelize,dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "Categories";
 
     let cols = {
-        id : {
-            type : dataTypes.INTEGER(11),
-            allowNull : false,
-            autoIncrement : true,
-            primaryKey : true
+        id: {
+            type: dataTypes.INTEGER(11),
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
         },
-        name : {
-            type : dataTypes.STRING(45),
-            allowNull : false,
-            uniqueKey : true
+        name: {
+            type: dataTypes.STRING(45),
+            allowNull: false,
+            uniqueKey: true
         },
-        image : {
-            type : dataTypes.STRING(45),
-            allowNull : false
+        image: {
+            type: dataTypes.STRING(45),
+            allowNull: false
         }
     }
 
@@ -24,8 +24,14 @@ module.exports = (sequelize,dataTypes) => {
         timestamps: false
     }
 
-    const Category = sequelize.define(alias,cols,config);
+    const Category = sequelize.define(alias, cols, config);
 
-    return Category
+    Category.associate = function(models) {
+        Category.hasMany(models.Product, {
+            as: 'Products',
+            foreignKey: 'category_id'
+        })
+        return Category
 
+    }
 }

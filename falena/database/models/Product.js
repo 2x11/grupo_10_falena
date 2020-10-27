@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         rating: {
-            type: dataTypes.DECIMAL(5,1),
+            type: dataTypes.DECIMAL(5, 1),
             allowNull: false
         },
         discount: {
@@ -53,6 +53,21 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Product = sequelize.define(alias, cols, config);
+    Product.associate = function(models) {
+        Product.belongsTo(models.Category, {
+            as: 'Categories',
+            foreignKey: "category_id"
+        })
+        Product.hasMany(models.Order_item, {
+            as: 'Order_items',
+            foreignKey: 'product_id'
 
-    return Product;
+        })
+        Product.hasMany(models.Cart_item, {
+            as: 'Cart_items',
+            foreignKey: 'product_id'
+
+        })
+        return Product;
+    }
 }
