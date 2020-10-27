@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS `falena`.`categories` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 22
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -41,13 +40,13 @@ CREATE TABLE IF NOT EXISTS `falena`.`products` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `author` VARCHAR(50) NOT NULL,
-  `price` DECIMAL(5,2) NOT NULL,
+  `price` DECIMAL(10,2) NOT NULL,
   `discount` INT(3) NULL DEFAULT NULL,
   `review` TEXT NOT NULL,
   `category_id` INT(11) NOT NULL,
   `section` VARCHAR(25) NOT NULL,
   `image` VARCHAR(100) NOT NULL,
-  `rating` DECIMAL(1,1) NOT NULL,
+  `rating` DECIMAL(2,1) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fkProducts_categories_idx` (`category_id` ASC),
   CONSTRAINT `fkProducts_categories`
@@ -57,7 +56,6 @@ CREATE TABLE IF NOT EXISTS `falena`.`products` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
 
 -- -----------------------------------------------------
 -- Table `falena`.`users`
@@ -104,7 +102,6 @@ CREATE TABLE IF NOT EXISTS `falena`.`cart_items` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
-
 -- -----------------------------------------------------
 -- Table `falena`.`orders`
 -- -----------------------------------------------------
@@ -126,8 +123,6 @@ CREATE TABLE IF NOT EXISTS `falena`.`orders` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
-
 -- -----------------------------------------------------
 -- Table `falena`.`order_items`
 -- -----------------------------------------------------
