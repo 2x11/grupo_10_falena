@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         status: {
-            type: dataTypes.VARCHAR(15),
+            type: dataTypes.STRING(15),
             allowNull: false
         },
         created_at: {
@@ -40,19 +40,18 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Order = sequelize.define(alias, cols, config);
-    /*
+    
     Order.associate = function(models) {
-        Order.belongsTo(models.User, {
+        Order.belongsTo(models.Users, {
                 as: 'Users',
                 foreignKey: "user_id"
             }),
-            Order.hasMany(models.Order_item, {
+            Order.hasMany(models.Order_items, {
                 as: 'Order_items',
                 foreignKey: 'transaction_id'
             })
 
 
     }
-    */
     return Order
 }
