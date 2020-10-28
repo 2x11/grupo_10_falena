@@ -44,6 +44,81 @@ module.exports = {
         })
     })  
    },
+    recomendados:function(req, res){
+        db.Products.findAll({
+            where : {
+                section : 'masVendidos'
+            }
+        })        
+        .then(recomendados => {
+            res.render('seccion', {
+                title: 'Falena',
+                css: 'index.css',
+                menu:'user',
+                products: recomendados
+            });
+        })
+    },
+    novedades:function(req, res){
+        db.Products.findAll({
+            where : {
+                section : 'novedades'
+            }
+        })        
+        .then(recomendados => {
+            res.render('seccion', {
+                title: 'Falena',
+                css: 'index.css',
+                menu:'user',
+                products: recomendados
+            });
+        })
+    },
+    independientes:function(req, res){
+        db.Products.findAll({
+            where : {
+                section : 'independientes'
+            }
+        })        
+        .then(recomendados => {
+            res.render('seccion', {
+                title: 'Falena',
+                css: 'index.css',
+                menu:'user',
+                products: recomendados
+            });
+        })
+    },
+    masvendido:function(req, res){
+        db.Products.findAll({
+            where : {
+                section : 'recomendados'
+            }
+        })        
+        .then(recomendados => {
+            res.render('seccion', {
+                title: 'Falena',
+                css: 'index.css',
+                menu:'user',
+                products: recomendados
+            });
+        })
+    },
+    autores:function(req, res){
+        db.Products.findAll({
+            where : {
+                section : 'autores'
+            }
+        })        
+        .then(recomendados => {
+            res.render('seccion', {
+                title: 'Falena',
+                css: 'index.css',
+                menu:'user',
+                products: recomendados
+            });
+        })
+    },
     cart: (req, res, next)=>{
         res.render('cart',{
             css: 'cart.css',
