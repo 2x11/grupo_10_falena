@@ -8,6 +8,8 @@ let locasRol = require('../middlewares/locasRol');
 /* GET home page. */
 router.get('/',  locasRol, mainController.index);
 
+router.post('/search',  locasRol, mainController.search);
+
 router.get('/cart',  locasRol, validaruser , mainController.cart);
 
 module.exports = router;
