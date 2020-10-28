@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_id: {
             type: dataTypes.INTEGER(11),
-            allowNull: false
+            allowNull: true
         },
         section: {
             type: dataTypes.STRING(25),
