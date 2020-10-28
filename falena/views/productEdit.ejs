@@ -15,26 +15,33 @@
           <div class="col-md-2"></div>
           <!-- COLUMNA 2 -->
           <div class="col-12 col-md-8">
-              <h1>Editando producto: <%= prodToEdit.name %> #<%= prodToEdit.id %>  </h1>
+              <h1>Editando producto: <%= products.name %> #<%= products.id %>  </h1>
               <hr>
               <!-- FORMULARIO -->  
              
-              <form action="/product/edit/<%= prodToEdit.id %>?_method=PUT" method="POST">
+              <form action="/product/edit/<%= products.id %>?_method=PUT" method="POST">
                 <!-- CATEGORIAS -->                   
                 
                 <div class="form-group">
                     <label for="category">Categorías</label>
                     <select class="form-control" id="category" name="category" >
-                      <option value="<%=prodToEdit.category %>" selected><%=prodToEdit.category %></option>
-                      <% category.forEach(element => { %>
-                        <option value="<%= element.category %>"><%= element.category %></option>                       
+                      <% category.forEach(categories => { %>
+                        <% if(categories.id == products.category_id) { %>
+                          <option value="<%= categories.id %>" selected>
+                              <%= categories.name %>
+                          </option>
+                      <% } else { %>
+                          <option value="<%= categories.id %>">
+                              <%= categories.name %>
+                          </option>  
+                      <% } %>                      
                       <% }) %>
                     </select>
                 </div>
                 <!-- SECCION -->
                 <div class="form-group">
                   <label for="section">Seccion</label>
-                  <select class="form-control" id="section" name="section" ><%=prodToEdit.section%>
+                  <select class="form-control" id="section" name="section" ><%=products.section%>
                     <option value="masVendidos">Más vendidos</option>
                     <option value="ultimaVisita">Última visita</option>
                   </select>
@@ -42,39 +49,45 @@
                 <!-- TITULO -->
                 <div class="form-group">
                     <label for="name">Titulo</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" value="<%=prodToEdit.name%>" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" value="<%=products.name%>" required>
                 </div>
                 <!-- AUTOR -->
                 <div class="form-group">
                     <label for="author">Autor</label>
-                    <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" value="<%=prodToEdit.author%>"  required>
+                    <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" value="<%=products.author%>"  required>
                 </div> 
                 <!-- DESCRIPCION DEL PRODUCTO -->
                 <div class="form-group">
                     <label for="review">Descripcion Del producto</label>
-                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required> <%=prodToEdit.review%> </textarea> 
+                    <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto" required> <%=products.review%> </textarea> 
                 </div>
                 <!-- SUBIR IMAGENES -->
                 <div class="form-group">
                     <label for="file">Subir Imagenes</label>
-                    <input type="file" class="form-control-file" id="file" name="file"> <!-- no funciona   value="< %=prodToEdit.file%>"    -->
+                    <input type="file" class="form-control-file" id="file" name="file"> <!-- no funciona   value="< %=products.file%>"    -->
                 </div>
                 <!-- PRECIO -->
                 <div class="form-group">
                     <label for="prece">Precio</label>
-                    <input type="text" class="form-control" id="prece" name="prece" placeholder="Agregar Precio" value="<%=prodToEdit.prece%>" required>
+                    <input type="text" class="form-control" id="prece" name="prece" placeholder="Agregar Precio" value="<%=products.price%>" required>
                 </div>
                 <!-- DESCUENTO -->
                 <div class="form-group">
                   <label for="discount">Descuento</label>
-                  <input type="text" class="form-control" id="discount" name="discount" placeholder="Agregar Descuento" value="<%=prodToEdit.discount%>" required>
-              </div>                  
+                  <input type="text" class="form-control" id="discount" name="discount" placeholder="Agregar Descuento" value="<%=products.discount%>" required>
+              </div>
+              <!-- rating -->
+              <div class="form-group">
+                <label for="rating">rating</label>
+                <input type="text" class="form-control" id="rating" name="rating" placeholder="Agregar rating" value="<%=products.rating%>" required
+                  required>
+              </div>                                 
               <!-- Boton Guardar -->
               <button type="submit" class="btn btn-primary mb-2">Guardar</button>
             </form>
             <!-- FIN FORMULARIO -->
             <!-- Boton Eliminar-->
-            <form action="/product/delete/<%= prodToEdit.id %>?_method=DELETE" method="POST">
+            <form action="/product/delete/<%= products.id %>?_method=DELETE" method="POST">
               <button type="submit" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
             </form>
           </div>
