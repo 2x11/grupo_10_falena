@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_id: {
             type: dataTypes.INTEGER(11),
-            allowNull: false
+            allowNull: true
         },
         section: {
             type: dataTypes.STRING(25),
@@ -58,6 +58,7 @@ module.exports = (sequelize, dataTypes) => {
             as: 'Categories',
             foreignKey: "category_id"
         })
+        /*
         Product.hasMany(models.Order_item, {
             as: 'Order_items',
             foreignKey: 'product_id'
@@ -68,6 +69,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'product_id'
 
         })
-        return Product;
+        */
     }
+    return Product;
 }

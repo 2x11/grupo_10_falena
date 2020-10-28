@@ -40,6 +40,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Order = sequelize.define(alias, cols, config);
+    /*
     Order.associate = function(models) {
         Order.belongsTo(models.User, {
                 as: 'Users',
@@ -50,7 +51,8 @@ module.exports = (sequelize, dataTypes) => {
                 foreignKey: 'transaction_id'
             })
 
-        return Order
-    }
 
+    }
+    */
+    return Order
 }

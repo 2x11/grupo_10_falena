@@ -25,8 +25,8 @@
           <div class="form-group">
             <label for="category">Categorias</label>
             <select class="form-control" id="category" name="category">
-              <% category.forEach(element => { %>
-              <option value="<%= element.category %>"><%= element.category %></option>
+              <% category.forEach(category => { %>
+                <option value="<%= category.id %>"><%= category.name %></option>
               <% }) %>
             </select>
           </div>
@@ -62,14 +62,20 @@
           <!-- PRECIO -->
           <div class="form-group">
             <label for="prece">Precio</label>
-            <input type="text" class="form-control" id="prece" name="prece" placeholder="Agregar Precio" required>
+            <input type="text" class="form-control" id="price" name="price" placeholder="Agregar Precio" required>
           </div>
           <!-- DESCUENTO -->
           <div class="form-group">
             <label for="discoun">Descuento</label>
-            <input type="text" class="form-control" id="discoun" name="discoun" placeholder="Agregar Descuento"
+            <input type="text" class="form-control" id="discoun" name="discount" placeholder="Agregar Descuento"
               required>
           </div>
+          <!-- rating -->
+          <div class="form-group">
+            <label for="rating">rating</label>
+            <input type="text" class="form-control" id="rating" name="rating" placeholder="Agregar rating"
+              required>
+          </div>            
           <!-- Boton Enviar -->
           <button type="submit" class="btn btn-primary mb-2">Guardar</button>
           <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>

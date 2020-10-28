@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Cart_item = sequelize.define(alias, cols, config);
-
+    /*
     Cart_item.associate = function(models) {
 
         Cart_item.belongsTo(models.User, {
@@ -43,6 +43,8 @@ module.exports = (sequelize, dataTypes) => {
 
             })
             
-        return Cart_item
+
     }
+    */
+    return Cart_item    
 }
