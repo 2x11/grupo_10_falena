@@ -1,28 +1,32 @@
-const path = require('path');
-const fs = require('fs');
-const dbProducts = require(path.join(__dirname, '..', 'data', 'dbProducts'), 'utf-8' );
 
-const dbUser = require(path.join(__dirname, '..', 'data', 'dbUser'), 'utf-8' );
+const Sequelize = require('sequelize');
+const db = require('../database/models');
+let Op = Sequelize.Op;
+
 module.exports = {
     index: function (req, res) {
-         let masVendidos = dbProducts.filter(producto => {
-             return producto.section == "masVendidos"
-         })
+        let masVendidos = db.Products.findAll({
+           where : {
+               section : 'masVendidos'
+           }
+       })
+       let visitados = db.Products.findAll({
+           where : {
+               section : 'ultimaVisita'
+           }
+       })        
+       Promise.all([masVendidos,visitados ])         
+       .then(([productsVendidos, productsVistados]) => {
+           res.render('index', {
+               title: 'Falena',
+               css: 'index.css',
+               menu:'user',
+               masVendidos: productsVendidos,
+               visitados: productsVistados
+           });
+       })
 
-         let visitados = dbProducts.filter(producto => {
-            return producto.section == "ultimaVisita"
-         })
-         
-
-        res.render('index', {
-            title: 'Falena',
-            css: 'index.css',
-            menu:'user',
-            user : dbUser,
-            masVendidos: masVendidos,
-            visitados: visitados
-        });
-    },
+   },
     cart: (req, res, next)=>{
         res.render('cart',{
             css: 'cart.css',

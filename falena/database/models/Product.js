@@ -48,7 +48,7 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "products",
-        timestamps: true,
+        timestamps: false,
         underscored: true
     }
 
@@ -64,12 +64,13 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'product_id'
 
         })
+
         Product.hasMany(models.Cart_items, {
             as: 'Cart_items',
             foreignKey: 'product_id'
 
         })
-     
+
     }
     return Product;
 }
