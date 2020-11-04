@@ -20,6 +20,7 @@ module.exports = {
         });
     },
     loginProcess: (req, res, next) => {
+
         let errors = validationResult(req);
         if(errors.isEmpty()){
             dbUser.forEach(user => {
