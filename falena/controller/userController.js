@@ -1,13 +1,12 @@
-const path = require('path');
-const fs = require('fs');
-const bcrypt = require('bcrypt');
-
+const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator');
-const { title } = require('process');
-
-const dbProducts = require(path.join(__dirname, '..', 'data', 'dbProducts'),'utf-8');
-
-const dbUser = require(path.join(__dirname, '..', 'data', 'dbUser'))
+/*
+ * IMPORTAR LIBRERIA Y ARCHIVOS
+ */
+const { reset } = require('nodemon');
+const Sequelize = require('sequelize');
+const db = require('../database/models');
+let Op = Sequelize.Op;
 
 
 module.exports = {
@@ -16,96 +15,104 @@ module.exports = {
             css: 'login.css',
             menu: 'user',
             title: 'Ingresar',
-            user: dbUser
+            user: req.session.user
         });
     },
+
     loginProcess: (req, res, next) => {
 
         let errors = validationResult(req);
-        if(errors.isEmpty()){
-            dbUser.forEach(user => {
-                if(user.email == req.body.email){
-                    /*agregado*/    
-                    req.session.id = user.id;
-                    req.session.nick = user.first_name + " " + user.last_name;
-                    req.session.email = user.email;
-                    req.session.rol = user.rol; 
+        if (errors.isEmpty()) {
 
-                    req.session.user = {
-                        id: user.id,
-                        nick: user.firstname + " " + user.lastname,
-                        email: user.email,
+            db.Users.findOne({
+                    where: {
+                        email: req.body.email
                     }
-                }
-            })
-            if(req.body.remember){
-                res.cookie('userFalena', req.session.user, { maxAge: 1000 * 60 * 60 })
-            }
-            res.redirect('/')
+                })
+                .then(user => {
+                    req.session.user = {
+                        id: req.session.id = user.id,
+                        nick: req.session.nick = user.first_name + " " + user.last_name,
+                        email: req.session.email = user.email,
+                        rol: req.session.rol = user.rol,
+                    }
+                    if (req.body.remember) {
+                        res.cookie('userFalena', req.session.user, { maxAge: 1000 * 60 * 60 })
+                    }
+
+                    res.locals.user = req.session.user
+
+                    res.redirect('/')
+                })
+
         } else {
+
             res.render('login', {
                 title: "Ingresar",
                 css: "login.css",
                 menu: 'user',
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                user: req.session.user
             })
-            res.send(errors)
         }
     },
     register: (req, res) => {
         res.render('register', {
             css: 'register.css',
             menu: 'user',
-            title: 'Registrarse'
+            title: 'Registrarse',
+            user: req.session.user
         });
     },
     registerProcess: (req, res) => {
         let errors = validationResult(req);
-        let lastID = 0;
-        if(dbUser.length != 0){
-            dbUser.forEach(user => {
-                if(user.id > lastID){
-                    lastID = user.id
+        if (errors.isEmpty()) {
+            db.Users.create(
+
+                {
+                    first_name: req.body.firstname.trim(),
+                    last_name: req.body.lastname.trim(),
+                    email: req.body.email.trim(),
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    dni : req.body.dni.trim(),
+                    profile_picture : 'default-picture.png',
+                    rol: "user"
                 }
+
+            )
+                .then(e => {
+                    return res.redirect('/user/login')
+                })
+                .catch(errores=>{
+                    console.log(errores);
+                })
+        } else {
+            res.render('register',{
+                title : "Registro de Usuarios",
+                css : 'register.css',
+                errors : errors.mapped(),
+                old : req.body,
+                user : req.session.user
             })
         }
-        if(errors.isEmpty()){
-            let newUser = {
-                id: lastID + 1,
-                first_name: req.body.firstname.trim(),
-                last_name: req.body.lastname.trim(),
-                email: req.body.email.trim(),
-                password:bcrypt.hashSync(req.body.password,10),
-                rol:"user"
-            }
-            dbUser.push(newUser);
-            fs.writeFileSync(path.join(__dirname,'..','data','dbUser.json'),JSON.stringify(dbUser),'utf-8')
-    
-            return res.redirect('/user/login')
-        }else{
-            res.render('re',{
-                title:"Registro de Usuario",
-                css:"register.css",
-                errors:errors.mapped(),
-                old:req.body
-            })
-        }
-       
     },
 
     logaut: function(req, res, next) {
         req.session.destroy();
+        if(req.cookies.usuarioFalena){
+            res.cookie('userFalena','',{ maxAge: -1})
+        }
         res.redirect('/');
     },
-    profile : (req,res,next)=>{
-        res.render('profile',{
+    profile: (req, res, next) => {
+        res.render('profile', {
             css: 'profile.css',
             menu: 'user',
-            user : dbUser,
+            user: db.Users,
         })
     },
-    profileUpdate : (req,res,next)=>{
+    profileUpdate: (req, res, next) => {
 
     },
     cart: (req, res, next) => {
