@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        firts_name: {
+        first_name: {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
         adress: {
             type: dataTypes.STRING(45)
         },
-        zipcode: {
+        zip_code: {
             type: dataTypes.INTEGER(4)
         },
         email: {
@@ -45,15 +45,12 @@ module.exports = (sequelize, dataTypes) => {
         profile_picture: {
             type: dataTypes.STRING(45),
             allowNull: false,
-        },
-        date: {
-            type: dataTypes.DATEONLY,
         }
     }
 
     let config = {
         tableName: "users",
-        timestamps: true,
+        timestamps: false,
         underscored: true
     }
 

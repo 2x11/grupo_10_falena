@@ -74,21 +74,21 @@ ALTER TABLE `products`;
 
 ALTER TABLE `users`;
 INSERT INTO `users` VALUES 
-(id,'Santiago','Uría','43150555',NULL,NULL,NULL,'uriasantiago.a@gmail.com','$2b$10$R85nEPvG.NDk.IE8cIeEteTteRuFCyXDckIaM1yKJq/5WhBNB12fC','user','default-picture.png',NULL),
-(id,'Noah','Goulding','26859123',NULL,NULL,NULL,'noahgoulding@gmail.com','$2b$10$.t3Ls9gip2QhAEQOqA/DOuoFbPIR3i47KC9SESz3cXtp4cdLnZhcu','user','default-picture.png',NULL),
-(id,'Emilija','Chapman','24188574',NULL,NULL,NULL,'emilijachapman@gmail.com','$2b$10$db5adjx047zhkPFi/fx4COiUzGRhyrbSxO1c5CMdoXEWjCXmgeMIm','user','default-picture.png',NULL),
-(id,'Lillian','Sargent','20758969',NULL,NULL,NULL,'liliansargent@gmail.com','$2b$10$DcNCmmmvmdIUbNPvdVzqY.xpoQ.OEPqWDYeLekmb47tLbOdrLGsD.','user','default-picture.png',NULL),
-(id,'Donnie','Mcdonnell','33555789',NULL,NULL,NULL,'donniemcdonnell@gmail.com','$2b$10$y5yIUyXKG3j8uq3qzi8/qezgbs1aauqawCNlOfX8vgcoK4r8x.K.m','user','default-picture.png',NULL),
-(id,'Waseem','Mckenzie','17859285',NULL,NULL,NULL,'waseemmckenzie@gmail.com','$2b$10$MqPCnYyaXss1KD2MJcTjIubbdYLhr/vOmTu3Ly8p1h8MCW6fz/JVu','user','default-picture.png',NULL),
-(id,'Mattie','Hoffman','39687452',NULL,NULL,NULL,'mattiehoffman@gmail.com','$2b$10$64tt89btkmzWaY2os3Khle4X3NTJVWgqb1vF3CZn3ZZ906mLPJg.u','user','default-picture.png',NULL),
-(id,'Christine','Craig','12333421',NULL,NULL,NULL,'christinecraig@gmail.com','$2b$10$iwDmt84rKVayEepiMRQK1eNusZ48SoXQwmcsDIMHEQpY5js7C5HYe','user','default-picture.png',NULL),
-(id,'Tianna','Rowley','37195842',NULL,NULL,NULL,'tiannarowley@gmail.com','$2b$10$b5GwozvrlBnapgQf3icX/uZhBrNjmGQPlyGF51C5G8ZI8BCGljF0.','user','default-picture.png',NULL),
-(id,'Inayah','Mercado','44256875',NULL,NULL,NULL,'inayahmercado@gmail.com','$2b$10$OWBOebVBmFGMYaEnoZzbC.kOmHj7klKupUo91vknfXDysaaLl2ZwS','user','default-picture.png',NULL),
-(id,'Nate','Gentile', '45789654',NULL,NULL,NULL,'nategentile@gmail.com','$2b$10$iAvFw21ktNUM580TxrSOTeAgrVPIwzrTxnhdXg8mvNAp9TDsjU8N6','user','default-picture.png',NULL),
-(id,'Kira','Yoshikage', '15498666',NULL,NULL,NULL,'kirayoshikage@gmail.com','$2b$10$vmk/BRrbFTVdpVC2NsRFee4VDbXwukweq559WVU9HPn8Qm3Wfn3PW','user','default-picture.png',NULL),
-(id,'Smokey','Brown','22478139',NULL,NULL,NULL,'smokeybrown@gmail.com','$2b$10$q1bQePN9/T.kk.hQxULJL.VqV8bOGwbdHC7RhY6v0OGWm3DMIztea','user','default-picture.png',NULL),
-(id,'Robyn','Mchamon','55716482',NULL,NULL,NULL,'robynmachamon@gmail.com','$2b$10$AyYF6dPV2peSx9qWgXtTr.kggkhOiOAKyRFrpXfnozWYENOL.Ih/O','user','default-picture.png',NULL),
-(id,'Arthur','Hayes','44759351',NULL,NULL,NULL,'arthurhayes@gmail.com','$2b$10$iLgAsgTHOwYSiDIqahfjt.mJ2JIrvrelGWB/tP8JwR7VJUsDeqD2.','user','default-picture.png',NULL),
-(id,'admin','admin','12345678',NULL,NULL,NULL,'admin@admin.com','$2b$10$MwprUMRD5s0MnDFuJ2ECv.JJd25BoNyJssVVOttAaqqRGM1OHjAnm','admin','default-picture.png',NULL),
-(id,'visitante','visitante','87654321',NULL,NULL,NULL,'visitante@vistante.com','$2b$10$OewGhk4Dd34bLBNbUzpDXOW2psoROCiDGyv9CYYA6IxCkptDnXbh6','user','default-picture.png',NULL);
+(id,'Santiago','Uría','43150555',NULL,NULL,NULL,'uriasantiago.a@gmail.com','$2b$10$R85nEPvG.NDk.IE8cIeEteTteRuFCyXDckIaM1yKJq/5WhBNB12fC','user','default-picture.png'),
+(id,'Noah','Goulding','26859123',NULL,NULL,NULL,'noahgoulding@gmail.com','$2b$10$.t3Ls9gip2QhAEQOqA/DOuoFbPIR3i47KC9SESz3cXtp4cdLnZhcu','user','default-picture.png'),
+(id,'Emilija','Chapman','24188574',NULL,NULL,NULL,'emilijachapman@gmail.com','$2b$10$db5adjx047zhkPFi/fx4COiUzGRhyrbSxO1c5CMdoXEWjCXmgeMIm','user','default-picture.png'),
+(id,'Lillian','Sargent','20758969',NULL,NULL,NULL,'liliansargent@gmail.com','$2b$10$DcNCmmmvmdIUbNPvdVzqY.xpoQ.OEPqWDYeLekmb47tLbOdrLGsD.','user','default-picture.png'),
+(id,'Donnie','Mcdonnell','33555789',NULL,NULL,NULL,'donniemcdonnell@gmail.com','$2b$10$y5yIUyXKG3j8uq3qzi8/qezgbs1aauqawCNlOfX8vgcoK4r8x.K.m','user','default-picture.png'),
+(id,'Waseem','Mckenzie','17859285',NULL,NULL,NULL,'waseemmckenzie@gmail.com','$2b$10$MqPCnYyaXss1KD2MJcTjIubbdYLhr/vOmTu3Ly8p1h8MCW6fz/JVu','user','default-picture.png'),
+(id,'Mattie','Hoffman','39687452',NULL,NULL,NULL,'mattiehoffman@gmail.com','$2b$10$64tt89btkmzWaY2os3Khle4X3NTJVWgqb1vF3CZn3ZZ906mLPJg.u','user','default-picture.png'),
+(id,'Christine','Craig','12333421',NULL,NULL,NULL,'christinecraig@gmail.com','$2b$10$iwDmt84rKVayEepiMRQK1eNusZ48SoXQwmcsDIMHEQpY5js7C5HYe','user','default-picture.png'),
+(id,'Tianna','Rowley','37195842',NULL,NULL,NULL,'tiannarowley@gmail.com','$2b$10$b5GwozvrlBnapgQf3icX/uZhBrNjmGQPlyGF51C5G8ZI8BCGljF0.','user','default-picture.png'),
+(id,'Inayah','Mercado','44256875',NULL,NULL,NULL,'inayahmercado@gmail.com','$2b$10$OWBOebVBmFGMYaEnoZzbC.kOmHj7klKupUo91vknfXDysaaLl2ZwS','user','default-picture.png'),
+(id,'Nate','Gentile', '45789654',NULL,NULL,NULL,'nategentile@gmail.com','$2b$10$iAvFw21ktNUM580TxrSOTeAgrVPIwzrTxnhdXg8mvNAp9TDsjU8N6','user','default-picture.png'),
+(id,'Kira','Yoshikage', '15498666',NULL,NULL,NULL,'kirayoshikage@gmail.com','$2b$10$vmk/BRrbFTVdpVC2NsRFee4VDbXwukweq559WVU9HPn8Qm3Wfn3PW','user','default-picture.png'),
+(id,'Smokey','Brown','22478139',NULL,NULL,NULL,'smokeybrown@gmail.com','$2b$10$q1bQePN9/T.kk.hQxULJL.VqV8bOGwbdHC7RhY6v0OGWm3DMIztea','user','default-picture.png'),
+(id,'Robyn','Mchamon','55716482',NULL,NULL,NULL,'robynmachamon@gmail.com','$2b$10$AyYF6dPV2peSx9qWgXtTr.kggkhOiOAKyRFrpXfnozWYENOL.Ih/O','user','default-picture.png'),
+(id,'Arthur','Hayes','44759351',NULL,NULL,NULL,'arthurhayes@gmail.com','$2b$10$iLgAsgTHOwYSiDIqahfjt.mJ2JIrvrelGWB/tP8JwR7VJUsDeqD2.','user','default-picture.png'),
+(id,'admin','admin','12345678',NULL,NULL,NULL,'admin@admin.com','$2b$10$MwprUMRD5s0MnDFuJ2ECv.JJd25BoNyJssVVOttAaqqRGM1OHjAnm','admin','default-picture.png'),
+(id,'visitante','visitante','87654321',NULL,NULL,NULL,'visitante@vistante.com','$2b$10$OewGhk4Dd34bLBNbUzpDXOW2psoROCiDGyv9CYYA6IxCkptDnXbh6','user','default-picture.png');
 ALTER TABLE `users`;
