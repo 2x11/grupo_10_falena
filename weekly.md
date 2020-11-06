@@ -1,6 +1,6 @@
 # :notebook: Weekly standups
 ## Sprint 4
-_Decidimos reunirnos via Zoom, el dia 26 de septiembre para hablar sobre el nuevo sprint_
+_Decidimos reunirnos via Zoom, el dia 26 de septiembre para hablar sobre el nuevo sprint_  
 _Daiana no tuvo luz durante todo el día así que se paso la reunion para el dia siguiente_
 
 
@@ -21,7 +21,7 @@ _Daiana no tuvo luz durante todo el día así que se paso la reunion para el dia
 
 
 ## Sprint 5
-_Decidimos reunirnos via Zoom, el dia 24 de octubre para hablar sobre el nuevo sprint_
+_Decidimos reunirnos via Zoom, el dia 24 de octubre para hablar sobre el nuevo sprint_  
 _Santiago adelanto trabajo haciendo la base de datos asi que se ofrecio a terminarlo_ 
 
 
