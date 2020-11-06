@@ -19,7 +19,7 @@
               <hr>
               <!-- FORMULARIO -->  
              
-              <form action="/product/edit/<%= products.id %>?_method=PUT" method="POST">
+              <form action="/product/edit/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <!-- CATEGORIAS -->                   
                 
                 <div class="form-group">
@@ -63,8 +63,9 @@
                 </div>
                 <!-- SUBIR IMAGENES -->
                 <div class="form-group">
-                    <label for="file">Subir Imagenes</label>
-                    <input type="file" class="form-control-file" id="file" name="file"> <!-- no funciona   value="< %=products.file%>"    -->
+                    <label for="image">Subir Imagenes</label>
+                    <input type="file" class="form-control-file" id="image" name="image"> <!-- no funciona   value="< %=products.file%>"    -->
+                    <input type="hidden" id="imagen" value="<%= products.file %>" >
                 </div>
                 <!-- PRECIO -->
                 <div class="form-group">

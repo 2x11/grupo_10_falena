@@ -93,6 +93,7 @@ module.exports = {
             review: req.body.review,
             category_id: req.body.category,
             section: req.body.section,
+            image: (req.files[0])?req.files[0].filename: req.body.imagen,
             rating: req.body.rating        
         },
         {

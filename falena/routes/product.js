@@ -23,7 +23,7 @@ router.get('/detail/:id', locasRol,productController.detail);
 router.get('/add',  locasRol,  validarAdmin, productController.add);
 router.post('/save', imageProduct.any(), productController.save);
 router.get('/edit/:id', locasRol,  validarAdmin, productController.editForm)
-router.put('/edit/:id', productController.edit);
+router.put('/edit/:id', imageProduct.any(), productController.edit);
 
 router.delete('/delete/:id',productController.delete)
 
