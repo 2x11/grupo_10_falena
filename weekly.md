@@ -27,7 +27,7 @@ _Santiago adelanto trabajo haciendo la base de datos asi que se ofrecio a termin
 
 
 :computer: **Division de Tareas:**
-- Santiago: diagrama y estructura de base de datos, creacion de carpeta sequelize .
+- Santiago: Diagrama y estructura de base de datos, creacion de carpeta sequelize .
 - Sebastian: CRUD productos.
 - Daiana: CRUD usuarios y archivo weekly.md
 
