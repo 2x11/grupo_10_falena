@@ -33,7 +33,7 @@ _Santiago adelanto trabajo haciendo la base de datos asi que se ofrecio a termin
 
 
 :warning: **Problemas durante la ejecucion del codigo:**
-- Daiana tuvo problemas con workbech ya que contaba con una version vieja y no compatible con la de sus compañeros, por esta razon se decide que Daiana pase su codigo en un archivo zip por slack para que sus compañeros puedan comprobar su funcionamiento. Santiago termino de corregir el codigo que paso Daiana e hizo el push del crud de usuarios. 
+- Daiana tuvo problemas con workbench ya que contaba con una version vieja y no compatible con la de sus compañeros, por esta razon se decide que Daiana pase su codigo en un archivo zip por slack para que sus compañeros puedan comprobar su funcionamiento. Santiago termino de corregir el codigo que paso Daiana e hizo el push del crud de usuarios. 
 
 
 :bulb:**Detalles:**
