@@ -1,4 +1,4 @@
-<!--
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,18 +8,67 @@
   <%- include('./partials/header'); %>
 
 
-<div class="row">
-<div class="col-6"></div>    
-<div class="col-3">
-    asdsadsadas
-</div>
-</div>
-<div class="row">
-    <div class="col-6"></div>    
-    <div class="col-3">
-        <img src="/images/user/<%-user.picture%>">
+  <section class="container">
+    <article class="row">
+      <!-- Saludar -->
+      <div class="col-4"></div>
+      <div class="col-4"><h1>Hola <%= user.first_name %></h1> </div>
+      <div class="col-4"></div>
+      <!-- Imagen -->
+      <div class="col-4"></div>
+      <div class="col-4"><img src="/images/user/default-picture.png" width="150"></div>
+      <div class="col-4"></div> 
+      <hr> 
+      <div class="col-2"></div>
+      <div class="col-8">
+        <!-- Formulario -->    
+        <form action="/product/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <!-- Nombre -->
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="<%=user.first_name%>" disabled>
+          </div>
+          <!-- apellido -->
+          <div class="form-group">
+            <label for="name">Apellido</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="<%=user.last_name%>" disabled>
+          </div>
+          <!-- Dni -->
+          <div class="form-group">
+            <label for="name">Dni</label>
+            <input type="text" class="form-control" id="dni" name="dni" value="<%=user.dni%>" disabled>
+          </div> 
+          <!-- phone_number -->
+          <div class="form-group">
+            <label for="name">Telefono</label>
+            <input type="text" class="form-control" id="phone_number" name="phone_number" value="<%=user.phone_number%>" >
+          </div>
+          <!-- adress -->
+          <div class="form-group">
+            <label for="name">Direccion</label>
+            <input type="text" class="form-control" id="adress" name="adress" value="<%=user.adress%>" >
+          </div>
+          <!-- zip_code -->
+          <div class="form-group">
+            <label for="name">Direccion</label>
+            <input type="text" class="form-control" id="zip_code" name="zip_code" value="<%=user.zip_code%>" >
+          </div> 
+          <!-- email-->
+          <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email" name="email" value="<%=user.email%>" >
+          </div>
+          <!-- profile_picture -->
+          <div class="form-group">
+            <label for="profile_picture">Avatar</label>
+            <input type="file" class="form-control-file" id="file" name="file">
+          </div>
+          <!-- Boton Enviar -->
+          <button type="submit" class="btn btn-primary mb-2">Guardar Cambios</button>
+          <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                                                                                   
+      </form>
     </div>
-    </div>
+    <div class="col-2"></div>         
     
     <!-- importa footer -->
     <%- include('./partials/footer') %>

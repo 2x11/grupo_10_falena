@@ -30,6 +30,7 @@ module.exports = {
                     }
                 })
                 .then(user => {
+                    req.session.ida = user.id;
                     req.session.user = {
                         id: req.session.id = user.id,
                         nick: req.session.nick = user.first_name + " " + user.last_name,
@@ -42,7 +43,7 @@ module.exports = {
 
                     res.locals.user = req.session.user
 
-                    res.redirect('/')
+                    res.redirect('/user/profile')
                 })
 
         } else {
@@ -106,11 +107,20 @@ module.exports = {
         res.redirect('/');
     },
     profile: (req, res, next) => {
-        res.render('profile', {
-            css: 'profile.css',
-            menu: 'user',
-            user: db.Users,
+        let id = req.session.ida;
+        db.Users.findOne({
+            where : {
+                id : id
+            }
         })
+        .then( user => { 
+           //res.send(user)   
+            res.render('profile', {
+                css: 'profile.css',
+                menu: 'user',
+                user: user
+            })
+        })    
     },
     profileUpdate: (req, res, next) => {
 

@@ -24,7 +24,7 @@ router.post('/register',registerValidator, userController.registerProcess);
 
 router.get('/logout', userController.logaut);
 
-router.get('/profile', userController.profile)
+router.get('/profile', locasRol, userController.profile)
 router.post('/profile', userController.profileUpdate)
 // router.post('/save', profilePicture.any(), productController);
 module.exports = router;
