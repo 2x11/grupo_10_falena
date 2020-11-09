@@ -123,8 +123,42 @@ module.exports = {
         })    
     },
     profileUpdate: (req, res, next) => {
-
+        db.Users.update(
+            {
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                dni: req.body.dni,
+                phone_number: req.body.phone_number,
+                adress: req.body.adress,
+                zip_code: req.body.zip_code,
+                email: req.body.email,
+                profile_picture: (req.files[0])?req.files[0].filename: 'default-picture.png'
+            },
+            {
+                where: {
+                    id: req.params.id
+                }            
+            })        
+            .then(resultado => {
+                res.redirect('/user/profile');
+            }).catch(err => {
+                console.log(err)
+            })
     },
+    delete: (req, res) => {
+        db.Users.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(result=>{
+            req.session.destroy();
+            if(req.cookies.usuarioFalena){
+                res.cookie('userFalena','',{ maxAge: -1})
+            }            
+            res.redirect('/')
+        })
+     },
     cart: (req, res, next) => {
         res.render('cart', {
             css: 'cart.css',

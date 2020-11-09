@@ -16,13 +16,13 @@
       <div class="col-4"></div>
       <!-- Imagen -->
       <div class="col-4"></div>
-      <div class="col-4"><img src="/images/user/default-picture.png" width="150"></div>
+      <div class="col-4"><img src="/images/user/<%= user.profile_picture %>" width="150"></div>
       <div class="col-4"></div> 
       <hr> 
       <div class="col-2"></div>
       <div class="col-8">
         <!-- Formulario -->    
-        <form action="/product/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/user/profile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
           <!-- Nombre -->
           <div class="form-group">
             <label for="name">Nombre</label>
@@ -50,7 +50,7 @@
           </div>
           <!-- zip_code -->
           <div class="form-group">
-            <label for="name">Direccion</label>
+            <label for="name">Codigo Postal</label>
             <input type="text" class="form-control" id="zip_code" name="zip_code" value="<%=user.zip_code%>" >
           </div> 
           <!-- email-->
@@ -61,12 +61,16 @@
           <!-- profile_picture -->
           <div class="form-group">
             <label for="profile_picture">Avatar</label>
-            <input type="file" class="form-control-file" id="file" name="file">
+            <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
           </div>
           <!-- Boton Enviar -->
-          <button type="submit" class="btn btn-primary mb-2">Guardar Cambios</button>
-          <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                                                                                   
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar Cambios</button>
       </form>
+      <br>
+      <form action="/user/profile/delete/<%= user.id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger btn-lg btn-block " type="submit" name="id" id="id" value="<%= user.id %> ">eliminar Perfil</button>  
+      </form>
+      <br>
     </div>
     <div class="col-2"></div>         
     
