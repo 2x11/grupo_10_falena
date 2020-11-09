@@ -17,6 +17,6 @@ router.get('/seccion/masvendido',  locasRol,  mainController.masvendido);
 router.get('/seccion/autores',  locasRol,  mainController.autores);
 
 
-router.get('/cart',  locasRol, validaruser , mainController.cart);
+
 
 module.exports = router;

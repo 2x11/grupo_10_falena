@@ -158,11 +158,6 @@ module.exports = {
             }            
             res.redirect('/')
         })
-     },
-    cart: (req, res, next) => {
-        res.render('cart', {
-            css: 'cart.css',
-            menu: 'user'
-        })
-    }
+     }
+
 }
