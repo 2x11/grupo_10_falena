@@ -20,7 +20,6 @@ module.exports = {
            res.render('index', {
                title: 'Falena',
                css: 'index.css',
-               menu:'user',
                masVendidos: productsVendidos,
                visitados: productsVistados
            });
@@ -39,7 +38,6 @@ module.exports = {
         res.render('search',{
             title: 'Falena',
             css: 'index.css',
-            menu:'user',                
             products: resultado
         })
     })  
@@ -54,7 +52,6 @@ module.exports = {
             res.render('seccion', {
                 title: 'Falena',
                 css: 'index.css',
-                menu:'user',
                 products: recomendados
             });
         })
@@ -69,7 +66,6 @@ module.exports = {
             res.render('seccion', {
                 title: 'Falena',
                 css: 'index.css',
-                menu:'user',
                 products: recomendados
             });
         })
@@ -84,7 +80,6 @@ module.exports = {
             res.render('seccion', {
                 title: 'Falena',
                 css: 'index.css',
-                menu:'user',
                 products: recomendados
             });
         })
@@ -99,7 +94,6 @@ module.exports = {
             res.render('seccion', {
                 title: 'Falena',
                 css: 'index.css',
-                menu:'user',
                 products: recomendados
             });
         })
@@ -114,7 +108,6 @@ module.exports = {
             res.render('seccion', {
                 title: 'Falena',
                 css: 'index.css',
-                menu:'user',
                 products: recomendados
             });
         })

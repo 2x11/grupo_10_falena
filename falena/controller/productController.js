@@ -14,7 +14,6 @@ module.exports = {
             res.render('product', {
                 title: 'Express',
                 css: 'index.css',
-                menu: 'admin',
                 products: Products
             });            
         })
@@ -32,7 +31,6 @@ module.exports = {
         }).then( Products => {
             res.render('productDetail', {
                 css: 'product.css',
-                menu: 'user',
                 product: Products,
                 category : Products.Categories
             });
@@ -47,7 +45,6 @@ module.exports = {
         .then(categories => {
             res.render('productAdd', {
                 css: 'product.css',
-                menu: 'admin',
                 category: categories
             });            
         })
@@ -76,7 +73,6 @@ module.exports = {
         .then(([products, categories]) => {
             res.render('productEdit', {
                 css: 'product.css',
-                menu: 'admin',
                 products:products,
                 category: categories
             });            

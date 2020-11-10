@@ -13,7 +13,6 @@ module.exports = {
     login: (req, res, next) => {
         res.render('login', {
             css: 'login.css',
-            menu: 'user',
             title: 'Ingresar',
             user: req.session.user
         });
@@ -51,7 +50,6 @@ module.exports = {
             res.render('login', {
                 title: "Ingresar",
                 css: "login.css",
-                menu: 'user',
                 errors: errors.mapped(),
                 old: req.body,
                 user: req.session.user
@@ -61,7 +59,6 @@ module.exports = {
     register: (req, res) => {
         res.render('register', {
             css: 'register.css',
-            menu: 'user',
             title: 'Registrarse',
             user: req.session.user
         });
@@ -117,7 +114,6 @@ module.exports = {
            //res.send(user)   
             res.render('profile', {
                 css: 'profile.css',
-                menu: 'user',
                 user: user
             })
         })    
