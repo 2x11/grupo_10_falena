@@ -25,8 +25,8 @@ module.exports = [
     .withMessage('Esta dirección de email ya está registrada'),
 
     check('password')
-    .isLength({min:6,max:24})
-    .withMessage('Debe ingresar una contraseña con mínimo 6 caracteres y un máximo de 24 caracteres'),
+    .isLength({min:8,max:24})
+    .withMessage('Debe ingresar una contraseña con mínimo 8 y un máximo de 24 caracteres'),
 
     body('passwordRepeat')
     .custom((value,{req}) =>{
