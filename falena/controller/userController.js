@@ -60,13 +60,14 @@ module.exports = {
         res.render('register', {
             css: 'register.css',
             title: 'Registrarse',
+            script: 'register.js',
             user: req.session.user
         });
     },
     registerProcess: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            db.Users.create(
+            user.create(
 
                 {
                     first_name: req.body.firstname.trim(),
@@ -89,6 +90,7 @@ module.exports = {
             res.render('register',{
                 title : "Registro de Usuarios",
                 css : 'register.css',
+                user : db.Users,
                 errors : errors.mapped(),
                 old : req.body,
                 user : req.session.user
