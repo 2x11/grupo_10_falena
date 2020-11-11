@@ -11,8 +11,8 @@ window.addEventListener('load', () => {
 
     //expresiones regulares:
     //validacion de mail
-    let regExEmail =  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    
+    let regExEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
 
     firstnameInput.addEventListener('blur', function() {
         switch (true) {
@@ -74,14 +74,14 @@ window.addEventListener('load', () => {
                 emailInput.classList.add('is-invalid')
                 emailError.innerHTML = "El correo electrónico es obligatorio";
                 break;
-            case !regExEmail.test(emailInput.value) :
+            case !regExEmail.test(emailInput.value):
                 emailInput.classList.add('is-invalid')
                 emailError.innerHTML = "Debes escribir un correo válido"
                 break;
-            // case
-            //     emailInput.classList.add('is-invalid')
-            //     emailError.innerHTML = "Esta dirección de corre ya está registrada"
-            //     break;
+                // case
+                //     emailInput.classList.add('is-invalid')
+                //     emailError.innerHTML = "Esta dirección de corre ya está registrada"
+                //     break;
             default:
                 emailInput.classList.remove('is-invalid')
                 emailInput.classList.add('is-valid')
@@ -89,16 +89,16 @@ window.addEventListener('load', () => {
                 break;
         }
     })
-    passwordInput.addEventListener('blur',()=>{
+    passwordInput.addEventListener('blur', () => {
         switch (true) {
             case passwordInput.value.length === 0:
                 passwordInput.classList.add('is-invalid')
                 passwordError.innerHTML = "La contraseña es obligatoria";
                 break;
-            case passwordInput.value.length < 8:
-                passwordInput.classList.add('is-invalid')
-                passwordError.innerHTML = "La contraseña debe contener al menos ocho caracteres"
-                break;
+            case !regExPass.test(this.value):
+                this.classList.add('is-invalid')
+                passwordError.innerHTML = "La contraseña debe tener entre 8 y 24 caracteres, una mayúscula una minúscula y un número"
+                break
             default:
                 passwordInput.classList.remove('is-invalid')
                 passwordInput.classList.add('is-valid')
@@ -106,16 +106,16 @@ window.addEventListener('load', () => {
                 break;
         }
     })
-    passwordInput2.addEventListener('blur',function(){
+    passwordInput2.addEventListener('blur', function() {
 
         switch (true) {
             case this.value.length === 0:
+                this.classList.add('is-invalid')
                 passwordError2.innerHTML = "Reingrese su contraseña";
-                this.classList.add('is-invalid')
                 break;
-            case this.value !== passwordInput.value :
-                passwordError2.innerHTML = "Las contraseñas no coinciden"
+            case this.value !== passwordInput.value:
                 this.classList.add('is-invalid')
+                passwordError2.innerHTML = "Las contraseñas no coinciden"
                 break
             default:
                 this.classList.remove('is-invalid')
