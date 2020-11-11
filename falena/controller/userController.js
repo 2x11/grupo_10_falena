@@ -75,7 +75,7 @@ module.exports = {
                     email: req.body.email.trim(),
                     password: bcrypt.hashSync(req.body.password, 10),
                     dni : req.body.dni.trim(),
-                    profile_picture : 'default-picture.png',
+                    profile_picture: (req.files[0])?req.files[0].filename: 'default-picture.png',
                     rol: "user"
                 }
 
@@ -130,7 +130,7 @@ module.exports = {
                 adress: req.body.adress,
                 zip_code: req.body.zip_code,
                 email: req.body.email,
-                profile_picture: (req.files[0])?req.files[0].filename: 'default-picture.png'
+                profile_picture: (req.files[0])?req.files[0].filename: req.body.profile_picture
             },
             {
                 where: {

@@ -62,6 +62,7 @@
           <div class="form-group">
             <label for="profile_picture">Avatar</label>
             <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
+            <input type="hidden" name="profile_picture" value="<%= user.profile_picture %>" >
           </div>
           <!-- Boton Enviar -->
           <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar Cambios</button>
