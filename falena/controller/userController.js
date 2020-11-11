@@ -13,6 +13,7 @@ module.exports = {
     login: (req, res, next) => {
         res.render('login', {
             css: 'login.css',
+            script : 'login.js',
             title: 'Ingresar',
             user: req.session.user
         });
@@ -113,7 +114,6 @@ module.exports = {
             }
         })
         .then( user => { 
-           //res.send(user)   
             res.render('profile', {
                 css: 'profile.css',
                 user: user
