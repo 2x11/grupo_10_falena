@@ -41,44 +41,49 @@
           <!-- TITULO -->
           <div class="form-group">
             <label for="name">Titulo</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" required>
+            <input type="text" class="form-control" id="name" name="name" value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>" placeholder="Agregar un titulo">
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.name)?errors.name.msg: "" %></small>
           </div>
           <!-- AUTOR -->
           <div class="form-group">
             <label for="author">Autor</label>
-            <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" required>
+            <input type="text" class="form-control" id="author" name="author" value="<%= (typeof old != 'undefined' && old.author)?old.author:'' %>" placeholder="Agregar un Autor">
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.author)?errors.author.msg: "" %></small>
           </div>
           <!-- DESCRIPCION DEL PRODUCTO -->
           <div class="form-group">
             <label for="review">Descripcion Del producto</label>
-            <textarea class="form-control" id="review" name="review" rows="3"
-              placeholder="Agregar una Descripcion Del producto" required></textarea>
+            <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto">
+              <%= (typeof old != 'undefined' && old.review)?old.review:'' %>
+            </textarea>
           </div>
+          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.review)?errors.review.msg: "" %></small>
           <!-- SUBIR IMAGENES -->
           <div class="form-group">
             <label for="file">Subir Imagenes</label>
             <input type="file" class="form-control-file" id="file" name="file">
-          </div>
+           </div>
           <!-- PRECIO -->
           <div class="form-group">
             <label for="prece">Precio</label>
-            <input type="text" class="form-control" id="price" name="price" placeholder="Agregar Precio" required>
+            <input type="text" class="form-control" id="price" name="price" value="<%= (typeof old != 'undefined' && old.price)?old.price:'' %>" placeholder="Agregar Precio">
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.price)?errors.price.msg: "" %></small>
           </div>
           <!-- DESCUENTO -->
           <div class="form-group">
             <label for="discoun">Descuento</label>
-            <input type="text" class="form-control" id="discoun" name="discount" placeholder="Agregar Descuento"
-              required>
+            <input type="text" class="form-control" id="discount" name="discount" value="<%= (typeof old != 'undefined' && old.discount)?old.discount:'' %>" placeholder="Agregar Descuento">
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.discount)?errors.discount.msg: "" %></small>
           </div>
           <!-- rating -->
           <div class="form-group">
             <label for="rating">rating</label>
-            <input type="text" class="form-control" id="rating" name="rating" placeholder="Agregar rating"
-              required>
+            <input type="text" class="form-control" id="rating" name="rating" value="<%= (typeof old != 'undefined' && old.rating)?old.rating:'' %>" placeholder="Agregar rating">
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.rating)?errors.rating.msg: "" %></small>
           </div>            
           <!-- Boton Enviar -->
-          <button type="submit" class="btn btn-primary mb-2">Guardar</button>
-          <button type="reset" class="btn btn-secondary mb-2 ">Borrar Formulario</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
+          <button type="reset" class="btn btn-primary btn-lg btn-block ">Borrar Formulario</button>
         </form>
         <!-- FIN FORMULARIO -->
       </div>
