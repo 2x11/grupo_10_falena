@@ -31,7 +31,7 @@
                 </small>
 
 
-                  <input type="text" class="form-control <%= (typeof old != 'undefined' && old.dni && !errors.dni)?" is-valid ":
+                  <input type="number" class="form-control <%= (typeof old != 'undefined' && old.dni && !errors.dni)?" is-valid ":
                   (typeof errors != 'undefined' && errors.dni)?"is-invalid ":
                   '' %>" id="dni" aria-describedby="dniHelp" value="<%= (typeof old != 'undefined' && old.dni)?old.dni:'' %>" id="dni" name="dni" placeholder="DNI">
                   <small

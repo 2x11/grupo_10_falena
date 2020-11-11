@@ -135,7 +135,16 @@
     background: var(--color-azul);
 }
 
-
+/* Elimina el color de fondo de los campos autocompletados */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* cambia el fondo con una transición */
+    transition: background-color 5000s ease-in-out 0s;
+    /* cambia el color de la tipografía */
+    -webkit-text-fill-color: white !important
+}
 /* 
   ---------------------------------------------------------------FIN LOGIN
   */

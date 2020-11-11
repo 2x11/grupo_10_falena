@@ -127,7 +127,12 @@
 .register-login a button:hover {
     background: var(--color-azul);
 }
-
+/* Elimina las flechas en input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /* 
   -------------------------------------------------------------------FIN REGISTER
