@@ -19,14 +19,14 @@
                 '' %>" id="inputEmail" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="Correo electrónico" name="email" spellcheck="false">
 
 
-                <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+                <h6 class="text-danger" id="emailError"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </h6>
 
 
                 <input type="password" class="form-control <%= (typeof errors != 'undefined' && errors.password)?" is-invalid ":
                 '' %>" id="inputPassword" placeholder="Contraseña" name="password" spellcheck="false">
 
 
-                <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </small>
+                <h6 class="text-danger" id="passwordError"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </h6>
                 
 
                 <label>
