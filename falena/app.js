@@ -16,6 +16,7 @@ var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var productRouter = require('./routes/product'); 
 var cartRouter = require('./routes/cart')
+var apiRouter = require('./routes/api')
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/product', productRouter);
 app.use('/cart', cartRouter);
+app.use('/api', apiRouter);
 
 
 // catch 404 and forward to error handler

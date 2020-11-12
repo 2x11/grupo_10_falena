@@ -12,12 +12,12 @@ window.addEventListener('load', () => {
     //expresiones regulares:
     //validacion de mail
     let regExEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
+    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,24}$/;
 
     firstnameInput.addEventListener('blur', function() {
         switch (true) {
             case this.value.length === 0:
-                firstnameError.innerHTML = "El nombre es obligatorio";
+                firstnameError.innerHTML = "Este campo es obligatorio";
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:
@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     lastnameInput.addEventListener('blur', function() {
         switch (true) {
             case this.value.length === 0:
-                lastnameError.innerHTML = "El apellido es obligatorio";
+                lastnameError.innerHTML = "Este campo es obligatorio";
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:
@@ -72,16 +72,12 @@ window.addEventListener('load', () => {
         switch (true) {
             case emailInput.value.length === 0:
                 emailInput.classList.add('is-invalid')
-                emailError.innerHTML = "El correo electrónico es obligatorio";
+                emailError.innerHTML = "Este campo es obligatorio";
                 break;
             case !regExEmail.test(emailInput.value):
                 emailInput.classList.add('is-invalid')
                 emailError.innerHTML = "Debes escribir un correo válido"
                 break;
-                // case
-                //     emailInput.classList.add('is-invalid')
-                //     emailError.innerHTML = "Esta dirección de corre ya está registrada"
-                //     break;
             default:
                 emailInput.classList.remove('is-invalid')
                 emailInput.classList.add('is-valid')
@@ -89,14 +85,28 @@ window.addEventListener('load', () => {
                 break;
         }
     })
+
+    emailInput.addEventListener('blur', () => {
+        fetch(`${window.location.origin}/api/email`,{method : 'POST'})
+        .then(response => response.json())
+        .then(users => {
+            users.forEach(user => {
+                if(user.email == emailInput.value){
+                    emailError.innerHTML = 'Este email ya se encuentra registrado'
+                    emailInput.classList.toggle('is-invalida')
+                }
+            });
+        })
+    })
+
     passwordInput.addEventListener('blur', () => {
         switch (true) {
             case passwordInput.value.length === 0:
                 passwordInput.classList.add('is-invalid')
                 passwordError.innerHTML = "La contraseña es obligatoria";
                 break;
-            case !regExPass.test(this.value):
-                this.classList.add('is-invalid')
+            case !regExPass.test(passwordInput.value):
+                passwordInput.classList.add('is-invalid')
                 passwordError.innerHTML = "La contraseña debe tener entre 8 y 24 caracteres, una mayúscula una minúscula y un número"
                 break
             default:
