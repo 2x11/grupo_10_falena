@@ -21,10 +21,6 @@ window.addEventListener('load', () => {
                 emailInput.classList.add('is-invalid')
                 emailError.innerHTML = "Debes escribir un correo válido"
                 break;
-            // case
-            //     this.classList.add('is-invalid')
-            //     emailError.innerHTML = "Esta dirección de corre ya está registrada"
-            //     break;
             default:
                 emailInput.classList.remove('is-invalid')
                 emailInput.classList.add('is-valid')
@@ -39,10 +35,6 @@ window.addEventListener('load', () => {
                 this.classList.add('is-invalid')
                 passwordError.innerHTML = "La contraseña es obligatorio";
                 break;
-            case !regExPass.test(this.value) :
-                this.classList.add('is-invalid')
-                passwordError.innerHTML = "La contraseña debe tener entre 8 y 24 caracteres, una mayúscula una minúscula y un número"
-                break
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
