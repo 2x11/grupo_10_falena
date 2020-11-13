@@ -43,7 +43,7 @@ module.exports = {
 
                     res.locals.user = req.session.user
 
-                    res.redirect('/user/profile')
+                    res.redirect('/')
                 })
 
         } else {
