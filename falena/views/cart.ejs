@@ -11,35 +11,123 @@
 
             <div class="container cart-body">
                 <div class="row">
+                    <!-- BOTONES DE CARRITO Y GUARDADOS -->
+
                     <div class="col-12 col-md-12 col-lg-12">
-                        <ul class="cart-favs">
-                            <li><button>Carrito</button></li>
-                            <li><button>Guardados</button></li>
-                        </ul>
-                    </div>
-                    <!-- Fin col-->
-                </div>
-                <!-- Fin Row1-->
-                <div class="row">
-                    <div class="col-3 col-md-3 col-lg-4 cart-tapa">
-                        <img src="/images/libros/tapa.png" alt="">
-                    </div>
-                    <!-- Fin col-->
-                    <div class="col-9 col-md-4 col-lg-4">
-                        <h5>Nombre de producto</h5>
-                        <h5>Característica de producto</h5>
-                        <p>Hasta 6 cuotas sin interés</p>
-                        <div class="cart-cantidad">
-                            <button class="cart-mas"> + </button> <input type="text" placeholder="1"><button class="cart-menos"> - </button>
-                            <h6>X disponibles</h6>
+                        <div class="flex">
+                            <button class="btn" id="cartBtn">Carrito</button>
+                            <button class="btn" id="favBtn">Guardados</button>
                         </div>
                     </div>
+                </div>
+
+                <!-- PRODUCTO EN CARRITO -->
+                <section class="shopping-cart">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="shopping-cart-header">
+                                    <h6>Producto</h6>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="shopping-cart-header">
+                                    <h6 class="text-truncate">Precio</h6>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="shopping-cart-header">
+                                    <h6>Cantidad</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ? START SHOPPING CART ITEMS -->
+                        <div class="shopping-cart-items shoppingCartItemsContainer">
+                        </div>
+                        <!-- ? END SHOPPING CART ITEMS -->
+            
+                        <!-- START TOTAL -->
+                        <!-- <div class="row">
+                            <div class="col-12">
+                                <div class="shopping-cart-total d-flex align-items-center">
+                                    <p class="mb-0">Total</p>
+                                    <p class="ml-4 mb-0 shoppingCartTotal">0€</p>
+                                    <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                                        data-delay="2000">
+                                        <div class="toast-header">
+                                            <span>✅</span>
+                                            <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="toast-body text-white">
+                                            Se agregó satisfactoriamente al carrito
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                                        data-target="#comprarModal">Comprar</button>
+                                </div>
+                            </div>
+                        </div> -->
+            
+                        <!-- END TOTAL -->
+            
+                        <!-- START MODAL COMPRA -->
+                        <!-- <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="comprarModalLabel">Datos para el envío</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body"> -->
+                                        <!-- ? STRIPE START -->
+                                        <!-- <form id="payment-form">
+                                            <div class="form-group">
+                                                <label for="email-element">Email</label>
+                                                <input type="email" class="form-control" id="email-element"
+                                                    aria-describedby="emailHelp" placeholder="E-mail">
+                                            </div>
+                                            <div class="form-group">
+                                                <div id="card-element" class="form-control"
+                                                    style='height: 2.4em; padding-top: .7em;'> -->
+                                                    <!--Stripe.js injects the Card Element-->
+                                                <!-- </div>
+                                            </div>
+                                            <button id="submit" class="btn btn-primary w-100">
+                                                <div class="spinner-border text-light hidden" id="spinner" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+                                                <span id="button-text">Pagar</span>
+                                            </button>
+                                            <p id="card-error" role="alert"></p>
+                                            <p class="result-message hidden">
+                                                Pago satisfactorio
+                                                ✅
+                                                En breve recibirá su pedido
+            
+                                            </p>
+                                        </form> -->
+                                        <!-- ? STRIPE END -->
+                                    <!-- </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- END MODAL COMPRA -->
+            
+            
+                    </div>
+            
+                </section>
                     <!-- Fin col-->
 
-                    <div class="col-12 col-md-4 col-lg-4 cart-precio">
-                        <h3>$---,--</h3>
-                    </div>
-                    <!-- Fin col-->
                     <div class="col-12 cart-options">
                         <button>Comprar ahora</button>
                         <button>Guardar para más después</button>
@@ -50,7 +138,7 @@
                 <hr>
                 <!-- Fin Row2-->
 
-                <div class="row cart-cart">
+<!--               <div class="row cart-cart">
                     <div class="col-12 col-md-12 col-lg-4 cart-envio">
                         <h3>CALCULAR ENVÍO</h3>
                         <h6>Calcula la dirección de envío y el precio estimado</h6>
@@ -95,7 +183,7 @@
                             <button>Calcular</button>
                         </form>
                     </div>
-                    <!-- Fin de col-->
+
                     <div class="col-12 col-md-12 col-lg-4 cart-descuentos">
                         <h3>CUPÓN DE DESCUENTO</h3>
                         <h6>Ingrese el código de su cupón si tiene uno</h6>
@@ -108,7 +196,6 @@
                             <button>APLICAR GIFTCARD</button>
                         </div>
                     </div>
-                    <!-- Fin de col-->
 
                     <div class="col-12 col-md-12 col-lg-4 cart-total">
                         <h3>TOTALES</h3>
@@ -126,16 +213,14 @@
                         <h3>TOTAL GENERAL</h3>
                         <button class="cart-finalizar">REALIZAR PEDIDO</button>
                     </div>
-                    <!-- Fin de col-->
+                    
                 </div>
-                <!-- Fin de Row3-->
 
             </div>
-            <!-- Fin container-->
+        -->
 
 
-
-            <!-- importa footer -->
+            <!-- importa footer --> 
             <%- include('./partials/footer') %>
 
                 <!-- scripts de bootstrap-->
