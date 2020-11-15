@@ -30,12 +30,11 @@ module.exports = {
                     }
                 })
                 .then(user => {
-                    req.session.ida = user.id;
                     req.session.user = {
-                        id: req.session.id = user.id,
-                        nick: req.session.nick = user.first_name + " " + user.last_name,
-                        email: req.session.email = user.email,
-                        rol: req.session.rol = user.rol,
+                        id: user.id,
+                        nick: `${user.first_name} ${user.last_name}`,
+                        email: user.email,
+                        rol: user.rol,
                     }
                     if (req.body.remember) {
                         res.cookie('userFalena', req.session.user, { maxAge: 1000 * 60 * 60 })
@@ -82,7 +81,7 @@ module.exports = {
 
             )
                 .then(e => {
-                    return res.redirect('/user/login')
+                res.redirect('/user/login')
                 })
                 .catch(errores=>{
                     console.log(errores);
@@ -107,10 +106,9 @@ module.exports = {
         res.redirect('/');
     },
     profile: (req, res, next) => {
-        let id = req.session.ida;
-        db.Users.findOne({
+            db.Users.findOne({
             where : {
-                id : id
+                id : req.session.user.id
             }
         })
         .then( user => { 
