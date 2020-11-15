@@ -27,21 +27,25 @@ module.exports = {
 
    },
    search:function(req, res, next){
-    db.Products.findAll({
-        where: {
-            name:{
-                [Op.substring]: req.body.search
-            } 
-        }
-    })
-    .then(resultado => {
+       db.Products.findAll({
+           where:{
+               [Op.or]: [
+                   { name :{[Op.like] : `%${req.query.search}%` }},
+                   { author :{[Op.like] : `%${req.query.search}%` }}
+                ]
+            }
+        })
+    .then(result => {
         res.render('search',{
             title: 'Falena',
             css: 'index.css',
-            products: resultado
+            products: result
         })
-    })  
-   },
+    })
+    .catch(e => {
+        res.send(e)
+    })
+},
     recomendados:function(req, res){
         db.Products.findAll({
             where : {
