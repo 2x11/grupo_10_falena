@@ -8,7 +8,7 @@ let locasRol = require('../middlewares/locasRol');
 /* GET home page. */
 router.get('/',  locasRol, mainController.index);
 
-router.post('/search',  locasRol, mainController.search);
+router.get('/search', mainController.search);
 
 router.get('/seccion/recomendados',  locasRol,  mainController.recomendados);
 router.get('/seccion/novedades',  locasRol,  mainController.novedades);
