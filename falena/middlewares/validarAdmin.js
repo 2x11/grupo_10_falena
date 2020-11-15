@@ -1,9 +1,9 @@
-module.exports = function UserAdmin(req,res,next){
-    if(req.session.rol == 'admin'){
-        next()
-    }else{
+module.exports = function(req, res, next) {
+    if(!req.session.user || req.session.user.rol !== 'admin'){
         res.redirect('/user/login')
         next()
     }
-    
+    else{
+        next()
+    }
 }

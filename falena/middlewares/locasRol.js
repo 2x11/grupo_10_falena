@@ -1,6 +1,6 @@
 module.exports = function UserCheck(req,res,next){
-    if(req.session.rol){
-        res.locals.rol = req.session.rol
+    if(req.session.user){
+        res.locals.user = req.session.user
         next()
     }else{
         next()
