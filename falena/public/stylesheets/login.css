@@ -24,7 +24,7 @@
     display: block;
     text-align: center;
     outline: none;
-    transition: 0.25s;
+    transition: 250ms;
 }
 
 .box input[type="email"]:focus,

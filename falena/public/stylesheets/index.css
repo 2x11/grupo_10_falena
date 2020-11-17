@@ -41,8 +41,10 @@
      padding: 20px;
      text-align: center;
  }
+
 .productos .contenido figure img{
-    width: 90%;
+    height: 250px;
+    width: 175px;
 }
 .productos article{
     display: flex;
@@ -53,10 +55,10 @@
     position: relative;
     
 }
-.productos article h2{
+.productos article h2 .title{
     display: flex;
     align-items: center;
-    color: black;
+    color: var(--color-marronOscuro);
 }
 
 .productos article span{

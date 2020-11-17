@@ -2,149 +2,176 @@
 -------------------------------------------------------------------------------------------------------HEADER 
 */
 
+
 /* 
 INICIO OPCIONES DE USUARIO
 */
-.header-body{
-  padding-left: 0;
-  padding-right: 0;
+
+.header-body {
+    padding-left: 0;
+    padding-right: 0;
 }
-.header-user{
+
+.header-user {
     background-color: var(--color-crudo);
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .header-user a{
+}
+
+.header-user a {
     color: white;
-  }
-  .header-user a i{
+}
+
+.header-user a i {
     font-size: 25px;
-  }
-  .header-oculto{
+}
+
+.header-oculto {
     display: none;
-  }
-  .profile-picture{
+}
+
+.profile-picture {
     width: 50px;
     padding: 0;
     margin: 0;
-  }
-  .nav ul li{
+}
+
+.nav ul li {
     align-self: center;
     margin: 0;
-  }
+}
 
-  /* 
+
+/* 
   FIN OPCIONES USUARIO
   */
-  
-  /* 
+
+
+/* 
   INICIO BANNER
   */
-  
-  .header-banner{
-    padding-top: 10px;
+
+.header-banner {
     padding-bottom: 10px;
     background-color: var(--color-marronClaro);
-  }
-  .header-banner a{
+}
+
+.header-banner a {
     color: white;
-  }
-  
-  /* 
+}
+
+
+/* 
   LOGO
   */
-  .header-banner .header-logo{
+
+.header-banner .header-logo {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 10px;
-  }  
-  .header-banner .header-logo img{  
+}
+
+.header-banner .header-logo img {
     max-width: 100%;
-  }
-  
-  /* 
+}
+
+
+/* 
   BARRA DE BUSQUEDA
   */
-  
-  .header-searchbox{
+
+.header-searchbox {
+    background-color: var(--color-azul);
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 24px;
+    height: 35px;
+    width: 100%;
     position: relative;
     align-content: center;
-  }
-  .header-banner .header-searchbox form{
-    padding-left: 15px;
-    padding-right: 15px;
-  }  
-  .header-banner .header-searchbox form input{  
-  margin-top: 25px;
-  width: 100%;
-  border: none;
-  }
-  .header-banner .header-searchbox form button{
+    text-align: center;
+    outline: none;
+    transition: 250ms;
+}
+.header-banner .header-searchbox form input {
+    padding-top: 5px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    text-align: center;
+    color: white;
+    caret-color: transparent;
+}
+.header-banner .header-searchbox form input::placeholder {
+    color: white;
+}
+.header-banner .header-searchbox form button {
+    padding-top: 5px;
     position: absolute;
-    top: 27px;
-    right: 33px;
+    right: 1%;
     background: none;
     border: none;
-  }
-  /* 
+    color: white;
+    outline: none;
+}
+
+
+/* 
   FIN BANNER
   */
-  
-  /* 
+
+
+/* 
   INICIO HEADER
   */
-  .header-favoritos{ 
-    display: flex;
+
+.header-favoritos {
+    text-align: center;
     margin-top: 20px;
-  }
-  
-  .header-navbar{
+}
+
+.header-navbar {
     /* background-color: var(--color-marronOscuro); */
     padding: 1px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+}
 
-  
-
-  .header-navbar li{
+.header-navbar li {
     text-align: center;
     list-style-type: none;
-  }
-  
-  .header-navbar li a{
-    color: black; /* cambiar a white */
-  }
-  .header-navbarActive{
+}
+
+.header-navbar li a {
+    color: black;
+    /* cambiar a white */
+}
+
+.header-navbarActive {
     justify-content: center;
-  }
+}
 
-  .header-navbarActive ul li a{
+.header-navbarActive ul li a {
     text-align: center;
     list-style-type: none;
-  }
-  /* 
+}
+
+
+/* 
   ------------------------------------------------------------------------------------------------FIN HEADER
   */
-  @media(min-width:768px){
-    .header-favoritos{
-      justify-content: center;
+
+@media(min-width:768px) {
+    .header-favoritos {
+        justify-content: center;
+        align-content: center;
     }
-}
-@media(min-width:1024px){
-
-  .header-favoritos{
-    justify-content: center;
-  }
-  
+    .header-searchbox {
+        width: 50%;
+    }
 
 }
-/*
- .header-navbar li{
-    border-right: 1px solid black;
-  } 
-  */
