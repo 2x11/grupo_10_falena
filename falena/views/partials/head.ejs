@@ -9,10 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <!-- mi stylesheet-->
     <link rel="stylesheet" href="/stylesheets/<%= css %>"> 
+    <!-- script formulario de search-->
+    <script type="text/javascript" src="/javascripts/search.js"></script>
+    <!-- script sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- script por controller -->
     <% if (typeof script !== 'undefined') { %>
       <script type="text/javascript" src="/javascripts/<%= script %> "></script>
     <% } %>
+    <!-- icono de pestaña -->
     <link rel="icon" href="/images/falena-icon.ico">
-    <script type="text/javascript" src="/javascripts/search.js"></script>
     
   </head>
