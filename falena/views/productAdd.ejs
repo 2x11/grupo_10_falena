@@ -61,8 +61,9 @@
           <!-- SUBIR IMAGENES -->
           <div class="form-group">
             <label for="file">Subir Imagenes</label>
-            <input type="file" class="form-control-file" id="file" name="file">
-           </div>
+            <input type="file" class="form-control-file" id="image" name="image">
+            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.image)?errors.image.msg: "" %></small> 
+          </div>
           <!-- PRECIO -->
           <div class="form-group">
             <label for="prece">Precio</label>
