@@ -67,7 +67,7 @@ module.exports = {
     registerProcess: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            user.create(
+            db.Users.create(
 
                 {
                     first_name: req.body.firstname.trim(),
@@ -75,7 +75,7 @@ module.exports = {
                     email: req.body.email.trim(),
                     password: bcrypt.hashSync(req.body.password, 10),
                     dni : req.body.dni.trim(),
-                    profile_picture: (req.files[0])?req.files[0].filename: 'default-picture.png',
+                    profile_picture: 'default-picture.png',
                     rol: "user"
                 }
 
