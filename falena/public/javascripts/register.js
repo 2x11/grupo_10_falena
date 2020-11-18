@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
             users.forEach(user => {
                 if(user.email == emailInput.value){
                     emailError.innerHTML = 'Este email ya se encuentra registrado'
-                    emailInput.classList.toggle('is-invalida')
+                    emailInput.classList.toggle('is-invalid')
                 }
             });
         })

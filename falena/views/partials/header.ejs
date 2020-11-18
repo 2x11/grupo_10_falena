@@ -5,11 +5,11 @@
             <!-- Nav -->
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <!-- Boton en vesion Tablet y Mobil -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones1">
-          <span class="navbar-toggler-icon"></span>
-          </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <!-- Menu derecho-->
-                <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="opciones1">
+                <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="opciones2">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
@@ -26,7 +26,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/user/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
                             </li>
-                            <% }else if(locals.user.rol == 'admin'){ %>
+                        <% }else if(locals.user.rol == 'admin'){ %>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-user-plus"></i> Admin Usuarios</a>
                             </li>
@@ -36,20 +36,21 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
                             </li>
-                       <% }else if(locals.user.rol == 'user'){ %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/user/profile"><i class="fas fa-user-plus"></i> Mi perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
+                        <% }else if(locals.user.rol == 'user'){ %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/profile"><i class="fas fa-user-plus"></i> <%- locals.user.nick  %> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
+                            </li>
                         <% } %>
-                            </ul>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        </nav>
     </div>
-    </div>
-  
-  
+
+
     <div class="header-banner">
         <!-- logo -->
         <div class="col-12 header-logo">
@@ -57,23 +58,24 @@
         </div>
         <!-- buscador -->
         <div class="col-12 header-searchbox">
-            <form action="/search" method="GET">
-                <input type="text" name="search" id="search" placeholder="Buscá tus libros!">
-                <button type="submit">
-          <i class="fas fa-search"></i>
-        </button>
+            <form action="/search" method="GET" id="searchForm">
+                <input type="text" name="search" id="searchTxt" placeholder="Buscá tus libros!" autocomplete="off">
+                <button type="submit" class="search-btn" id="searchBtn"><i class="fas fa-search searchIcon"></i></button>
             </form>
         </div>
         <!-- enlaces -->
-        <div class="col-12 header-favoritos">
-            <ul>
-                <li><a href=""><i class="fas fa-heart"></i> Lista de deseos</a></li>
-            </ul>
-            <ul>
-                <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Mi carrito</a></li>
+        <div class="row header-favoritos">
+            <div class="col-md-3 col-lg-3 "></div>
+            <div class="col-md-3 col-lg-3 ">
+                <li><a href=""><i class="fas fa-heart fav"></i> Lista de deseos</a></li>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <li><a href="/cart"><i class="fas fa-shopping-cart cart"></i> Mi carrito</a></li>
+            </div>
+            <div class="col-md-3 col-lg-3 "></div>
             </ul>
         </div>
-  
+
         <!-- FIN DEL ROW-->
     </div>
     <!-- Nav 2-->
@@ -82,8 +84,8 @@
         <button class="navbar-toggler header-navbutton" type="button" data-toggle="collapse" data-target="#opciones">
       <i class="navbar-toggler-icon"></i>
     </button>
-  
-  
+
+
         <div class="collapse navbar-collapse header-navbarActive" id="opcionesUser">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -107,4 +109,4 @@
             </ul>
         </div>
     </nav>
-  </header>
+</header>

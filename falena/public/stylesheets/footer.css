@@ -4,15 +4,14 @@ p{
     color: #999;
     line-height: 25px;
 }
-h2, h3 {
-    color: #fff;
-}
-h2{
-    font-size: 18px;
-}
+
 .footer-top{
     background: var(--gray-dark);
     padding: 80px 0;
+    color: #fff;
+}
+.footer-top h2{
+    font-size: 18px;
 }
 .segment-one h3{
     font-family: Courgette;
