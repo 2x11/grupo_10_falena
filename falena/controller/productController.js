@@ -62,7 +62,7 @@ module.exports = {
                 review: req.body.review,
                 category_id: req.body.category,
                 section: req.body.section,
-                image: req.files[0].filename,
+                image: (req.files[0])?req.files[0].filename:"default_producto.jpg",
                 rating: req.body.rating
             }).then(newProducts => {
                 res.redirect('/product')            
