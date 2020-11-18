@@ -137,8 +137,8 @@ INICIO OPCIONES DE USUARIO
     padding: 1px;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .header-navbar li {
@@ -147,12 +147,13 @@ INICIO OPCIONES DE USUARIO
 }
 
 .header-navbar li a {
-    color: black;
+    color: hotpink;
     /* cambiar a white */
 }
 
 .header-navbarActive {
     justify-content: center;
+
 }
 
 .header-navbarActive ul li a {
@@ -173,5 +174,8 @@ INICIO OPCIONES DE USUARIO
     .header-searchbox {
         width: 50%;
     }
-
+    .header-navbarActive{
+        flex-direction: row;
+    }
+    
 }
