@@ -1,5 +1,5 @@
 <header class="container">
-
+    
     <div class="row">
         <div class="col-12">
             <!-- Nav -->
@@ -11,14 +11,14 @@
                 <!-- Menu derecho-->
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="opciones2">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
                         </li>
                     </ul>
                 </div>
                 <!-- Menu izquiero-->
                 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 nav" id="opciones1">
-                    <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto">
                         <% if(!locals.user){ %>
                             <li class="nav-item">
                                 <a class="nav-link" href="/user/register"><i class="fas fa-user-plus"></i> Registrate</a>
@@ -65,14 +65,14 @@
         </div>
         <!-- enlaces -->
         <div class="row header-favoritos">
-            <div class="col-md-3 col-lg-3 "></div>
-            <div class="col-md-3 col-lg-3 ">
+            <div class="col-sm-1 col-md-2 col-lg-3 "></div>
+            <div class="col-sm-5 col-md-4 col-lg-3 ">
                 <li><a href=""><i class="fas fa-heart fav"></i> Lista de deseos</a></li>
             </div>
-            <div class="col-md-3 col-lg-3">
+            <div class="col-sm-5 col-md-4 col-lg-3">
                 <li><a href="/cart"><i class="fas fa-shopping-cart cart"></i> Mi carrito</a></li>
             </div>
-            <div class="col-md-3 col-lg-3 "></div>
+            <div class="col-sm-1 col-md-2 col-lg-3 "></div>
             </ul>
         </div>
 
