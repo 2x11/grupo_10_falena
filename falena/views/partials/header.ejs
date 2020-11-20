@@ -37,12 +37,21 @@
                                 <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
                             </li>
                         <% }else if(locals.user.rol == 'user'){ %>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/user/profile"><i class="fas fa-user-plus"></i> <%- locals.user.nick  %> </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
-                            </li>
+                            <% if(locals.user.nick){ %> 
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/user/profile"><i class="fas fa-user-plus"></i> <%- locals.user.nick  %> </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
+                                </li>
+                            <%}else{%>
+                                <li>
+                                    <a class="nav-link" href="/user/profile"><i class="fas fa-user-plus"></i> <%- locals.user.defaultnick  %> </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
+                                </li>
+                            <% } %> 
                         <% } %>
                     </ul>
                 </div>

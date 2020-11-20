@@ -45,6 +45,9 @@ module.exports = (sequelize, dataTypes) => {
         profile_picture: {
             type: dataTypes.STRING(45),
             allowNull: false,
+        },
+        nick: {
+            type: dataTypes.STRING(45),
         }
     }
 

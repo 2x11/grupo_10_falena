@@ -1,92 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
-  <%- include('./partials/head'); %>
+<%- include('./partials/head'); %>
 
 <body>
   <%- include('./partials/header'); %>
 
+    <section class="container profile-body">
+      <article class="row profile-form">
+        <!-- Imagen -->
+          <div class="col-3">
+              <img src="/images/user/<%= user.profile_picture %>" width="150" id="profile-picture">
+          </div>
+            <!-- Formulario -->
+            <div class="col-6">
+              <form action="/user/profile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="profileUpdate-form">
+                <!-- nick -->
+                <div class="form-group">
+                  <label for="name">Nickname</label>
+                  <input type="text" class="form-control" id="nick" name="nick" value="<%=user.nick%>">
+                </div>
+                <!-- Nombre -->
+                <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" class="form-control" id="first_name" name="first_name" value="<%=user.first_name%>" disabled>
+                </div>
+                <!-- apellido -->
+                <div class="form-group">
+                  <label for="name">Apellido</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" value="<%=user.last_name%>" disabled>
+                </div>
+                <!-- Dni -->
+                <div class="form-group">
+                  <label for="name">Dni</label>
+                  <input type="text" class="form-control" id="dni" name="dni" value="<%=user.dni%>" disabled>
+                </div>
+                <!-- phone_number -->
+                <div class="form-group">
+                  <label for="name">Telefono</label>
+                  <input type="text" class="form-control" id="phone_number" name="phone_number" value="<%=user.phone_number%>">
+               </div>
+              <!-- adress -->
+                <div class="form-group">
+                  <label for="name">Direccion</label>
+                  <input type="text" class="form-control" id="adress" name="adress" value="<%=user.adress%>">
+               </div>
+              <!-- zip_code -->
+                <div class="form-group">
+                  <label for="name">Codigo Postal</label>
+                  <input type="text" class="form-control" id="zip_code" name="zip_code" value="<%=user.zip_code%>">
+                </div>
+              <!-- email-->
+                <div class="form-group">
+                  <label for="name">Email</label>
+                  <input type="text" class="form-control" id="email" name="email" value="<%=user.email%>">
+                </div>
+              <!-- profile_picture -->
+               <div class="form-group">
+                  <label for="profile_picture">Avatar</label>
+                  <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
+                  <input type="hidden" name="profile_picture" value="<%= user.profile_picture %>">
+                </div>
+              <!-- Boton Enviar -->
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="profile-save">Guardar Cambios</button>
+              </form>
+            <br>
+            <form action="/user/profile/delete/<%= user.id %>?_method=DELETE" method="POST">
+              <button class="btn btn-danger btn-lg btn-block " type="submit" name="id" id="id" value="<%= user.id %> ">Eliminar Perfil</button>
+            </form>
+            <br>
+          </div>
+        </div>
+      </article>
+    </section>
 
-  <section class="container">
-    <article class="row">
-      <!-- Saludar -->
-      <div class="col-4"></div>
-      <div class="col-4"><h1>Hola <%= user.first_name %></h1> </div>
-      <div class="col-4"></div>
-      <!-- Imagen -->
-      <div class="col-4"></div>
-      <div class="col-4"><img src="/images/user/<%= user.profile_picture %>" width="150"></div>
-      <div class="col-4"></div> 
-      <hr> 
-      <div class="col-2"></div>
-      <div class="col-8">
-        <!-- Formulario -->    
-        <form action="/user/profile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-          <!-- Nombre -->
-          <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="first_name" name="first_name" value="<%=user.first_name%>" disabled>
-          </div>
-          <!-- apellido -->
-          <div class="form-group">
-            <label for="name">Apellido</label>
-            <input type="text" class="form-control" id="last_name" name="last_name" value="<%=user.last_name%>" disabled>
-          </div>
-          <!-- Dni -->
-          <div class="form-group">
-            <label for="name">Dni</label>
-            <input type="text" class="form-control" id="dni" name="dni" value="<%=user.dni%>" disabled>
-          </div> 
-          <!-- phone_number -->
-          <div class="form-group">
-            <label for="name">Telefono</label>
-            <input type="text" class="form-control" id="phone_number" name="phone_number" value="<%=user.phone_number%>" >
-          </div>
-          <!-- adress -->
-          <div class="form-group">
-            <label for="name">Direccion</label>
-            <input type="text" class="form-control" id="adress" name="adress" value="<%=user.adress%>" >
-          </div>
-          <!-- zip_code -->
-          <div class="form-group">
-            <label for="name">Codigo Postal</label>
-            <input type="text" class="form-control" id="zip_code" name="zip_code" value="<%=user.zip_code%>" >
-          </div> 
-          <!-- email-->
-          <div class="form-group">
-            <label for="name">Email</label>
-            <input type="text" class="form-control" id="email" name="email" value="<%=user.email%>" >
-          </div>
-          <!-- profile_picture -->
-          <div class="form-group">
-            <label for="profile_picture">Avatar</label>
-            <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
-            <input type="hidden" name="profile_picture" value="<%= user.profile_picture %>" >
-          </div>
-          <!-- Boton Enviar -->
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar Cambios</button>
-      </form>
-      <br>
-      <form action="/user/profile/delete/<%= user.id %>?_method=DELETE" method="POST">
-        <button class="btn btn-danger btn-lg btn-block " type="submit" name="id" id="id" value="<%= user.id %> ">eliminar Perfil</button>  
-      </form>
-      <br>
-    </div>
-    <div class="col-2"></div>         
-    
-    <!-- importa footer -->
-    <%- include('./partials/footer') %>
-  <!-- scripts de bootstrap-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
-    crossorigin="anonymous "></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
-    crossorigin="anonymous "></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
-    crossorigin="anonymous "></script>
-</body>
+            <!-- importa footer -->
+            <%- include('./partials/footer') %>
+                <!-- scripts de bootstrap-->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    </body>
 
 </html>
