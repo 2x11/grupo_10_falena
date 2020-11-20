@@ -70,10 +70,10 @@
                 </div>
                 <!-- SUBIR IMAGENES -->
                 <div class="form-group">
-<<<<<<< HEAD
                   <label for="image">Subir Imagenes</label>
                   <input type="file" class="form-control-file" id="image" name="image"> <!-- no funciona   value="< %=products.file%>"    -->
                   <input type="hidden" id="imagen" value="<%= products.file %>" >
+                  <small class="text-danger"><%= (typeof errors != 'undefined' && errors.image)?errors.image.msg: "" %></small>
                   <span id="errorimagen" class="text-danger"></span> 
                   <div class="custom-file mt-4">
                     <div class="col-12">
@@ -83,13 +83,6 @@
                     </div>
                     </div>
               </div>
-=======
-                    <label for="image">Subir Imagenes</label>
-                    <input type="file" class="form-control-file" id="image" name="image"> <!-- no funciona   value="< %=products.file%>"    -->
-                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.image)?errors.image.msg: "" %></small> 
-                    <input type="hidden" id="imagen" value="<%= products.file %>" >
-                </div>
->>>>>>> a9dcecf30b5dd07075ba4b44efdab85348049d69
                 <!-- PRECIO -->
                 <div class="form-group">
                     <label for="price">Precio</label>
@@ -114,11 +107,13 @@
               <!-- Boton Guardar -->
               <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
               <span id="msgError" class="text-danger"></span>
+              <br>
+              <br>
             </form>
             <!-- FIN FORMULARIO -->
             <!-- Boton Eliminar-->
             <!--
-            <form action="/product/delete/<%= products.id %>?_method=DELETE" method="POST">
+            <form action="/product/delete/<%= //products.id %>?_method=DELETE" method="POST">
               <button type="submit" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
             </form>
              -->
