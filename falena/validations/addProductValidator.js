@@ -29,5 +29,23 @@ module.exports = [
 
     check('rating')
     .isNumeric({min:1})
-    .withMessage('Debes ingresar un precio')              
+    .withMessage('Debes ingresar un precio'),
+    
+    body('image')
+    .custom((value,{req})=>{
+        if(req.fileValidationError){
+            return false
+        }else{
+            return true
+        }
+    }).withMessage("Solo se permite png, jpg, jpeg, gif"),
+
+    body('image')
+    .custom((value,{req})=>{
+        if(!req.files[0]){
+            return false
+        }else{
+            return true
+        }
+    }).withMessage('Tenés que subir una imagen')
 ]

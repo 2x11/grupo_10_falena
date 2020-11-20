@@ -69,6 +69,7 @@
                 <div class="form-group">
                     <label for="image">Subir Imagenes</label>
                     <input type="file" class="form-control-file" id="image" name="image"> <!-- no funciona   value="< %=products.file%>"    -->
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.image)?errors.image.msg: "" %></small> 
                     <input type="hidden" id="imagen" value="<%= products.file %>" >
                 </div>
                 <!-- PRECIO -->
