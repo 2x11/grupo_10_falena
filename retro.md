@@ -51,3 +51,39 @@
 - Dejar de hacer cosas a ultimo momento
 #### Hacer menos
 - Amontonar código
+
+# Sprint 5: Retro
+#### Seguir haciendo
+- Reuniones programadas
+- Comunicación en equipo
+- Pedir ayuda a los compañeros
+- Usar las funciones de vencimiento de trello
+#### Hacer mas
+- Usar mas Trello
+- Comentar el código
+#### Empezar a hacer
+- Reuniones de Progreso
+- Tener Horarios de trabajo en el repositorio
+#### Dejar de hacer
+- Procastinar
+- Dejar de hacer cosas a ultimo momento
+#### Hacer menos
+- Amontonar código
+
+# Sprint 6: Retro
+#### Seguir haciendo
+- Reuniones programadas
+- Comunicación en equipo
+- Pedir ayuda a los compañeros
+- Usar las funciones de vencimiento de trello
+#### Hacer mas
+- Usar mas Trello
+- Comentar el código
+#### Empezar a hacer
+- Reuniones de Progreso
+- Tener Horarios de trabajo en el repositorio
+#### Dejar de hacer
+- Procastinar
+- Dejar de hacer cosas a ultimo momento
+#### Hacer menos
+- Amontonar código
