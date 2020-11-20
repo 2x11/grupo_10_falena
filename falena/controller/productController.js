@@ -139,6 +139,7 @@ module.exports = {
                 res.render('productEdit', {
                     css: 'product.css',
                     script: 'editproduct.js',
+                    product : db.Products,
                     products:products,
                     category: categories,
                     errors: errors.mapped(),
