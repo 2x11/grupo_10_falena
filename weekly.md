@@ -38,5 +38,23 @@ _Santiago adelanto trabajo haciendo la base de datos asi que se ofrecio a termin
 
 :bulb:**Detalles:**
 - El grupo se mantiene en contacto en whatsapp como en Slack. 
+
+
+## Sprint 6
+_Decidimos reunirnos via Zoom, el dia 9 de noviembre para hablar sobre el nuevo sprint_  
+
+
+:computer: **Division de Tareas:**
+- Santiago: login y register de usuarios (front)
+- Sebastian: login y register de usuarios, creacion y modificacion de productos (back)
+- Daiana: creacion y modificacion de productos (front)
+
+
+:warning: **Problemas durante la ejecucion del codigo:**
+- Daiana tuvo problemas con la creacion de productos por eso decidio no subirlo al repositorio hasta terminarlo. 
+
+
+:bulb:**Detalles:**
+- El grupo se mantiene en contacto en whatsapp como en Slack. 
  
 
