@@ -19,7 +19,7 @@
               <hr>
               <!-- FORMULARIO -->  
              
-              <form action="/product/edit/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+              <form action="/product/edit/<%= products.id %>?_method=PUT" method="POST" id="formEdit" enctype="multipart/form-data">
                 <!-- CATEGORIAS -->                   
                 
                 <div class="form-group">
@@ -51,12 +51,14 @@
                     <label for="name">Titulo</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Agregar un titulo" value="<%= (typeof old != 'undefined' && old.name)?old.name: products.name %>">
                     <small class="text-danger"><%= (typeof errors != 'undefined' && errors.name)?errors.name.msg: "" %></small>
-                </div>
+                    <span id="errorNombre" class="text-danger"></span>
+                  </div>
                 <!-- AUTOR -->
                 <div class="form-group">
                     <label for="author">Autor</label>
                     <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" value="<%= (typeof old != 'undefined' && old.author)?old.author: products.author %>">
                     <small class="text-danger"><%= (typeof errors != 'undefined' && errors.author)?errors.author.msg: "" %></small>
+                    <span id="errorAutor" class="text-danger"></span>
                 </div> 
                 <!-- DESCRIPCION DEL PRODUCTO -->
                 <div class="form-group">
@@ -64,33 +66,46 @@
                     <textarea class="form-control" id="review" name="review" rows="3" placeholder="Agregar una Descripcion Del producto">
                       <%= (typeof old != 'undefined' && old.review)?old.review: products.review %> 
                     </textarea> 
+                    <span id="errorDescripcion" class="text-danger"></span>
                 </div>
                 <!-- SUBIR IMAGENES -->
                 <div class="form-group">
-                    <label for="image">Subir Imagenes</label>
-                    <input type="file" class="form-control-file" id="image" name="image"> <!-- no funciona   value="< %=products.file%>"    -->
-                    <input type="hidden" id="imagen" value="<%= products.file %>" >
-                </div>
+                  <label for="image">Subir Imagenes</label>
+                  <input type="file" class="form-control-file" id="image" name="image"> <!-- no funciona   value="< %=products.file%>"    -->
+                  <input type="hidden" id="imagen" value="<%= products.file %>" >
+                  <span id="errorimagen" class="text-danger"></span> 
+                  <div class="custom-file mt-4">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center">
+                            <img src="" id="vistaPrevia" class="img-thumbnail">
+                        </div>
+                    </div>
+                    </div>
+              </div>
                 <!-- PRECIO -->
                 <div class="form-group">
                     <label for="price">Precio</label>
                     <input type="text" class="form-control" id="price" name="price" placeholder="Agregar Precio" value="<%= (typeof old != 'undefined' && old.price)?old.price: products.price %>">
                     <small class="text-danger"><%= (typeof errors != 'undefined' && errors.price)?errors.price.msg: "" %></small>
+                    <span id="errorPrecio" class="text-danger"></span>
                 </div>
                 <!-- DESCUENTO -->
                 <div class="form-group">
                   <label for="discount">Descuento</label>
                   <input type="text" class="form-control" id="discount" name="discount" placeholder="Agregar Descuento" value="<%= (typeof old != 'undefined' && old.discount)?old.discount: products.discount %>">
                   <small class="text-danger"><%= (typeof errors != 'undefined' && errors.discount)?errors.discount.msg: "" %></small>
+                  <span id="errorDescuento" class="text-danger"></span>
               </div>
               <!-- rating -->
               <div class="form-group">
                 <label for="rating">rating</label>
                 <input type="text" class="form-control" id="rating" name="rating" placeholder="Agregar rating" value="<%= (typeof old != 'undefined' && old.rating)?old.rating: products.rating %>" >
                   <small class="text-danger"><%= (typeof errors != 'undefined' && errors.rating)?errors.rating.msg: "" %></small>
-              </div>                                 
+                  <span id="errorRating" class="text-danger"></span>
+                </div>                                 
               <!-- Boton Guardar -->
               <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
+              <span id="msgError" class="text-danger"></span>
             </form>
             <!-- FIN FORMULARIO -->
             <!-- Boton Eliminar-->
@@ -123,6 +138,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
     crossorigin="anonymous "></script>
+
+ 
+  <!-- <script type= "text/javascript" src="/javascripts/editproduct.js "></script> -->
+  
 </body>
 
 </html>

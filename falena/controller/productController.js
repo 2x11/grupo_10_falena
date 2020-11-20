@@ -95,6 +95,7 @@ module.exports = {
         .then(([products, categories]) => {
             res.render('productEdit', {
                 css: 'product.css',
+                script: 'editproduct.js',
                 products:products,
                 category: categories
             });            
@@ -137,6 +138,7 @@ module.exports = {
             .then(([products, categories]) => {
                 res.render('productEdit', {
                     css: 'product.css',
+                    script: 'editproduct.js',
                     products:products,
                     category: categories,
                     errors: errors.mapped(),
