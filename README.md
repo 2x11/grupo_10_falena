@@ -123,5 +123,31 @@ Implementacion Weekly Stundups: [Weekly.md](https://github.com/sebastianabila/gr
 - PDF Diagrama base de datos: [Falena-der.pdf](https://github.com/sebastianabila/grupo_10_falena/blob/master/design/database/falena-der.pdf "Falena-der.pdf") 
 
 ### CRUD
-- De productos
 - De usuarios
+- De productos
+
+
+
+# Sprint 6:
+
+### Retro.md
+Retrospectiva: [Retro.md](https://github.com/sebastianabila/grupo_10_falena/blob/master/retro.md "retro.md")
+
+### Tablero de trabajo
+Para la realización y organización del proyecto optamos por realizar un tablero en Trello, el link del mismo es el siguiente: [Tablero de Trello](https://trello.com/b/JpDPQ3ev/grupo-10-librería-falena "Tablero de Trello")
+
+### Weekly.md
+Implementacion Weekly Stundups: [Weekly.md](https://github.com/sebastianabila/grupo_10_falena/blob/master/weekly.md "weekly.md")
+
+### base de datos
+- Script de creación de estructura de base de datos: [Falena_Structure.sql](https://github.com/sebastianabila/grupo_10_falena/blob/master/falena/database/Falena_Structure.sql "Falena_Structure.sql")
+- Script de población de base de datos: [Falena_Data.sql](https://github.com/sebastianabila/grupo_10_falena/blob/master/falena/database/Falena_Data.sql "Falena_Data.sql")
+- PDF Diagrama base de datos: [Falena-der.pdf](https://github.com/sebastianabila/grupo_10_falena/blob/master/design/database/falena-der.pdf "Falena-der.pdf") 
+
+### validaciones Front
+- modificacion de productos
+- registro y login de usuarios
+
+### validaciones Back
+- registro y login de usuarios
+- creacion y modificacion de productos
