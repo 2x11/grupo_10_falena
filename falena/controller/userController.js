@@ -32,9 +32,11 @@ module.exports = {
                 .then(user => {
                     req.session.user = {
                         id: user.id,
-                        nick: `${user.first_name} ${user.last_name}`,
                         email: user.email,
                         rol: user.rol,
+                        nick: user.nick,
+                        defaultnick: `${user.first_name} ${user.last_name}`
+
                     }
                     if (req.body.remember) {
                         res.cookie('userFalena', req.session.user, { maxAge: 1000 * 60 * 60 })
@@ -76,7 +78,8 @@ module.exports = {
                     password: bcrypt.hashSync(req.body.password, 10),
                     dni : req.body.dni.trim(),
                     profile_picture: 'default-picture.png',
-                    rol: "user"
+                    rol: "user",
+                    nick: `${req.body.firstname.trim()} ${req.body.lastname.trim()}`
                 }
 
             )
@@ -114,7 +117,8 @@ module.exports = {
         .then( user => { 
             res.render('profile', {
                 css: 'profile.css',
-                user: user
+                user: user,
+                script: 'profile.js'
             })
         })    
     },
@@ -128,6 +132,7 @@ module.exports = {
                 adress: req.body.adress,
                 zip_code: req.body.zip_code,
                 email: req.body.email,
+                nick : req.body.nick,
                 profile_picture: (req.files[0])?req.files[0].filename: req.body.profile_picture
             },
             {
@@ -136,7 +141,9 @@ module.exports = {
                 }            
             })        
             .then(resultado => {
-                res.redirect('/user/profile');
+                req.session.reload(()=>{
+                    res.redirect('/user/profile');
+                })
             }).catch(err => {
                 console.log(err)
             })
