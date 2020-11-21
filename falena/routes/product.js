@@ -13,6 +13,7 @@ let imageProduct = require('../middlewares/subirImagenProduct'); /* Multer */
 let validarAdmin = require('../middlewares/validarAdmin')
 let locasRol = require('../middlewares/locasRol');
 let addProductValidator = require('../validations/addProductValidator') //valida formulario de agregar productos
+let editarProductValidator = require('../validations/editProductValidator')
 /*
 * Routes
 */
@@ -24,7 +25,7 @@ router.get('/detail/:id', locasRol,productController.detail);
 router.get('/add',  locasRol,  validarAdmin,  productController.add);
 router.post('/save', imageProduct.any(), addProductValidator, productController.save);
 router.get('/edit/:id', locasRol,  validarAdmin, productController.editForm)
-router.put('/edit/:id', imageProduct.any(), addProductValidator, productController.edit);
+router.put('/edit/:id', imageProduct.any(), editarProductValidator, productController.edit);
 
 router.delete('/delete/:id',productController.delete)
 
