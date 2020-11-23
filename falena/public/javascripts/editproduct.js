@@ -1,3 +1,4 @@
+const e = require("express");
 
 let qs = function (elemento) {
     return document.querySelector(elemento)
@@ -151,26 +152,26 @@ window.addEventListener('load', function () { //capturamos los id
             }
         })
 
-        console.log(errores);
 
         formulario.addEventListener('submit', function (event) {
-            event.preventDefault();
-
+            event.preventDefault()
             let elementosForm = formulario.elements;
 
             let error = false
-            for (let index = 0; index < elementosForm.length - 1; index++) {
+            for (let index = 0; index < formulario.length - 1; index++) {
                 if (elementosForm[index].value == 0) {
-
+                    elementosForm[i]
                     error = true;
 
                 }
             }
-            if (!error) {
-                formulario.submit()
-            } else {
+            if (error) {
+                event.preventDefault();
                 msgError.innerHTML = "los campos señalados son obligatorios"
+            } else {
+                formulario.submit()
             }
+
 
         })
 
