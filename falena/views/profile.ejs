@@ -65,8 +65,8 @@
                 <button type="submit" class="btn btn-primary btn-lg btn-block" id="profile-save">Guardar Cambios</button>
               </form>
             <br>
-            <form action="/user/profile/delete/<%= user.id %>?_method=DELETE" method="POST">
-              <button class="btn btn-danger btn-lg btn-block " type="submit" name="id" id="id" value="<%= user.id %> ">Eliminar Perfil</button>
+            <form action="/user/profile/delete/<%= user.id %>?_method=DELETE" method="POST" id="profileDelete-form">
+              <button class="btn btn-danger btn-lg btn-block " type="submit" name="id" id="profile-delete" value="<%= user.id %> ">Eliminar Perfil</button>
             </form>
             <br>
           </div>
