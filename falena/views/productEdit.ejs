@@ -72,7 +72,7 @@
                 <div class="form-group">
                   <label for="image">Subir Imagenes</label>
                   <input type="file" class="form-control-file" id="image" name="image"> <!-- no funciona   value="< %=products.file%>"    -->
-                  <input type="hidden" id="imagen" value="<%= products.file %>" >
+                  <!-- <input type="hidden" id="imagen" value= "< %= products.file %>" > -->
                   <small class="text-danger"><%= (typeof errors != 'undefined' && errors.image)?errors.image.msg: "" %></small>
                   <span id="errorimagen" class="text-danger"></span> 
                   <div class="custom-file mt-4">
