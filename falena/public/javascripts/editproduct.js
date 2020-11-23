@@ -1,5 +1,3 @@
-const e = require("express");
-
 let qs = function (elemento) {
     return document.querySelector(elemento)
 }
@@ -160,9 +158,8 @@ window.addEventListener('load', function () { //capturamos los id
             let error = false
             for (let index = 0; index < formulario.length - 1; index++) {
                 if (elementosForm[index].value == 0) {
-                    elementosForm[i]
                     error = true;
-
+                    elementosForm[index].classList.add('is-invalid');
                 }
             }
             if (error) {
