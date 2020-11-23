@@ -84,6 +84,9 @@
     align-items: center;
 }
 
+#div_productEditButtons{
+    display: flex;
+}
 /*--estilo de mi pie de pagina--*/
  
 .piedepagina{
