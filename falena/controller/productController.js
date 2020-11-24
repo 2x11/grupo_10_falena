@@ -45,6 +45,7 @@ module.exports = {
             .then(categories => {
                 res.render('productAdd', {
                     css: 'product.css',
+                    script: 'addproduct.js',
                     category: categories
                 });            
             })
