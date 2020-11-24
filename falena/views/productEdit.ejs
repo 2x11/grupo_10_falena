@@ -105,18 +105,18 @@
                   <span id="errorRating" class="text-danger"></span>
                 </div>                                 
               <!-- Boton Guardar -->
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block" id="saveButton_products">Guardar</button>
               <span id="msgError" class="text-danger"></span>
               <br>
               <br>
             </form>
             <!-- FIN FORMULARIO -->
             <!-- Boton Eliminar-->
-            <!--
-            <form action="/product/delete/<%= //products.id %>?_method=DELETE" method="POST">
-              <button type="submit" class="btn btn-secondary mb-2 ">Borrar Formulario</button>                     
+            
+            <form action="/product/delete/<%= products.id %>?_method=DELETE" method="POST" id="formDelete">
+              <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color : red" id="deleteButton_products">Eliminar</button>                     
             </form>
-             -->
+            
           </div>
           <!-- COLUMNA 3 -->
           <div class="col-md-2"></div>
