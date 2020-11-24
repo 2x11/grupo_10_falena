@@ -32,7 +32,7 @@ module.exports = {
             res.render('productDetail', {
                 css: 'product.css',
                 product: Products,
-                category : Products.Categories
+               //category : Products.Categories
             });
         })
     },
@@ -76,11 +76,13 @@ module.exports = {
                 ]
             })
             .then(categories => {
+                //console.log(req.session.user)
                 res.render('productAdd', {
                     css: 'product.css',
                     category: categories,
                     errors: errors.mapped(),
-                    old: req.body,                
+                    old: req.body,
+                    user: req.session.user                
                 });           
             })
             

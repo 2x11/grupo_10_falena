@@ -26,7 +26,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/user/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
                             </li>
-                        <% }else if(locals.user.rol == 'admin'){ %>
+                        <% }else if(locals.user.rol == 'admin' || (typeof user != "undefined" && user.rol == 'admin') ){ %>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-user-plus"></i> Admin Usuarios</a>
                             </li>
@@ -36,7 +36,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/user/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
                             </li>
-                        <% }else if(locals.user.rol == 'user'){ %>
+                        <% }else if(locals.user.rol == 'user' ){ %>
                             <% if(locals.user.nick){ %> 
                                 <li class="nav-item">
                                     <a class="nav-link" href="/user/profile"><i class="fas fa-user-plus"></i> <%- locals.user.nick  %> </a>
