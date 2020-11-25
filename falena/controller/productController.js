@@ -45,6 +45,7 @@ module.exports = {
             .then(categories => {
                 res.render('productAdd', {
                     css: 'product.css',
+                    script: 'addproduct.js',
                     category: categories
                 });            
             })
@@ -141,6 +142,7 @@ module.exports = {
                 res.render('productEdit', {
                     css: 'product.css',
                     script: 'editproduct.js',
+                    product : db.Products,
                     products:products,
                     category: categories,
                     errors: errors.mapped(),

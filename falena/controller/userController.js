@@ -140,11 +140,21 @@ module.exports = {
                     id: req.params.id
                 }            
             })        
-            .then(resultado => {
-                req.session.reload(()=>{
-                    res.redirect('/user/profile');
+            .then(e => {
+                db.Users.findByPk(req.params.id)         
+                .then(user =>{
+                    req.session.user.nick = user.nick
+                    req.session.user.phone_number = user.phone_number
+                    req.session.user.adress = user.adress
+                    req.session.user.zip_code = user.zip_code
+                    req.session.user.email = user.email
+
+                    res.locals.user = req.session.user
+                    res.redirect('/user/profile')
+
                 })
-            }).catch(err => {
+            })
+            .catch(err => {
                 console.log(err)
             })
     },

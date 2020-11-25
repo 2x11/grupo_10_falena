@@ -1,7 +1,8 @@
 window.addEventListener('load', () => {
             let saveBtn = document.querySelector('#profile-save')
-            let deleteBtn = document.querySelector('#id')
-            let form = document.querySelector('#profileUpdate-form')
+            let deleteBtn = document.querySelector('#profile-delete')
+            let formUpdate = document.querySelector('#profileUpdate-form')
+            let formDelete = document.querySelector('#profileDelete-form')
 
             
 
@@ -27,7 +28,34 @@ window.addEventListener('load', () => {
                                 text: "Tu perfil ha sido actualizado",
                                 timer: 3000
                             }).then(()=>{
-                                form.submit()
+                                formUpdate.submit()
+                            })
+                    };
+                })
+            })
+
+            deleteBtn.addEventListener('click', (e) => {
+                e.preventDefault()
+                Swal.fire({
+                    title: '¿Esta seguro de que quiere eliminar su cuenta?',
+                    showDenyButton: true,
+                    showCancelButton: false,
+                    confirmButtonText: `Eliminar`,
+                    denyButtonText: `Cancelar`,
+                    customClass: {
+                        confirmButton: 'order-2',
+                        denyButton: 'order-1',
+                    },
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                                title: "Eliminamos tu perfil :(",
+                                icon: "success",
+                                text: "Esperamos verte de nuevo!",
+                                timer: 3000
+                            }).then(()=>{
+                                formDelete.submit()
                             })
                     };
                 })

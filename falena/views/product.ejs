@@ -26,18 +26,19 @@
                 <figure>
                   <a href=""><img src="/images/libros/<%= product.image %>" alt=""></a>
                 </figure>
-                <article>
-                  <h2><%= //product.name %></h2>
-                  <br>
+                <div>
+                  <h2><%= product.name %></h2>
                   <!-- boton editar -->
-                  <form action="/product/edit/<%= product.id %>" method="GET">
-                    <button class="btn btn-info btn-12 btn-block" type="submit" name="id" value="<%= product.id %> ">Editar</button>  
-                  </form>
-                  <!-- boton eliminar -->
-                  <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">
-                    <button class="btn btn-danger btn-12 btn-block" type="submit" name="id" value="<%= product.id %> ">eliminar</button>  
-                  </form>
-                </article>
+
+                    <form action="/product/edit/<%= product.id %>" method="GET">
+                      <button class="btn btn-info btn-12 btn-block" type="submit" name="id" value="<%= product.id %> ">Editar</button>  
+                    </form>
+                    <!-- boton eliminar -->
+                    <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST" id="deleteFormProductList">
+                      
+                        <button class="btn btn-danger btn-12 btn-block deleteButtonProductList" type="submit" name="id" value="<%= product.id %> " id="">eliminar</button> 
+                    </form>
+                </div>
               </div>
             </div>
             <% }) %> 
@@ -48,16 +49,6 @@
   <!-- importa footer -->
   <%- include('./partials/footer') %>
 
-  <!-- scripts de bootstrap-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
-    crossorigin="anonymous "></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
-    crossorigin="anonymous "></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
-    crossorigin="anonymous "></script>
 </body>
 
 </html>

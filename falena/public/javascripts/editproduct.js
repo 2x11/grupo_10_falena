@@ -1,11 +1,11 @@
-
 let qs = function (elemento) {
     return document.querySelector(elemento)
 }
 
 window.addEventListener('load', function () { //capturamos los id
     let formulario = qs('form#formEdit');
-
+    let formularioDelete = qs('form#formDelete');
+    
     let inputTitulo = qs('#name');
     let inputAutor = qs('#author');
     let inputPrecio = qs('#price');
@@ -18,6 +18,9 @@ window.addEventListener('load', function () { //capturamos los id
     let regExRating = /^[0-9]*$/
     let inputFoto = qs('#image');
     (inputFoto.value) ? inputFoto.value = "" : ""
+
+    let deleteBtn = qs('#deleteButton_products')
+    let saveBtn = qs('#saveButton_products')
 
     let errores = {};
 
@@ -170,21 +173,27 @@ window.addEventListener('load', function () { //capturamos los id
             }
         })
 
+<<<<<<< HEAD
         // console.log(errores);
+=======
+>>>>>>> 97d6aff55fbd7f7d608fd47d98e6ac27aad48482
 
         formulario.addEventListener('submit', function (event) {
-            event.preventDefault();
-
+            event.preventDefault()
             let elementosForm = formulario.elements;
 
             let error = false
-            for (let index = 0; index < elementosForm.length - 1; index++) {
+            for (let index = 0; index < formulario.length - 1; index++) {
                 if (elementosForm[index].value == 0) {
+<<<<<<< HEAD
                     elementosForm[index].classList.add('is-invalid');
 
+=======
+>>>>>>> 97d6aff55fbd7f7d608fd47d98e6ac27aad48482
                     error = true;
-
+                    elementosForm[index].classList.add('is-invalid');
                 }
+<<<<<<< HEAD
              }
             if (!error) {
                  formulario.submit()
@@ -193,13 +202,77 @@ window.addEventListener('load', function () { //capturamos los id
              }
 
          })
+=======
+            }
+            if (error) {
+                event.preventDefault();
+                msgError.innerHTML = "los campos señalados son obligatorios"
+            } else {
+                formulario.submit()
+            }
+
+
+        })
+>>>>>>> 97d6aff55fbd7f7d608fd47d98e6ac27aad48482
 
 
      })
 
 
 
+// SWEET ALERT //
+saveBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    Swal.fire({
+        title: '¿Esta seguro de que quiere guardar los cambios?',
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: `Guardar`,
+        denyButtonText: `Cancelar`,
+        customClass: {
+            confirmButton: 'order-2',
+            denyButton: 'order-1',
+        },
+    }).then((result) => {
 
+        if (result.isConfirmed) {
+            Swal.fire({
+                    title: "Guardado!",
+                    icon: "success",
+                    text: "El perfil ha sido actualizado",
+                    timer: 3000
+                }).then(()=>{
+                    formulario.submit()
+                })
+        };
+    })
+})
+deleteBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    Swal.fire({
+        title: '¿Esta seguro de que quiere eliminar este producto?',
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: `Eliminar`,
+        denyButtonText: `Cancelar`,
+        customClass: {
+            confirmButton: 'order-2',
+            denyButton: 'order-1',
+        },
+    }).then((result) => {
+
+        if (result.isConfirmed) {
+            Swal.fire({
+                    title: "Producto eliminado",
+                    icon: "success",
+                    text: "",
+                    timer: 3000
+                }).then(()=>{
+                    formularioDelete.submit()
+                })
+        };
+    })
+})
 
 })
 
