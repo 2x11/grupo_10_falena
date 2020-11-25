@@ -28,13 +28,17 @@ window.addEventListener('load', function () { //capturamos los id
             case this.value.length == 0:
                 errores.name = "El campo titulo es obligatorio";
                 errorNombre.innerHTML = errores.name;
+                this.classList.add('is-invalid')
 
                 break;
             case this.value.trim().length <= 2:
                 errores.name = "Tenés que poner al menos 3 letras"
                 errorNombre.innerHTML = errores.name; //hay que ponerlo en el formulario para que se muestre
+                this.classList.remove('is-invalid');
                 break;
             default:
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
                 errorNombre.innerHTML = "";
         }
 
@@ -43,13 +47,16 @@ window.addEventListener('load', function () { //capturamos los id
                 case this.value.length == 0:
                     errores.author = "El campo Autor es obligatorio";
                     errorAutor.innerHTML = errores.author;
-
+                    this.classList.add('is-invalid')
                     break;
                 case this.value.trim().length <= 2:
                     errores.author = "Tenés que poner al menos 3 letras"
                     errorAutor.innerHTML = errores.author;
+                    this.classList.remove('is-invalid');
                     break;
                 default:
+                    this.classList.remove('is-invalid');
+                    this.classList.add('is-valid');
                     errorAutor.innerHTML = "";
             }
         })
@@ -104,14 +111,18 @@ window.addEventListener('load', function () { //capturamos los id
                 case this.value == "":
                     errores.price = "Es obligatorio declarar un precio";
                     errorPrecio.innerHTML = errores.price;
+                    this.classList.add('is-invalid')
 
                     break;
                 case !regExPrecio.test(this.value):
                     errores.price = "solo puede ingresar numeros"
                     errorPrecio.innerHTML = errores.price;
+                    this.classList.remove('is-invalid');
                     break;
 
                 default:
+                    this.classList.remove('is-invalid');
+                    this.classList.add('is-valid');
                     errorPrecio.innerHTML = "";
             }
         })
@@ -122,14 +133,18 @@ window.addEventListener('load', function () { //capturamos los id
                 case this.value == "":
                     errores.discount = "Es obligatorio establecer un descuento";
                     errorDescuento.innerHTML = errores.discount;
+                    this.classList.add('is-invalid')
 
                     break;
                 case !regExDescuento.test(this.value):
                     errores.discount = "solo puede ingresar numeros"
                     errorDescuento.innerHTML = errores.discount;
+                    this.classList.remove('is-invalid');
                     break;
 
                 default:
+                    this.classList.remove('is-invalid');
+                    this.classList.add('is-valid');
                     errorDescuento.innerHTML = "";
             }
         })
@@ -139,19 +154,23 @@ window.addEventListener('load', function () { //capturamos los id
                 case this.value == "":
                     errores.rating = "Es obligatorio establecer una calificacion";
                     errorRating.innerHTML = errores.rating;
+                    this.classList.add('is-invalid')
 
                     break;
                 case !regExRating.test(this.value):
                     errores.rating = "solo puede ingresar numeros"
                     errorRating.innerHTML = errores.rating;
+                    this.classList.remove('is-invalid');
                     break;
 
                 default:
+                    this.classList.remove('is-invalid');
+                    this.classList.add('is-valid');
                     errorRating.innerHTML = "";
             }
         })
 
-        console.log(errores);
+        // console.log(errores);
 
         formulario.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -161,21 +180,22 @@ window.addEventListener('load', function () { //capturamos los id
             let error = false
             for (let index = 0; index < elementosForm.length - 1; index++) {
                 if (elementosForm[index].value == 0) {
+                    elementosForm[index].classList.add('is-invalid');
 
                     error = true;
 
                 }
-            }
+             }
             if (!error) {
-                formulario.submit()
-            } else {
-                msgError.innerHTML = "los campos señalados son obligatorios"
-            }
+                 formulario.submit()
+             } else {
+                 msgError.innerHTML = "los campos señalados son obligatorios"
+             }
 
-        })
+         })
 
 
-    })
+     })
 
 
 
