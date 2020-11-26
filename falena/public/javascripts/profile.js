@@ -38,6 +38,29 @@ window.addEventListener('load', () => {
                 break;
         }
     })
+    phoneNumberInput.addEventListener('blur', () => {
+
+        switch (true) {
+            case phoneNumberInput.value.length === 0:
+                errorPhone_number.innerHTML = "Si dejas este campo vacío se te idenfiticará por tu nombre y apellido"
+                phoneNumberInput.classList.remove('is-invalid')
+
+                break;
+            case  phoneNumberInput.value.length < 10 :
+                phoneNumberInput.classList.add('is-invalid')
+                errorPhone_number.innerHTML = "Ingresa tu número con su código de área"
+                break;
+            case phoneNumberInput.value.length > 12:
+                phoneNumberInput.classList.add('is-invalid')
+                errorPhone_number.innerHTML = "Debes ingresar número de teléfono válido"
+                break;
+            default:
+                phoneNumberInput.classList.remove('is-invalid')
+                phoneNumberInput.classList.add('is-valid')
+                errorPhone_number.innerHTML = ""
+                break;
+        }
+    })
 
 // no funciona en elementos con el atributo disabled
 
