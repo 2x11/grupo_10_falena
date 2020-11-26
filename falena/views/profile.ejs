@@ -17,49 +17,66 @@
               <form action="/user/profile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="profileUpdate-form">
                 <!-- nick -->
                 <div class="form-group">
-                  <label for="name">Nickname</label>
-                  <input type="text" class="form-control" id="nick" name="nick" value="<%=user.nick%>">
+                  <label for="nick">Nickname</label>
+                  <input type="text" class="form-control" id="nick" name="nick" placeholder="Elige tu Nick" value="<%= (typeof old != 'undefined' && old.nick)?old.nick: user.nick %>">
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nick)?errors.nick.msg: "" %></small>
+                    <span id="errorNick" class="text-danger"></span>
                 </div>
                 <!-- Nombre -->
                 <div class="form-group">
-                  <label for="name">Nombre</label>
-                  <input type="text" class="form-control" id="first_name" name="first_name" value="<%=user.first_name%>" disabled>
+                  <label for="first_name">Nombre</label>
+                  <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Ingresa tu nombre" value="<%= (typeof old != 'undefined' && old.first_name)?old.first_name: user.first_name %>" disabled>
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.first_name)?errors.first_name.msg: "" %></small>
+                    <span id="errorFirst_name" class="text-danger"></span>
                 </div>
                 <!-- apellido -->
                 <div class="form-group">
-                  <label for="name">Apellido</label>
-                <input type="text" class="form-control" id="last_name" name="last_name" value="<%=user.last_name%>" disabled>
+                  <label for="last_name">Apellido</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Ingresa tu apellido" value="<%= (typeof old != 'undefined' && old.last_name)?old.last_name: user.last_name %>" disabled>
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.last_name)?errors.last_name.msg: "" %></small>
+                    <span id="errorLast_name" class="text-danger"></span>
                 </div>
                 <!-- Dni -->
                 <div class="form-group">
-                  <label for="name">Dni</label>
-                  <input type="text" class="form-control" id="dni" name="dni" value="<%=user.dni%>" disabled>
+                  <label for="dni">Dni</label>
+                  <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingresa tu dni" value="<%= (typeof old != 'undefined' && old.dni)?old.dni: user.dni %>" disabled>
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.dni)?errors.dni.msg: "" %></small>
+                    <span id="errorDni" class="text-danger"></span>
                 </div>
                 <!-- phone_number -->
                 <div class="form-group">
-                  <label for="name">Telefono</label>
-                  <input type="text" class="form-control" id="phone_number" name="phone_number" value="<%=user.phone_number%>">
+                  <label for="phone_number">Telefono</label>
+                  <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Ingresa tu número telefónico" value="<%= (typeof old != 'undefined' && old.phone_number)?old.phone_number: user.phone_number %>">
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.phone_number)?errors.phone_number.msg: "" %></small>
+                    <span id="errorPhone_number" class="text-danger"></span>
+                  
                </div>
               <!-- adress -->
                 <div class="form-group">
-                  <label for="name">Direccion</label>
-                  <input type="text" class="form-control" id="adress" name="adress" value="<%=user.adress%>">
+                  <label for="adress">Direccion</label>
+                  <input type="text" class="form-control" id="adress" name="adress" placeholder="Ingresa tu dirección" value="<%= (typeof old != 'undefined' && old.adress)?old.adress: user.adress %>">
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.adress)?errors.adress.msg: "" %></small>
+                    <span id="errorAdress" class="text-danger"></span>
                </div>
               <!-- zip_code -->
                 <div class="form-group">
-                  <label for="name">Codigo Postal</label>
-                  <input type="text" class="form-control" id="zip_code" name="zip_code" value="<%=user.zip_code%>">
+                  <label for="zip_code">Codigo Postal</label>
+                  <input type="text" class="form-control" id="zip_code" name="zip_code" placeholder="Ingresa tu código postal" value="<%= (typeof old != 'undefined' && old.zip_code)?old.zip_code: user.zip_code %>">
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.zip_code)?errors.zip_code.msg: "" %></small>
+                    <span id="errorZip_code" class="text-danger"></span>
                 </div>
               <!-- email-->
                 <div class="form-group">
-                  <label for="name">Email</label>
-                  <input type="text" class="form-control" id="email" name="email" value="<%=user.email%>">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" value="<%= (typeof old != 'undefined' && old.email)?old.email: user.email %>">
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %></small>
+                    <span id="errorEmail" class="text-danger"></span>
                 </div>
               <!-- profile_picture -->
                <div class="form-group">
                   <label for="profile_picture">Avatar</label>
+                  <!-- <input type="hidden" name="profile_picture" value="< %= user.profile_picture %>"> -->
                   <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
-                  <input type="hidden" name="profile_picture" value="<%= user.profile_picture %>">
                 </div>
               <!-- Boton Enviar -->
                 <button type="submit" class="btn btn-primary btn-lg btn-block" id="profile-save">Guardar Cambios</button>
