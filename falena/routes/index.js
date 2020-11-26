@@ -10,6 +10,7 @@ router.get('/',  locasRol, mainController.index);
 
 router.get('/search', locasRol, mainController.search);
 
+router.get('/seccion/genres',  locasRol,  mainController.genres);
 router.get('/seccion/recomendados',  locasRol,  mainController.recomendados);
 router.get('/seccion/novedades',  locasRol,  mainController.novedades);
 router.get('/seccion/independientes',  locasRol,  mainController.independientes);

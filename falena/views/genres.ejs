@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head'); %>
+
+<body>
+  <!-- importa header -->
+  <%- include('./partials/header'); %>
+  <div class="container">
+    <section class="vip-products">
+
+      <!--caja contenedora de productos-->
+      <div class="container">
+        <section>
+          <div class="row productos">
+
+            <% genres.forEach(genre => { %>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="contenido">
+                <figure>
+                  <a href="/product/detail/<%= genre.id %>"><img src="/images/libros/<%= genre.image %>" alt=""></a>
+                </figure>
+                <article>
+                  <P>
+                    <%= genre.name %>
+                  </P>
+                </article>
+              </div>
+            </div>
+
+            <% }) %>
+
+            </header>
+
+
+            <!-- importa footer -->
+            <%- include('./partials/footer') %>
+
+</body>
+
+</html>

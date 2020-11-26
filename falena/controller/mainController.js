@@ -46,6 +46,16 @@ module.exports = {
         res.send(e)
     })
 },
+    genres:function(req, res){
+        db.Categories.findAll()        
+        .then(genre => {
+            res.render('genres', {
+                title: 'Falena',
+                css: 'index.css',
+                genres: genre
+            });
+        })
+    },
     recomendados:function(req, res){
         db.Products.findAll({
             where : {
@@ -103,16 +113,12 @@ module.exports = {
         })
     },
     autores:function(req, res){
-        db.Products.findAll({
-            where : {
-                section : 'autores'
-            }
-        })        
-        .then(recomendados => {
-            res.render('seccion', {
-                title: 'Falena',
+        db.Products.findAll({attributes: [[Sequelize.fn('DISTINCT', Sequelize.col('author')), 'author']]})
+        .then(authors => {                                                                                
+            res.render('authors', { //Haría falta agregar una tabla de autores 
+                title: 'Falena',    //para mayor facilidad de manipulacion de datos
                 css: 'index.css',
-                products: recomendados
+                authors: authors
             });
         })
     }
