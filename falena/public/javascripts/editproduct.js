@@ -17,7 +17,7 @@ window.addEventListener('load', function () { //capturamos los id
     let inputRating = qs('#rating');
     let regExRating = /^[0-9]*$/
     let inputFoto = qs('#image');
-    (inputFoto.value) ? inputFoto.value = "" : ""
+    inputFoto.value = (inputFoto.value) ? "" : ""
 
     let deleteBtn = qs('#deleteButton_products')
     let saveBtn = qs('#saveButton_products')

@@ -60,8 +60,9 @@
               </figure>
               <span><%= producto.discount %> %OFF </span>
               <article>
-                <h2 class="title"><%= producto.name %> </h2>
-                <h2 class="price"> $ <%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %> </h2>
+                <h2 class="mx-auto my-auto title"><%= producto.name %> </h2>
+                <br>
+                <h2 class="mx-auto price"> $ <%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %> </h2>
               </article>
             </div>
           </div>
@@ -85,12 +86,13 @@
                 <figure>
                   <a href="/product/detail/<%= producto.id %>"><img src="/images/libros/<%= producto.image %> " alt=""></a>
                 </figure>
+                <span><%= producto.discount %> %OFF </span>
                 <article>
-                  <h2 class="title"> <%= producto.name %> </h2>
-                  <h2 class="price">
+                  <h2 class="mx-auto title"> <%= producto.name %> </h2>
+                  <br>
+                  <h2 class="mx-auto price">
                     $ <%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
                   </h2>
-                  <span><%= producto.discount %> %OFF </span>
                 </article>
               </div>
             </div>

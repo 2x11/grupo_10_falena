@@ -14,6 +14,7 @@ module.exports = {
             res.render('product', {
                 title: 'Express',
                 css: 'index.css',
+                script: 'product.js',
                 products: Products
             });            
         })
