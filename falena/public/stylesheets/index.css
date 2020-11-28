@@ -1,108 +1,129 @@
 @import "style.css";
-
-.product{
+.product {
     float: right;
     width: 300px;
     margin-bottom: 30px;
     margin-right: 20px;
 }
-.vip-products{
-    overflow:hidden;
+
+.vip-products {
+    overflow: hidden;
     margin-top: 30px;
-    
+}
+
+.carousel {
+    position: relative;
+    width: 720px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    display: none;
 }
 
 
+/* resultado de busqueda */
 
- .carousel{
-     position: relative;
-     width: 720px;
-     margin-left: 0px;
-     margin-bottom: 30px;
-     display: none;
-
- }
-
-/*---seccion de contenido producto--*/
-.productos{
-    display:flex;
-    flex-wrap: wrap;
-}
- .productos .title h2{
-     text-align: left;
-     font-size: 24px;
-     padding: 30px;
-     color: var(--color-marronClaro);
- }
- .productos .contenido{
-     background-color: white;
-     margin-bottom: 30px;
-     border-radius: 5px;
-     padding: 20px;
-     text-align: center;
- }
-
- .productos .resultado{
+.productos .resultado {
     background-color: white;
     padding: 20px;
     text-align: center;
     margin-bottom: 30px;
     border-radius: 5px;
- }
- 
- .productos .resultado h2{
+}
+
+.productos .resultado h2 {
     color: var(--color-marronClaro);
     text-transform: uppercase;
     font-size: 20px;
     margin-top: 10px;
- }
+}
 
- 
-.productos .contenido figure img{
+
+/*---seccion de contenido producto--*/
+
+
+/* .productos{
+    display:flex;
+    flex-wrap: wrap;
+} */
+
+.productos .contenido {
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.productos .contenido figure img {
     height: 250px;
     width: 175px;
 }
-.productos article{
+
+.productos article {
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid var(--color-marronClaro) ;
-    padding: 20px;
+    border-top: 1px solid var(--color-marronClaro);
     height: 150px;
-    position: relative;
-    
-}
-.productos article h2 .titulo{
-    display: flex;
-    align-items: center;
-    color: var(--color-marronOscuro);
 }
 
-.productos article span{
-    color: var(--color-celeste);
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
+.productos .contenido .name {
+    color: var(--color-marronClaro);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    display:block;
+    width:100%;
+    height: 50%;
+/* oculta el exceso en una linea y el resto de palabras pasa a un renglón abajo */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.productos .contenido .name h2{
+    font-size: 20px;
+}
+.productos .contenido .price{
+    display:block;
+    width:100%;
+    height: 50%;
+}
+.productos .contenido .price h2{
+    background-color: burlywood;
+    border-radius: 24px;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#div_productEditButtons{
-    display: flex;
+.productos span {
+    background: lightgreen;
+    color: black;
+    border-radius: 24px;
+    padding: 5px;
+    font-weight: bolder;
+    display: table;
+    margin: auto;
+    position: absolute;
+    left: 66%;
 }
+
+
 /*--estilo de mi pie de pagina--*/
- 
-.piedepagina{
-    padding: 20px;
 
+.piedepagina {
+    padding: 20px;
 }
 
-.piedepagina article{
+.piedepagina article {
     display: flex;
     flex-wrap: wrap;
     align-items: left;
     flex-direction: column;
-    
 }
 
-.piedepagina article i{
+.piedepagina article i {
     font-size: 25px;
     width: 60px;
     height: 60px;
@@ -113,24 +134,23 @@
     line-height: 60px;
     text-align: center;
 }
- .piedepagina article h4{
+
+.piedepagina article h4 {
     text-align: center;
     color: var(--color-marronClaro);
     margin: 10px 0;
- }
-
- .piedepagina article p {
-     color:var(--color-marronOscuro);
-     text-align: center;
-     
-     
 }
 
- /*---version para tablet (768px)---*/
+.piedepagina article p {
+    color: var(--color-marronOscuro);
+    text-align: center;
+}
 
- @media(min-width:768px){
 
-    .carousel{
+/*---version para tablet (768px)---*/
+
+@media(min-width:768px) {
+    .carousel {
         position: relative;
         width: 720px;
         margin-left: 0px;
@@ -139,21 +159,18 @@
     }
 }
 
+
 /*---version para escritorio (1024px)---*/
 
-@media(min-width:1024px){
-
-    .productos article h2{
+@media(min-width:1024px) {
+    .productos article h2 {
         font-size: 1.5rem;
     }
-
 }
 
-.carousel{
+.carousel {
     position: relative;
     width: 100%;
     margin-left: 0px;
     margin-bottom: 30px;
-    
-
 }
