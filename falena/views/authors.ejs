@@ -5,7 +5,7 @@
 <body>
   <!-- importa header -->
   <%- include('./partials/header'); %>
-  <div class="container">
+  <div class="author_body">
     <section class="vip-products">
 
       <!--caja contenedora de productos-->
@@ -17,11 +17,11 @@
             <div class="col-12 col-md-6 col-lg-3">
               <div class="contenido">
                 <figure>
-                  <a href="/product/detail/<%= author %>"><img src="/images/libros/<%= author.image %>" alt=""></a>
+                  <a href="/product/detail/<%= author.image %>"><img src="/images/authors/<%= author.image %>" alt=""></a>
                 </figure>
                 <article>
                   <P>
-                    <%= author.author %>
+                    <%= author.name %>
                   </P>
                 </article>
               </div>

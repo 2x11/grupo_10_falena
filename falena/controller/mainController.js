@@ -51,7 +51,7 @@ module.exports = {
         .then(genre => {
             res.render('genres', {
                 title: 'Falena',
-                css: 'index.css',
+                css: 'genres.css',
                 genres: genre
             });
         })
@@ -113,12 +113,12 @@ module.exports = {
         })
     },
     autores:function(req, res){
-        db.Products.findAll({attributes: [[Sequelize.fn('DISTINCT', Sequelize.col('author')), 'author']]})
-        .then(authors => {                                                                                
-            res.render('authors', { //Haría falta agregar una tabla de autores 
-                title: 'Falena',    //para mayor facilidad de manipulacion de datos
-                css: 'index.css',
-                authors: authors
+        db.Authors.findAll()
+        .then(author => {                                                                                
+            res.render('authors', { 
+                title: 'Falena',
+                css: 'genres.css',
+                authors: author
             });
         })
     }

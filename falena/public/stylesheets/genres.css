@@ -1,0 +1,17 @@
+@import "style.css";
+.genre_body, .author_body{
+    padding-top: 50px;
+}
+.contenido{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+}
+.contenido figure img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+footer{
+    margin-top: 50px;
+}
