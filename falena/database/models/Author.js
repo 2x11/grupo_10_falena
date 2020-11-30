@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Categories";
+    let alias = "Authors";
 
     let cols = {
         id: {
@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true
         },
         name: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(100),
             allowNull: false,
             uniqueKey: true
         },
@@ -19,18 +19,18 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     let config = {
-        tableName: "categories",
+        tableName: "Authors",
         timestamps: false
     }
 
-    const Category = sequelize.define(alias, cols, config);
+    const Author = sequelize.define(alias, cols, config);
 
-    Category.associate = function(models) {
+    Author.associate = function(models) {
         
-        Category.hasMany(models.Products, {
-            as: 'Products',
-            foreignKey: 'category_id'
+        Author.hasMany(models.Products, {
+            as: 'authors',
+            foreignKey: 'author_id'
         })
     }
-    return Category
+    return Author
 }

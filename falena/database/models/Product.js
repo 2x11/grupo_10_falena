@@ -12,10 +12,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        author: {
-            type: dataTypes.STRING(50),
-            allowNull: false
-        },
         price: {
             type: dataTypes.DECIMAL(10, 2).UNSIGNED,
             allowNull: false
@@ -43,6 +39,10 @@ module.exports = (sequelize, dataTypes) => {
         rating: {
             type: dataTypes.DECIMAL(2, 1),
             allowNull: false
+        },
+        author_id: {
+            type: dataTypes.INTEGER(11),
+            allowNull: false
         }
     }
 
@@ -57,6 +57,10 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsTo(models.Categories, {
             as: 'Categories',
             foreignKey: "category_id"
+        })
+        Product.belongsTo(models.Authors, {
+            as: 'Authors',
+            foreignKey: "author_id"
         })
 
         Product.hasMany(models.Order_items, {
