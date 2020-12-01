@@ -1,4 +1,5 @@
 
+const { where } = require('sequelize');
 const Sequelize = require('sequelize');
 const db = require('../database/models');
 let Op = Sequelize.Op;
@@ -28,12 +29,17 @@ module.exports = {
    },
    search:function(req, res, next){
        db.Products.findAll({
-           where:{
-               [Op.or]: [
-                   { name :{[Op.like] : `%${req.query.search}%` }},
-                   { author :{[Op.like] : `%${req.query.search}%` }}
+        //    include : [{
+        //     models : db.Author, attributes:['name'],
+        //     models : db.Products, attributes:['name']
+        //    }],
+            where : {
+                [Op.or]: 
+                [
+                    { name :{[Op.like] : `%${req.query.search}%` }},
+                    // { name :{[Op.like] : `%${req.query.search}%` }}
                 ]
-            }
+               }
         })
     .then(result => {
         res.render('search',{
