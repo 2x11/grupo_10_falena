@@ -121,6 +121,31 @@ module.exports = {
                 authors: author
             });
         })
-    }
+    },
+
+     listByGenre: (req,res ) => {
+        db.Products.findAll({
+            where : {category_id : req.params.id}
+        })
+        .then(prodByGender => {
+            res.render('seccion',{
+                title: 'Falena',
+                css: 'index.css',
+                products: prodByGender
+            })
+        })
+     },
+     listByAuthor: (req,res) => {
+        db.Products.findAll({
+            where : {author_id : req.params.id}
+        })
+        .then(prodByAuthor => {
+            res.render('seccion',{
+                title: 'Falena',
+                css: 'index.css',
+                products: prodByAuthor
+            })
+        })
+     }
 
 }

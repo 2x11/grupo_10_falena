@@ -17,7 +17,8 @@ router.get('/seccion/independientes',  locasRol,  mainController.independientes)
 router.get('/seccion/masvendido',  locasRol,  mainController.masvendido);
 router.get('/seccion/autores',  locasRol,  mainController.autores);
 
-
+router.get('/genre/:id',  locasRol, mainController.listByGenre);
+router.get('/author/:id',  locasRol, mainController.listByAuthor);
 
 
 module.exports = router;
