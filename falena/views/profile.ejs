@@ -51,13 +51,26 @@
                     <span id="errorPhone_number" class="text-danger"></span>
                   
                </div>
-              <!-- adress  // CAMBIAR POR PROVINCIA Y LOCALIDAD VALIDANDO CON API DE DATOS GEOGRAFICOS-->
-                <div class="form-group">
-                  <label for="adress">Direccion</label>
-                  <input type="text" class="form-control" id="adress" name="adress" placeholder="Ingresa tu dirección" value="<%= (typeof old != 'undefined' && old.adress)?old.adress: user.adress %>">
-                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.adress)?errors.adress.msg: "" %></small>
-                    <span id="errorAdress" class="text-danger"></span>
-               </div>
+              <!-- city  // CAMBIAR POR PROVINCIA Y LOCALIDAD VALIDANDO CON API DE DATOS GEOGRAFICOS-->
+              <div class="form-group">
+                <label for="city">Ciudad</label>
+                <input type="text" name="city" class="form-control" id="cityInput"
+                  value="<%= user.city %>">
+                <select class="form-control" id="citySelect" style="display: none;">
+                  <option>Seleccione su ciudad... </option>
+                </select>
+              </div>
+
+              <!-- town -->
+              <div class="form-group">
+                <label for="town">Localidad</label>
+                <input type="text" name="town" class="form-control" id="townInput"
+                  value="<%= user.town %>">
+                <select class="form-control" id="townSelect" style="display: none;">
+                  <option value="">Seleccione su localidad...</option>
+                </select>
+              </div>
+
               <!-- zip_code // VALIDAR CON API DE CODIGOS POSTALES  https://github.com/jcodagnone/localidades-ar/blob/master/codigo-postal/correo/B.txt -->
                 <div class="form-group">
                   <label for="zip_code">Codigo Postal</label>

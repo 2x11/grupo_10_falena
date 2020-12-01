@@ -125,14 +125,15 @@ module.exports = {
     profileUpdate: (req, res, next) => {
         db.Users.update(
             {
+                nick : req.body.nick,
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 dni: req.body.dni,
                 phone_number: req.body.phone_number,
-                adress: req.body.adress,
+                city: req.body.city,
+                town: req.body.town,
                 zip_code: req.body.zip_code,
                 email: req.body.email,
-                nick : req.body.nick,
                 profile_picture: (req.files[0])?req.files[0].filename: req.body.profile_picture
             },
             {
@@ -145,7 +146,8 @@ module.exports = {
                 .then(user =>{
                     req.session.user.nick = user.nick
                     req.session.user.phone_number = user.phone_number
-                    req.session.user.adress = user.adress
+                    req.session.user.city = user.city
+                    req.session.user.town = user.town
                     req.session.user.zip_code = user.zip_code
                     req.session.user.email = user.email
 
