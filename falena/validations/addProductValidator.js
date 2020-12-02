@@ -8,12 +8,12 @@ module.exports = [
     .isLength({min:4})
     .trim()
     .withMessage('Debes ingresar titulo con al menos 4 letras'),
-
+/*
     check('author')
     .isLength({min:3})
     .trim()
     .withMessage('Debes ingresar Autor con al menos 3 letras'),
-
+*/
     check('review')
     .isLength({min:20})
     .trim()

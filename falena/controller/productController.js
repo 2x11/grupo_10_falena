@@ -38,16 +38,19 @@ module.exports = {
         })
     },
     add: function(req, res) {
-            db.Categories.findAll({
+            let pedidosCategories = db.Categories.findAll({
                 order : [
                     ['name','ASC']
                 ]
             })
-            .then(categories => {
+            let pedidosAuthors = db.Authors.findAll()
+            Promise.all([pedidosCategories,pedidosAuthors])
+            .then( ([categories, authors ]) => {
                 res.render('productAdd', {
                     css: 'product.css',
                     script: 'addproduct.js',
-                    category: categories
+                    category: categories,
+                    authors: authors
                 });            
             })
     },
@@ -58,7 +61,7 @@ module.exports = {
 
             db.Products.create({
                 name: req.body.name,
-                author: req.body.author,
+                author_id: req.body.author_id,
                 price: req.body.price,
                 discount: req.body.discount,
                 review: req.body.review,
@@ -94,14 +97,15 @@ module.exports = {
     editForm: (req, res) => {
         let pedidoProducts = db.Products.findByPk(req.params.id)
         let pedidosCategories = db.Categories.findAll();
-
-        Promise.all([pedidoProducts,pedidosCategories ])
-        .then(([products, categories]) => {
+        let pedidosAuthors = db.Authors.findAll()
+        Promise.all([pedidoProducts,pedidosCategories,pedidosAuthors ])
+        .then(([products, categories, authors]) => {
             res.render('productEdit', {
                 css: 'product.css',
                 script: 'editproduct.js',
                 products:products,
-                category: categories
+                category: categories,
+                authors: authors
             });            
         })
 
@@ -114,7 +118,7 @@ module.exports = {
 
             db.Products.update({
                 name: req.body.name,
-                author: req.body.author,
+                author_id: req.body.author_id,
                 price: req.body.price,
                 discount: req.body.discount,
                 review: req.body.review,
@@ -137,8 +141,8 @@ module.exports = {
 
             let pedidoProducts = db.Products.findByPk(req.params.id)
             let pedidosCategories = db.Categories.findAll();
-    
-            Promise.all([pedidoProducts,pedidosCategories ])
+            let pedidosAuthors = db.Authors.findAll()
+            Promise.all([pedidoProducts,pedidosCategories,pedidosAuthors ])
             .then(([products, categories]) => {
                 res.render('productEdit', {
                     css: 'product.css',
@@ -146,6 +150,7 @@ module.exports = {
                     product : db.Products,
                     products:products,
                     category: categories,
+                    authors: authors,
                     errors: errors.mapped(),
                     old: req.body,                    
                 });            

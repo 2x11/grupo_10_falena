@@ -55,11 +55,22 @@
                   </div>
                 <!-- AUTOR -->
                 <div class="form-group">
-                    <label for="author">Autor</label>
-                    <input type="text" class="form-control" id="author" name="author" placeholder="Agregar un Autor" value="<%= (typeof old != 'undefined' && old.author)?old.author: products.author %>">
-                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.author)?errors.author.msg: "" %></small>
-                    <span id="errorAutor" class="text-danger"></span>
+                  <label for="author">Autor</label>
+                  <select class="form-control" id="author_id" name="author_id" >
+                    <% authors.forEach(authors => { %>
+                      <% if(authors.id == products.author_id) { %>
+                        <option value="<%= authors.id %>" selected>
+                            <%= authors.name %>
+                        </option>
+                      <% } else { %>
+                        <option value="<%= authors.id %>">
+                            <%= authors.name %>
+                        </option>  
+                      <% } %>                      
+                    <% }) %>
+                  </select>
                 </div> 
+
                 <!-- DESCRIPCION DEL PRODUCTO -->
                 <div class="form-group">
                     <label for="review">Descripcion Del producto</label>

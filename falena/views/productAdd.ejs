@@ -47,10 +47,14 @@
           </div>
           <!-- AUTOR -->
           <div class="form-group">
-            <label for="author">Autor</label>
-            <input type="text" class="form-control" id="author" name="author" value="<%= (typeof old != 'undefined' && old.author)?old.author:'' %>" placeholder="Agregar un Autor">
-            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.author)?errors.author.msg: "" %></small>
-            <span id="errorAutor" class="text-danger"></span>
+            <label for="section">Autor</label>
+            <select class="form-control" id="author_id" name="author_id" >
+              <% authors.forEach(authors => { %>
+                  <option value="<%= authors.id %>">
+                      <%= authors.name %>
+                  </option>  
+              <% }) %>
+            </select>
           </div>
           <!-- DESCRIPCION DEL PRODUCTO -->
           <div class="form-group">
