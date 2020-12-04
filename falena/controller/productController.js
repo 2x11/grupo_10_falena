@@ -75,16 +75,20 @@ module.exports = {
 
         }else{
             
-            db.Categories.findAll({
+            let pedidoCategories = db.Categories.findAll({
                 order : [
                     ['name','ASC']
                 ]
             })
-            .then(categories => {
+            let pedidoAuthors = db.Authors.findAll()
+            Promise.all([pedidoCategories,pedidoAuthors])
+            .then( ([categories, authors ]) => {
                 //console.log(req.session.user)
                 res.render('productAdd', {
                     css: 'product.css',
+                    script: 'addproduct.js',
                     category: categories,
+                    authors: authors,
                     errors: errors.mapped(),
                     old: req.body,
                     user: req.session.user                
