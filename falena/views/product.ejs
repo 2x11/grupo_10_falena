@@ -26,19 +26,22 @@
                 <figure>
                   <a href=""><img src="/images/libros/<%= product.image %>" alt=""></a>
                 </figure>
-                <div>
-                  <h2><%= product.name %></h2>
-                  <!-- boton editar -->
-
+                  <div class="name">
+                    <h2> <%= product.name %> </h2>
+                  </div>
+                    <!-- boton editar -->
+                  <div>
                     <form action="/product/edit/<%= product.id %>" method="GET">
-                      <button class="btn btn-info btn-12 btn-block" type="submit" name="id" value="<%= product.id %> ">Editar</button>  
+                      <button class="btn btn-info btn-12 btn-block" type="submit" name="id" value="<%= product.id %>" id="editButton">Editar</button>  
                     </form>
+                  </div>
+                  <div>
                     <!-- boton eliminar -->
-                    <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST" id="deleteFormProductList">
+                    <form action="/product/delete/<%= product.id %>?_method=DELETE" method="POST" id="deleteFormProductList" >
                       
-                        <button class="btn btn-danger btn-12 btn-block deleteButtonProductList" type="submit" name="id" value="<%= product.id %> " id="">eliminar</button> 
+                      <button class="btn btn-danger btn-12 btn-block deleteButtonProductList" type="submit" name="id" value="<%= product.id %> " id="deleteButton">Eliminar</button> 
                     </form>
-                </div>
+                  </div >
               </div>
             </div>
             <% }) %> 

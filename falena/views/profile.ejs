@@ -9,11 +9,11 @@
     <section class="container profile-body">
       <article class="row profile-form">
         <!-- Imagen -->
-          <div class="col-3">
-              <img src="/images/user/<%= user.profile_picture %>" width="150" id="profile-picture">
+          <div class="col-2">
           </div>
             <!-- Formulario -->
-            <div class="col-6">
+            <div class="col-8">
+              <img src="/images/user/<%= user.profile_picture %>" width="150" id="profile-picture">
               <form action="/user/profile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="profileUpdate-form">
                 <!-- nick -->
                 <div class="form-group">
@@ -53,11 +53,11 @@
                </div>
               <!-- city  // CAMBIAR POR PROVINCIA Y LOCALIDAD VALIDANDO CON API DE DATOS GEOGRAFICOS-->
               <div class="form-group">
-                <label for="city">Ciudad</label>
+                <label for="city">Provincia</label>
                 <input type="text" name="city" class="form-control" id="cityInput"
                   value="<%= user.city %>">
                 <select class="form-control" id="citySelect" style="display: none;">
-                  <option>Seleccione su ciudad... </option>
+                  <option>Seleccione su provincia... </option>
                 </select>
               </div>
 
@@ -86,11 +86,11 @@
                     <span id="errorEmail" class="text-danger"></span>
                 </div>
               <!-- profile_picture -->
-               <div class="form-group">
-                  <label for="profile_picture">Avatar</label>
-                  <!-- <input type="hidden" name="profile_picture" value="< %= user.profile_picture %>"> -->
-                  <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
-                </div>
+              <div class="form-group">
+                <label for="profile_picture">Avatar</label>
+                <!-- <input type="hidden" name="profile_picture" value="< %= user.profile_picture %>"> -->
+                <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
+              </div>
               <!-- Boton Enviar -->
                 <button type="submit" class="btn btn-primary btn-lg btn-block" id="profile-save">Guardar Cambios</button>
               </form>

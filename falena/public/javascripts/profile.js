@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
 
         switch (true) {
             case phoneNumberInput.value.length === 0:
-                errorPhone_number.innerHTML = "Si dejas este campo vacío se te idenfiticará por tu nombre y apellido"
+                errorPhone_number.innerHTML = "Sugerimos que completes este campo para poder contactarte :)"
                 phoneNumberInput.classList.remove('is-invalid')
 
                 break;

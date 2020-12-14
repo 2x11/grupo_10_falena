@@ -174,3 +174,8 @@
     margin-left: 0px;
     margin-bottom: 30px;
 }
+
+article #deleteButton, article #editButton{
+    display: block;
+    width: 100%;
+}
