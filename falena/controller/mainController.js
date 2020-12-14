@@ -28,29 +28,40 @@ module.exports = {
 
    },
    search:function(req, res, next){
-       db.Products.findAll({
-        //    include : [{
-        //     models : db.Author, attributes:['name'],
-        //     models : db.Products, attributes:['name']
-        //    }],
-            where : {
-                [Op.or]: 
-                [
-                    { name :{[Op.like] : `%${req.query.search}%` }},
-                    // { name :{[Op.like] : `%${req.query.search}%` }}
-                ]
-               }
-        })
-    .then(result => {
-        res.render('search',{
-            title: 'Falena',
-            css: 'index.css',
-            products: result
-        })
-    })
-    .catch(e => {
-        res.send(e)
-    })
+    db.Products.findAll({
+     where : {
+         [Op.or]: 
+         [
+             {
+                  name :{
+                      [Op.like] : `%${req.query.search}%`
+                     },
+             },
+             {
+                 '$Authors.name$': {
+                     [Op.like] : `%${req.query.search}%` 
+                 } 
+             }
+             // { name :{[Op.like] : `%${req.query.search}%` }}[Op.substring]: 'hat',   
+                           
+         ]
+     },
+         include : [{
+             association: 'Authors'
+     //     models : db.Products, attributes:['name']
+        }],
+        
+     })
+ .then(result => {
+     res.render('search',{
+         title: 'Falena',
+         css: 'index.css',
+         products: result
+     })
+ })
+ .catch(e => {
+     res.send(e)
+ })
 },
     genres:function(req, res){
         db.Categories.findAll()        
